@@ -180,8 +180,9 @@ exec_always feh --bg-scale ~/.config/i3/feh/wallpaper.jpg
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="task_dialog"] floating enable
 
-# Example of defining a floating window
+# list defining a floating windows
 for_window [class="Arandr"] floating enable
+for_window [class="Pavucontrol"] floating enable
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -264,10 +265,22 @@ client.placeholder 	#000000 #0c0c0c $white2 #000000 0c0c0c
 
 for_window [class="URxvt*"] border pixel 1
 
-# Terminal scratchpad
-for_window [instance="urxvt_scratchpad"] move to scratchpad, border none
-bindsym $mod+Shift+t [instance="urxvt_scratchpad"] scratchpad show
-exec urxvtc -name urxvt_scratchpad
+# Terminal scratchpad with tmux and three windows: 1. Terminal | 2.Neovim temp file
+
+# First version
+
+ for_window [instance="urxvt_scratchpad"] move to scratchpad, border none
+ bindsym $mod+Shift+t [instance="urxvt_scratchpad"] scratchpad show
+ exec urxvtc -name urxvt_scratchpad \
+ -e tmux -2 new-session -d -s scratchpad \; \
+ new-window -n nvim 'nvim +e /tmp/nvim-tmp.md' \; \
+ attach-session -d -t scratchpad
+
+# Second version
+
+#for_window [instance="urxvt_scratchpad"] move to scratchpad, border none
+#bindsym $mod+Shift+t [instance="urxvt_scratchpad"] scratchpad show
+#exec "$DOTFILES/zsh/scratchpad.sh"
 
 # htop scratchpad
 for_window [instance="htop_scratchpad"] move to scratchpad, border none
