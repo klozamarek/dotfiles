@@ -72,3 +72,11 @@ ln -sf "$DOTFILES/tmux/tmux.conf" "$XDG_CONFIG_HOME/tmux/tmux.conf"
 
 mkdir -p "$XDG_CONFIG_HOME/tmuxp"
 ln -sf "$DOTFILES/tmuxp/dotfiles.yml" "$XDG_CONFIG_HOME/tmuxp/dotfiles.yml"
+
+########
+#ranger#
+########
+
+rm -rf "$XDG_CONFIG_HOME/ranger"
+ln -s "$DOTFILES/ranger" "$XDG_CONFIG_HOME"
+
