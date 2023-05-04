@@ -52,3 +52,6 @@ bindkey -r '^g'
 bindkey -s '^g' 'clear\n'
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# skip loading the default config file for ranger
+export RANGER_LOAD_DEFAULT_RC=FALSE

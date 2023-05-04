@@ -1,0 +1,11 @@
+session_name: ranger
+windows:
+  - window_name: ranger
+    layout: tiled
+    panes:
+      - ranger
+  - window_name: terms
+    layout: even-horizontal
+    panes:
+      - focus: true
+      - 

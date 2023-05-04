@@ -321,7 +321,10 @@ bar {
 #bindsym $mod+a mode "$mode_display"
 
 #keybinding for dmenufm
-bindsym $mod+z exec dmenufm
+bindsym $mod+SHIFT+z exec dmenufm
+
+#keybinding for ranger
+bindsym $mod+z exec urxvt -e ranger
 
 #start dunst notofication
 exec --no-startup-id dunst
