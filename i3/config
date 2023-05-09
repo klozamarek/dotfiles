@@ -174,7 +174,7 @@ bindsym $mod+BackSpace mode "$mode_system"
 #set monitor
 exec_always xrandr --output LVDS-1 --off --output HDMI-1 --off --output VGA-1 --primary --mode 1440x900 --pos 0x0 --rotate normal
 
-exec_always feh --bg-scale ~/.config/i3/feh/wallpaper.jpg
+exec_always feh --bg-scale ~/.config/i3/feh/wallpaper.png
 
 # floating pop up automatically
 for_window [window_role="pop-up"] floating enable

@@ -71,6 +71,6 @@ cue2flac() {
 # Run script to tag flac files from cue sheet
 # remove the unsplit flac file FIRST!
 tag2flac() {
-    sh $DOTFILES/tag2flac.sh
-}
+   sh $DOTFILES/tag2flac.sh
+} 
 
