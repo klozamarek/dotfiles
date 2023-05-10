@@ -1,4 +1,4 @@
-set aaa_mode=artist
+set aaa_mode=all
 set altformat_current= %F 
 set altformat_playlist= %f%= %d 
 set altformat_title=%f
@@ -109,7 +109,7 @@ set smart_artist_sort=true
 set softvol=false
 set softvol_state=0 0
 set start_view=tree
-set status_display_program=
+set status_display_program=/home/ssserpent/dotfiles/cmus/cmus-feh.sh
 set stop_after_queue=false
 set time_show_leading_zero=true
 set tree_width_max=0
@@ -196,7 +196,7 @@ bind common s toggle shuffle
 bind common space win-toggle
 bind common t toggle show_remaining_time
 bind common tab win-next
-bind common u update-cache
+bind common u shell $DOTFILES/cmus/update_cmus_lib.sh
 bind common up win-up
 bind common v player-stop
 bind common x player-play

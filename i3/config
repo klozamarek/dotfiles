@@ -183,6 +183,7 @@ for_window [window_role="task_dialog"] floating enable
 # list defining a floating windows
 for_window [class="Arandr"] floating enable
 for_window [class="Pavucontrol"] floating enable
+for_window [class="feh"] floating enable, resize set 500 500
 
 # resize window (you can also use the mouse for that)
 mode "resize" {

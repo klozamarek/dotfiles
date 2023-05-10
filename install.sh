@@ -81,10 +81,10 @@ ln -sf "$DOTFILES/tmuxp/ranger.yml" "$XDG_CONFIG_HOME/tmuxp/ranger.yml"
 rm -rf "$XDG_CONFIG_HOME/ranger"
 ln -s "$DOTFILES/ranger" "$XDG_CONFIG_HOME"
 
-######
-#cmus#
-######
+########
+# cmus #
+# ######
 
 rm -rf "$XDG_CONFIG_HOME/cmus"
-ln -s "$DOTFILES/cmus" "$XDG_CONFIG_HOME"
+ln -sf "$DOTFILES/cmus" "$XDG_CONFIG_HOME"
 

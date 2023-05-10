@@ -1,6 +1,7 @@
 q
-Q
-tmux list-sessions
-list-sessions
-ls
+cmus-feh.sh
+set status_display_program=/home/ssserpent/dotfiles/cmus/cmus-feh.sh
+set status_display_program=/home/dotfiles/cmus/cmus-cover-art/observe.sh
+set status_display_program=$DOTFILES/cmus/cmus-feh.sh
+bind -f common u shell $DOTFILES/cmus/update_cmus_lib.sh
 add /run/media/ssserpent/gen_dta/Music/

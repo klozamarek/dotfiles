@@ -5,16 +5,12 @@
 /run/media/ssserpent/gen_dta/Music/ipod_160G/1979. Bobby Hutcherson - Un Poco Loco/05-Ivory Coast.flac
 /run/media/ssserpent/gen_dta/Music/ipod_160G/1979. Bobby Hutcherson - Un Poco Loco/06-Ebony Moonbeams.flac
 /run/media/ssserpent/gen_dta/Music/ipod_160G/1979. Bobby Hutcherson - Un Poco Loco/07-I Wanna Stand Over there.flac
-/run/media/ssserpent/gen_dta/Music/ipod_160G/Art Farmer & Jim Hall Quartet - Complete Live Recordings/01-Stompin' At The Savoy.flac
-/run/media/ssserpent/gen_dta/Music/ipod_160G/Art Farmer & Jim Hall Quartet - Complete Live Recordings/02-Swing Spring.flac
-/run/media/ssserpent/gen_dta/Music/ipod_160G/Art Farmer & Jim Hall Quartet - Complete Live Recordings/03-What's New.flac
-/run/media/ssserpent/gen_dta/Music/ipod_160G/Art Farmer & Jim Hall Quartet - Complete Live Recordings/04-I Want To Be Happy.flac
-/run/media/ssserpent/gen_dta/Music/ipod_160G/Art Farmer & Jim Hall Quartet - Complete Live Recordings/05-I'm Getting Sentimental Over You.flac
-/run/media/ssserpent/gen_dta/Music/ipod_160G/Art Farmer & Jim Hall Quartet - Complete Live Recordings/06-Sometime Ago.flac
-/run/media/ssserpent/gen_dta/Music/ipod_160G/Art Farmer & Jim Hall Quartet - Complete Live Recordings/07-Bilbao Song.flac
-/run/media/ssserpent/gen_dta/Music/ipod_160G/Art Farmer & Jim Hall Quartet - Complete Live Recordings/08-Darn That Dream.flac
-/run/media/ssserpent/gen_dta/Music/ipod_160G/Art Farmer & Jim Hall Quartet - Complete Live Recordings/09-Valse Hot.flac
-/run/media/ssserpent/gen_dta/Music/ipod_160G/Art Farmer & Jim Hall Quartet - Complete Live Recordings/10-Theme.flac
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Chet Baker - Someday My Prince Will Come/1.Gnid.wav
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Chet Baker - Someday My Prince Will Come/2.Love VIbrations.wav
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Chet Baker - Someday My Prince Will Come/3.Sad Walk.wav
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Chet Baker - Someday My Prince Will Come/4.Someday My Prince Will Come.wav
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Chet Baker - Someday My Prince Will Come/5.I'm Oldfashioned.wav
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Chet Baker - Someday My Prince Will Come/6.In Your Own Sweet Way.wav
 /run/media/ssserpent/gen_dta/Music/ipod_160G/Adam Rogers - Apparition/01 Labyrinth.m4a
 /run/media/ssserpent/gen_dta/Music/ipod_160G/Adam Rogers - Apparition/02 Tyranny Of Fixed Numbers.m4a
 /run/media/ssserpent/gen_dta/Music/ipod_160G/Adam Rogers - Apparition/03 Persephone.m4a
@@ -164,6 +160,16 @@
 /run/media/ssserpent/gen_dta/Music/ipod_160G/Art Farmer - Art and Perception (2012, Poll Winners)/14 - Blue Room.flac
 /run/media/ssserpent/gen_dta/Music/ipod_160G/Art Farmer - Art and Perception (2012, Poll Winners)/15 - Change Partners.flac
 /run/media/ssserpent/gen_dta/Music/ipod_160G/Art Farmer - Art and Perception (2012, Poll Winners)/16 - Nobody's Heart.flac
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Art Farmer & Jim Hall Quartet - Complete Live Recordings/01 - Stompin' At The Savoy.flac
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Art Farmer & Jim Hall Quartet - Complete Live Recordings/02 - Swing Spring.flac
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Art Farmer & Jim Hall Quartet - Complete Live Recordings/03 - What's New.flac
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Art Farmer & Jim Hall Quartet - Complete Live Recordings/04 - I Want To Be Happy.flac
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Art Farmer & Jim Hall Quartet - Complete Live Recordings/05 - I'm Getting Sentimental Over You.flac
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Art Farmer & Jim Hall Quartet - Complete Live Recordings/06 - Sometime Ago.flac
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Art Farmer & Jim Hall Quartet - Complete Live Recordings/07 - Bilbao Song.flac
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Art Farmer & Jim Hall Quartet - Complete Live Recordings/08 - Darn That Dream.flac
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Art Farmer & Jim Hall Quartet - Complete Live Recordings/09 - Valse Hot.flac
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Art Farmer & Jim Hall Quartet - Complete Live Recordings/10 - Theme.flac
 /run/media/ssserpent/gen_dta/Music/ipod_160G/Avishai Cohen - As Is - Live At The Blue Note/01-Smash.flac
 /run/media/ssserpent/gen_dta/Music/ipod_160G/Avishai Cohen - As Is - Live At The Blue Note/02-Elli.flac
 /run/media/ssserpent/gen_dta/Music/ipod_160G/Avishai Cohen - As Is - Live At The Blue Note/03-Etude.flac
@@ -393,6 +399,70 @@
 /run/media/ssserpent/gen_dta/Music/ipod_160G/1983. Cedar Walton - Eastern Rebellion 4 (2015) {CDSOL-6332}/04 - I Am Not So Sure.flac
 /run/media/ssserpent/gen_dta/Music/ipod_160G/1983. Cedar Walton - Eastern Rebellion 4 (2015) {CDSOL-6332}/05 - Epistrophy.flac
 /run/media/ssserpent/gen_dta/Music/ipod_160G/1983. Cedar Walton - Eastern Rebellion 4 (2015) {CDSOL-6332}/06 - Groundwork.flac
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Cedar Walton Quartet - Bluesville Time/01 Rubberman.m4a
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Cedar Walton Quartet - Bluesville Time/02 Naima.m4a
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Cedar Walton Quartet - Bluesville Time/03 Bluesville.m4a
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Cedar Walton Quartet - Bluesville Time/04 I Remember Clifford.m4a
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Cedar Walton Quartet - Bluesville Time/05 Ojos de Rojos.m4a
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Cedar Walton Quartet - Bluesville Time/06 'Round Midnight.m4a
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Cedar Walton Quartet - Bluesville Time/07 Without A Song.m4a
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Charles Lloyd & The Marvels - Tone Poem (2021, Blue Note)/01 - Peace.flac
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Charles Lloyd & The Marvels - Tone Poem (2021, Blue Note)/02 - Ramblin'.flac
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Charles Lloyd & The Marvels - Tone Poem (2021, Blue Note)/03 - Anthem.flac
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Charles Lloyd & The Marvels - Tone Poem (2021, Blue Note)/04 - Dismal Swamp.flac
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Charles Lloyd & The Marvels - Tone Poem (2021, Blue Note)/05 - Tone Poem.flac
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Charles Lloyd & The Marvels - Tone Poem (2021, Blue Note)/06 - Monk's Mood.flac
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Charles Lloyd & The Marvels - Tone Poem (2021, Blue Note)/07 - Ay Amor (Live).flac
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Charles Lloyd & The Marvels - Tone Poem (2021, Blue Note)/08 - Lady Gabor.flac
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Charles Lloyd & The Marvels - Tone Poem (2021, Blue Note)/09 - Prayer.flac
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Charles Mingus - The Complete 1961-1962 Birdland Broadcasts (2010, RLR)/CD1/01 - Nouroog.flac
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Charles Mingus - The Complete 1961-1962 Birdland Broadcasts (2010, RLR)/CD1/02 - Ecclusiastics.flac
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Charles Mingus - The Complete 1961-1962 Birdland Broadcasts (2010, RLR)/CD1/03 - Hog Callin' Blues.flac
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Charles Mingus - The Complete 1961-1962 Birdland Broadcasts (2010, RLR)/CD1/04 - Dead Air with Symphony Sid.flac
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Charles Mingus - The Complete 1961-1962 Birdland Broadcasts (2010, RLR)/CD1/05 - Take the 'A' Train.flac
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Charles Mingus - The Complete 1961-1962 Birdland Broadcasts (2010, RLR)/CD1/06 - Fables of Faubus.flac
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Charles Mingus - The Complete 1961-1962 Birdland Broadcasts (2010, RLR)/CD1/07 - Eat That Chicken #1.flac
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Charles Mingus - The Complete 1961-1962 Birdland Broadcasts (2010, RLR)/CD1/08 - Monk, Funk or Vice Versa #1.flac
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Charles Mingus - The Complete 1961-1962 Birdland Broadcasts (2010, RLR)/CD1/09 - Oh Lord, Don't Let Them Drop That Atomic Bomb on Me....flac
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Charles Mingus - The Complete 1961-1962 Birdland Broadcasts (2010, RLR)/CD1/10 - Eat That Chicken #2.flac
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Charles Mingus - The Complete 1961-1962 Birdland Broadcasts (2010, RLR)/CD2/01 - Eat That Chicken #3.flac
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Charles Mingus - The Complete 1961-1962 Birdland Broadcasts (2010, RLR)/CD2/02 - Reets and I.flac
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Charles Mingus - The Complete 1961-1962 Birdland Broadcasts (2010, RLR)/CD2/03 - Monk, Funk or Vice Versa #2.flac
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Charles Mingus - The Complete 1961-1962 Birdland Broadcasts (2010, RLR)/CD2/04 - Devil Woman.flac
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Charles Mingus - The Complete 1961-1962 Birdland Broadcasts (2010, RLR)/CD2/05 - Eat That Chicken #4.flac
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Charles Mingus - The Complete 1961-1962 Birdland Broadcasts (2010, RLR)/CD2/06 - Introduction by Symphony Sid.flac
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Charles Mingus - The Complete 1961-1962 Birdland Broadcasts (2010, RLR)/CD2/07 - Peggy's Blue Skylight.flac
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Charles Mingus - The Complete 1961-1962 Birdland Broadcasts (2010, RLR)/CD2/08 - Ysabel's Table Dance.flac
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Charles Mingus - The Complete 1961-1962 Birdland Broadcasts (2010, RLR)/CD2/09 - Eat That Chicken #5.flac
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Charles Mingus - The Complete 1961-1962 Birdland Broadcasts (2010, RLR)/CD3/01 - The Search (I Can't Get Started) #1.flac
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Charles Mingus - The Complete 1961-1962 Birdland Broadcasts (2010, RLR)/CD3/02 - Monk, Funk or Vice Versa #3.flac
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Charles Mingus - The Complete 1961-1962 Birdland Broadcasts (2010, RLR)/CD3/03 - Please Don't Come Back from the Moon.flac
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Charles Mingus - The Complete 1961-1962 Birdland Broadcasts (2010, RLR)/CD3/04 - Eat That Chicken #6.flac
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Charles Mingus - The Complete 1961-1962 Birdland Broadcasts (2010, RLR)/CD3/05 - Eat That Chicken #7.flac
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Charles Mingus - The Complete 1961-1962 Birdland Broadcasts (2010, RLR)/CD3/06 - Monk, Funk or Vice Versa #4.flac
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Charles Mingus - The Complete 1961-1962 Birdland Broadcasts (2010, RLR)/CD3/07 - O.P..flac
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Charles Mingus - The Complete 1961-1962 Birdland Broadcasts (2010, RLR)/CD3/08 - The Search (I Can't Get Started) #2.flac
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Charles Wuorinen – LEPTON (2002)/01 Time's Encomium, Part I.flac
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Charles Wuorinen – LEPTON (2002)/02 Time's Encomium, Part II.flac
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Charles Wuorinen – LEPTON (2002)/03 Lepton.flac
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Charles Wuorinen – LEPTON (2002)/04 New York Notes, Part I.flac
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Charles Wuorinen – LEPTON (2002)/05 New York Notes, Part II.flac
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Charles Wuorinen – LEPTON (2002)/06 New York Notes, Part III.flac
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Charles Wuorinen – LEPTON (2002)/07 Epithalamium.flac
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Chet Baker - Live At New Morning (1983) {CECC-00420}/01 - Out Of Nowhere.flac
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Chet Baker - Live At New Morning (1983) {CECC-00420}/02 - My Funny Valentine.flac
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Chet Baker - Live At New Morning (1983) {CECC-00420}/03 - I Remember You.flac
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Chet Baker - Live At New Morning (1983) {CECC-00420}/04 - New Morning Blues.flac
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Chris Potter - Moving In (1996)/01 Nero's Fiddle.flac
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Chris Potter - Moving In (1996)/02 Book Of Kells.flac
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Chris Potter - Moving In (1996)/03 Moving In.flac
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Chris Potter - Moving In (1996)/04 A Kiss To Build A Dream On.flac
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Chris Potter - Moving In (1996)/05 Rhubarb.flac
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Chris Potter - Moving In (1996)/06 South For The Winter.flac
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Chris Potter - Moving In (1996)/07 The Forest.flac
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Chris Potter - Moving In (1996)/08 Pelog.flac
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Chris Potter - Moving In (1996)/09 Chorale.flac
+/run/media/ssserpent/gen_dta/Music/ipod_160G/Chris Potter - Moving In (1996)/10 Old Faithful.flac
 /run/media/ssserpent/gen_dta/Music/ipod_160G/Banquet Of The Spirits - Infinito/01 - Infinito Coming.flac
 /run/media/ssserpent/gen_dta/Music/ipod_160G/Banquet Of The Spirits - Infinito/02 - Batida De Côco.flac
 /run/media/ssserpent/gen_dta/Music/ipod_160G/Banquet Of The Spirits - Infinito/03 - In Vitrous.flac
