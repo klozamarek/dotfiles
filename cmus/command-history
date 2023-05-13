@@ -1,3 +1,9 @@
+set status_display_program=/home/ssserpent/dotfiles/cmus/cmushnotify
+set_display_program=/home/ssserpent/dotfiles/cmus/cmushnotify
+set status_display_program=/usr/local/bin/cmushnotify
+set status_display_program=/home/ssserpent/dotfiles/cmus/dunstify
+set status_display_program=/home/ssserpent/dotfiles/cmus/dunstify.sh 
+:set status_display_program=/usr/local/bin/cmushnotify
 q
 cmus-feh.sh
 set status_display_program=/home/ssserpent/dotfiles/cmus/cmus-feh.sh

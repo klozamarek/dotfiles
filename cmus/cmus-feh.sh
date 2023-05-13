@@ -29,12 +29,8 @@ if echo "$FLIST" | grep -i ".jpeg\|.png\|.jpg" &>/dev/null; then
 	
 	# '200x200' is the window size for the artwork. '+1160+546' is the offset.
 	# For example, if you want a 250 by 250 window on the bottom right hand corner of a 1920 by 1080 screen: "250x250+1670+830"
-
-    # Show the album art as a notification with Dunst
-    if [[ -n "$ART" ]]; then
-        dunstify -a cmus -t 15000 -i "$ART" -r 1234 "Album Art" -i "$ART" -i "$ART" -u low
-    fi
-
+    setsid feh --geometry 500x500 -. --title "Album Art" "$ART" &
+#   setsid feh --scale-down --zoom fill --title "Album-Art" "$ART" &
 else
 	killall -q feh
 	exit
