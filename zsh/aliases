@@ -9,8 +9,11 @@ for index ({1..9}) alias "$index"="cd +${index}"; unset index
 # | ls |
 # +----+
 
-alias ll='ls -lahF'
-alias llr='ls -lahR'
+alias ls='ls --color=auto'
+alias l='ls -l'
+alias ll='ls -lahF'     # list long, w/hidden, hr, append file idn
+alias llr='ls -lahR'    # list long, w/hidden, hr, recurs in subdirs
+alias lls='ls -lahFtr'  # list sorted by time, reversed
 
 # +-----+
 # | git |
