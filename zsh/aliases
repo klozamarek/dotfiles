@@ -1,8 +1,37 @@
-alias ll='ls -lah'
-alias ga='git add'
-alias gc='git commit'
-alias gp='git push'
+# +-----+
+# | zsh |
+# +-----+
 
 alias d='dirs -v'
 for index ({1..9}) alias "$index"="cd +${index}"; unset index
 
+# +----+
+# | ls |
+# +----+
+
+alias ll='ls -lahF'
+alias llr='ls -lahR'
+
+# +-----+
+# | git |
+# +-----+
+
+alias gs='git status'
+alias gss='git status -s'
+alias ga='git add'
+alias gc='git commit'
+alias gp='git push'
+
+# +------+
+# | grep |
+# +______+
+
+alias grep='grep --color=auto'
+
+# +------+
+# | tmux |
+# +------+
+
+alias tmuxk='tmux kill-session -t'
+alias tmuxa='tmux attach -t'
+alias tmuxl='tmux list-sessions'

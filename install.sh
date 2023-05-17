@@ -86,6 +86,8 @@ ln -s "$DOTFILES/ranger" "$XDG_CONFIG_HOME"
 # cmus #
 # ######
 
-rm -rf "$XDG_CONFIG_HOME/cmus"
-ln -sf "$DOTFILES/cmus" "$XDG_CONFIG_HOME"
+ln -sf "$DOTFILES/cmus/autosave" "$XDG_CONFIG_HOME/cmus"
+ln -sf "$DOTFILES/cmus/cmushnotify" "$XDG_CONFIG_HOME/cmus"
+ln -sf "$DOTFILES/cmus/cmus-feh.sh" "$XDG_CONFIG_HOME/cmus"
+ln -sf "$DOTFILES/cmus/update_cmus_lib.sh" "$XDG_CONFIG_HOME/cmus"
 
