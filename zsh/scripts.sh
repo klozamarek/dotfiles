@@ -74,3 +74,8 @@ tag2flac() {
    sh $DOTFILES/tag2flac.sh
 } 
 
+# Open pdf with Zathura
+fpdf() {
+    result=$(find -type f -name '*.pdf' | fzf --bind "ctrl-r:reload(find -type f -name '*.pdf')" --preview "pdftotext {} - | less")
+    [ -n "$result" ] && nohup zathura "$result" &> /dev/null & disown
+}

@@ -38,3 +38,9 @@ alias grep='grep --color=auto'
 alias tmuxk='tmux kill-session -t'
 alias tmuxa='tmux attach -t'
 alias tmuxl='tmux list-sessions'
+
+# +----------------+
+# | tree colorized |
+# +----------------+
+
+alias tree='tree -C'

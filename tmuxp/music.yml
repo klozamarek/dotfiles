@@ -3,7 +3,7 @@ windows:
   - window_name: ranger
     layout: tiled
     panes:
-      - ranger /run/media/ssserpent/gen_dta/Music/ipod_160G /run/media/ssserpent/bckp/marek/Music/jazz_bckp
+      - ranger /run/media/ssserpent/gen_dta/Music/
   - window_name: term
     layout: tiled
     panes:
