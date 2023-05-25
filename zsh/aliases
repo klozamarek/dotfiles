@@ -44,3 +44,12 @@ alias tmuxl='tmux list-sessions'
 # +----------------+
 
 alias tree='tree -C'
+
+# +------------+
+# | expressvpn |
+# +------------+
+ 
+alias vpns='expressvpn status'
+alias vpnc='expressvpn connect'
+alias vpnd='expressvpn disconnect'
+
