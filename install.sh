@@ -91,3 +91,8 @@ ln -sf "$DOTFILES/cmus/cmushnotify" "$XDG_CONFIG_HOME/cmus"
 ln -sf "$DOTFILES/cmus/cmus-feh.sh" "$XDG_CONFIG_HOME/cmus"
 ln -sf "$DOTFILES/cmus/update_cmus_lib.sh" "$XDG_CONFIG_HOME/cmus"
 
+########
+# rofi #
+########
+
+ln -sf "$DOTFILES/rofi/ssserpent.rasi" "$XDG_CONFIG_HOME/rofi"
