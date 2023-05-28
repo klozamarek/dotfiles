@@ -58,21 +58,38 @@ updatesys() {
     sh $DOTFILES/update.sh
 }
 
-# Run script to convert .ape -> .flac
+#########
+# MUSIC #
+#########
+
+# Run function to convert .ape -> .flac
+# function to convert .ape file to .flac file
+# run from the relevant directory
 ape2flac() {
-    sh $DOTFILES/ape2flac.sh
+find . -name "*.ape" -exec sh -c 'exec ffmpeg -i "$1" "${1%.ape}.flac"' _ {} \;
 }
 
-# Run script to split flac files from cue sheet
+# Run function to split flac files from cue sheet
+# function to split individual flac files from cue sheet
+# output is <nr>-<SongName>
+# run from relevant directory
 cue2flac() {
-    sh $DOTFILES/cue2flac.sh
+find . -name "*.cue" -exec sh -c 'exec shnsplit -f "$1" -o flac -t "%n-%t" "${1%.cue}.flac"' _ {} \;
 }
 
-# Run script to tag flac files from cue sheet
+# Run function to tag flac files from cue sheet
+# function to tag flac files from cue sheet
 # remove the unsplit flac file FIRST!
 tag2flac() {
-   sh $DOTFILES/tag2flac.sh
+    echo "please remove the unsplit (large) .flac file FIRST!!"
+    find . -name "*.cue" -execdir sh -c 'exec cuetag.sh "$1" *.flac' _ {} \;
 } 
+
+# Run function to convert .wav -> flac
+# run from relevant directory
+wav2flac() {
+      find . -name "*.wav" -exec sh -c 'exec ffmpeg -i "$1" "${1%.wav}.flac"' _ {} \;
+}
 
 # Open pdf with Zathura
 fpdf() {
