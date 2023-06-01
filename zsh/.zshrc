@@ -55,3 +55,7 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 
 # skip loading the default config file for ranger
 export RANGER_LOAD_DEFAULT_RC=FALSE
+
+# add folder containg sgpt script to $PATH
+
+export PATH="$HOME/.local/bin:$PATH"

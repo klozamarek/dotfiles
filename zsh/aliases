@@ -52,4 +52,4 @@ alias tree='tree -C'
 alias vpns='expressvpn status'
 alias vpnc='expressvpn connect'
 alias vpnd='expressvpn disconnect'
-
+alias vpna='expressvpn activate'
