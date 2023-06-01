@@ -57,6 +57,14 @@ mv "$filename" "$new_filename"
 echo "File renamed to $new_filename."
 }
 
+# replace whitespaces with underscores and make lowercase all filenames in cwd
+lowscore () {
+for file in *; do 
+    mv "$file" "${file// /_}" >/dev/null 2>&1 
+    mv "${file// /_}" "$(echo ${file// /_} | tr '[:upper:]' '[:lower:]')" >/dev/null 2>&1; 
+done
+}
+
 # Compress a file
 compress() {
     tar cvzf $1.tar.gzd $1
