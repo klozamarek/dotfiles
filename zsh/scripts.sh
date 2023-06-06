@@ -95,6 +95,14 @@ _ex() {
     esac
 }
 
+# +--------+
+# | backup |
+# +--------+
+
+backup() {
+    "$DOTFILES/bash/scripts/backup/backup.sh" "-x" "$@" "$DOTFILES/bash/scripts/backup/dir.csv"
+}
+
 # +------+
 # | tmux |
 # +------+

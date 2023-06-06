@@ -7,6 +7,7 @@ call plug#begin("$XDG_CONFIG_HOME/nvim/plugged")
     Plug 'simnalamburt/vim-mundo'
     Plug 'christoomey/vim-tmux-navigator'
     Plug 'jez/vim-superman'
+    Plug 'will133/vim-dirdiff'
 call plug#end()
 
 set clipboard+=unnamedplus

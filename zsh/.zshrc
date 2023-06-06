@@ -59,3 +59,4 @@ export RANGER_LOAD_DEFAULT_RC=FALSE
 # add folder containg sgpt script to $PATH
 
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
