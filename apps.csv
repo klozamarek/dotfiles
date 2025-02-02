@@ -23,8 +23,12 @@ network,net-tools,Configuration tools for Linux networking
 network,gufw,Uncomplicated way to manage your Linux firewall
 network,expressvpn,Proprietary VPN client for Linux
 network,arp-scan,A tool that uses ARP to discover and fingerprint IP hosts on the local network
+network,warpinator,LAN file sender send and receive files across the network
 tools,rsync,Synchronizing files across computers
 tools,arandr,xrandr GUI
+tools,i3-autodisplay,i3wm display auto-configuration for multiple monitors
+tools,autorandr,Auto-detect connected display hardware and load appropiate X11 setup using xrandr
+tools,aria2,Download utility that supports HTTP(S) FTP BitTorrent and Metalink
 tools,xsel,Manipulate the X selection
 tools,fzf,Command line fuzzy finder
 tools,scrot,Screenshot software
@@ -33,6 +37,7 @@ tools,lxappearance,Theme switcher for GTK+
 tools,xcape,Configure modifier keys to act as other keys
 tools,ripgrep,Faster alternative to grep
 tools,ripgrep-all,rga
+tools,acpi,Client for battery power and thermal readings
 tools,htop,Interactive process viewer
 tools,zoxide,A smarter cd command for your terminal
 tools,xvkbd,virtual (graphical) keyboard program for X Window System
@@ -47,12 +52,10 @@ tools,the_silver_searcher,Code searching tool similar to Ack but faster
 tools,system-config-printer,A CUPS printer configuration tool and status applet
 tools,sysstat,a collection of performance monitoring tools
 tools,sshfs,FUSE client based on the SSH File Transfer Protocol
-tools,solaar,Linux device manager for a wide range of Logitech devices
 tools,shntool,A multi-purpose WAVE data processing and reporting utility
 tools,rustup,The Rust toolchain installer
 tools,rofi,A window switcher application launcher and dmenu replacement
 tools,reflector,A Python 3 module and script to retrieve and filter the latest Pacman mirror list.
-tools,pandoc-cli,Conversion between documentation formats
 tools,os-prober,Utility to detect other OSes on a set of drives
 tools,ntfs-3g,NTFS filesystem driver and utilities
 tools,navi,An interactive cheatsheet tool for the command-line
@@ -64,6 +67,9 @@ tools,lsof,Lists open files for running Unix processes
 tools,kitty,A modern hackable featureful OpenGL-based terminal emulator
 tools,hplip,Drivers for HP DeskJet OfficeJet Photosmart Business Inkjet and some LaserJet
 tools,dmenu,Generic menu for X
+tools,dialog,A tool to display dialog boxes from shell scripts
+tools,bluez,Daemons for the bluetooth protocol stack
+tools,bluez-utils,Development and debugging utilities for the bluetooth protocol stack
 tools,cups,OpenPrinting CUPS - daemon package
 tools,cronie,Daemon that runs specified programs at scheduled times and related tools
 tools,brightnessctl,Lightweight brightness control tool
@@ -72,6 +78,12 @@ tools,bluez-utils,Development and debugging utilities for the bluetooth protocol
 tools,advcpmv,'cp' and 'mv' utilities with progress bar patches
 tools,newsboat,RSS/Atom feed reader for text terminals
 tools,samba,SMB Fileserver and AD Domain server
+tools,gparted,A Partition Magic clone frontend to GNU Parted
+tools,plocate,Alternative to locate faster and compatible with mlocate's database
+tools,radeontop,View GPU utilization for total activity percent and individual blocks
+tools,smartmontools,Control and monitor S.M.A.R.T. enabled ATA and SCSI Hard Drives
+tools,termscp,A feature rich terminal UI file transfer and explorer
+fonts,ttf-joypixels,Emoji as a Service (formerly EmojiOne)
 compression,unzip,For extracting and viewing files in .zip archives
 compression,unrar,The RAR uncompression program
 compression,p7zip,Command-line file archiver with high compression ratio
@@ -86,14 +98,12 @@ tmux,tmuxp,Configure tmux session + windows + panes via config files
 notifier,dunst,Notification system
 notifier,libnotify,Notifier
 file_mngr,ranger,Simple vim-like file manager
-file_mngr,nnn,The fastest terminal file manager ever written.
 file_mngr,ncdu,Disk usage analyzer with an ncurses interface
 git,git,Version control system
 git,diff-so-fancy,Human readable git diff
 git,grv,Git repository viewer
 git,gitin,Commit/branch/workdir explorer for git
 git,git-delta,Syntax-highlighting pager for git and diff output
-git,meld,Compare files directories and working copies
 i3,i3-wm,i3 window tile manager
 i3,i3status,i3 status bar
 i3,i3lock,i3 lock monitor
@@ -106,7 +116,6 @@ zsh,zsh-syntax-highlighting,Syntax highlighting for ZSH
 zsh,starship,The cross-shell prompt for astronauts
 neovim,neovim,Editor... and much more
 neovim,python-neovim,Python for neovim
-neovim,python2-neovim,Python2 for neovim (AUR)
 neovim,ruby-neovim,Ruby for neovim (AUR)
 neovim,nodejs-neovim,Nodejs for neovim (AUR)
 neovim,python-pynvim,Python clent for Neovim
@@ -137,7 +146,6 @@ multimedia,pulseaudio,A featureful general-purpose sound server
 multimedia,pavucontrol,PulseAudio Volume Control
 multimedia,mpv,a free open source and cross-platform media player
 multimedia,mediainfo,Supplies technical and tag information about media files
-multimedia,kid3,An MP3/Ogg/Vorbis and FLAC tag editor
 multimedia,imagemagick,An image viewing/manipulation program
 multimedia,ffmpegthumbnailer,Lightweight video thumbnailer that can be used by file managers
 multimedia,ueberzeugpp,Command line util which allows to display images in combination with X11 written in C++
@@ -151,7 +159,6 @@ utilities,oscar-git,sleep tracking software with a focus on monitoring CPAP trea
 utilities,maim,Utility to take a screenshot using imlib2
 utilities,lltag,Automatic command-line music (mp3/ogg/flac) file tagger and renamer
 utilities,iotop,View I/O usage of processes
-utilities,filezilla,Fast and reliable FTP FTPS and SFTP client
 utilities,fdupes,a program for identifying or deleting duplicate files residing within specified directories
 utilities,dust,A more intuitive version of du in rust
 utilities,duf,Disk Usage/Free Utility
@@ -164,13 +171,15 @@ utilities,urlview,A curses URL parser for text files
 utilities,btop,A monitor of system resourcesbpytop ported to C++
 utilities,inxi,Full featured CLI system information tool
 utilities,ddgr,DuckDuckGo from the terminal
-utilities,code,The Open Source build of Visual Studio Code (vscode) editor
 utilities,buku,web bookmarks
+utilities,libgen-cli-bin,A CLI tool to access the Library Genesis dataset
+utilities,emacs,The extensible customizable self-documenting real-time display editor
 utilities,oil-search,Search-as-you-type cli frontend for the buku bookmarks manager using peco
 utilities,peco,Simplistic interactive filtering tool
 utilities,transmission-cli,Fast easy and free BitTorrent client (CLI tools daemon and web client)
 utilities,afew,Initial tagging script for notmuch mail
 utilities,pam-gnupg,Unlock GnuPG keys on login
+utilities,weechat,Fast light and extensible IRC client (curses UI)
 office,zathura-pdf-mupdf,PDF support for Zathura
 office,neomutt,A version of mutt with added features
 office,zathura-djvu,DjVu support for Zathura
