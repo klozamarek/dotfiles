@@ -84,6 +84,11 @@ tools,radeontop,View GPU utilization for total activity percent and individual b
 tools,smartmontools,Control and monitor S.M.A.R.T. enabled ATA and SCSI Hard Drives
 tools,termscp,A feature rich terminal UI file transfer and explorer
 fonts,ttf-joypixels,Emoji as a Service (formerly EmojiOne)
+fonts,noto-fonts,Google Noto TTF fonts
+fonts,otf-font-awesome,Iconic font designed for Bootstrap
+fonts,noto-fonts-emoji,Google Noto emoji fonts
+fonts,otf-inconsolata-dz,Monospace font for pretty code listings and for the terminal (modified to have straight single and double quotes)
+fonts,ttf-inconsolata-nerd,Patched font Inconsolata from nerd fonts library
 compression,unzip,For extracting and viewing files in .zip archives
 compression,unrar,The RAR uncompression program
 compression,p7zip,Command-line file archiver with high compression ratio
