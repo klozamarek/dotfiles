@@ -7,7 +7,7 @@ apps_path="/tmp/apps.csv"
 
 #-- put list of apps in temporary file
 # apps.csv hash: {{ include "apps.csv" | sha256sum }}
-cat apps.csv > $apps_path / < {{ joinPath .chezmoi.sourceDir "apps.csv" | quote }}
+cp {{ joinPath .chezmoi.sourceDir "apps.csv" | quote }} "$apps_path"
 
 dialog --title "Welcome!" \
 --msgbox "Welcome to the install script for your apps!" \

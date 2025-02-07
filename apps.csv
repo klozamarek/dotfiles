@@ -56,7 +56,6 @@ tools,rofi,A window switcher application launcher and dmenu replacement
 tools,reflector,A Python 3 module and script to retrieve and filter the latest Pacman mirror list.
 tools,os-prober,Utility to detect other OSes on a set of drives
 tools,ntfs-3g,NTFS filesystem driver and utilities
-tools,navi,An interactive cheatsheet tool for the command-line
 tools,mtools,A collection of utilities to access MS-DOS disks
 tools,mesa,An open-source implementation of the OpenGL specification
 tools,mesa-utils,Essential Mesa utilities
