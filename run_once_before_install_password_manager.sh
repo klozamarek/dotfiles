@@ -59,7 +59,7 @@ if [ ! -d "$PASS_DIR/.git" ]; then
     git clone "$GITHUB_PASS_REPO" "$PASS_DIR"
 else
     echo "Pass repository already exists, pulling latest changes..."
-    cd "$PASS_DIR" && git pull origin main
+    cd "$PASS_DIR" && pass git pull
 fi
 
 # Restore GPG Public Keys
@@ -104,7 +104,7 @@ grep -q '^PermitEmptyPasswords ' /etc/ssh/sshd_config || echo 'PermitEmptyPasswo
 grep -q '^AllowAgentForwarding ' /etc/ssh/sshd_config || echo 'AllowAgentForwarding yes' | sudo tee -a /etc/ssh/sshd_config
 
 # Restart SSH service to apply changes
-sudo systemctl restart ssh
+sudo systemctl restart sshd.service
 
 # Add lines for pam-gnupg to work
 PAM_FILE="/etc/pam.d/system-local-login"
