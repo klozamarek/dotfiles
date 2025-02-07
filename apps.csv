@@ -26,8 +26,6 @@ network,arp-scan,A tool that uses ARP to discover and fingerprint IP hosts on th
 network,warpinator,LAN file sender send and receive files across the network
 tools,rsync,Synchronizing files across computers
 tools,arandr,xrandr GUI
-tools,i3-autodisplay,i3wm display auto-configuration for multiple monitors
-tools,autorandr,Auto-detect connected display hardware and load appropiate X11 setup using xrandr
 tools,aria2,Download utility that supports HTTP(S) FTP BitTorrent and Metalink
 tools,xsel,Manipulate the X selection
 tools,fzf,Command line fuzzy finder
@@ -83,6 +81,7 @@ tools,plocate,Alternative to locate faster and compatible with mlocate's databas
 tools,radeontop,View GPU utilization for total activity percent and individual blocks
 tools,smartmontools,Control and monitor S.M.A.R.T. enabled ATA and SCSI Hard Drives
 tools,termscp,A feature rich terminal UI file transfer and explorer
+tools,python-pillow,Python Imaging Library (PIL) fork
 fonts,ttf-joypixels,Emoji as a Service (formerly EmojiOne)
 fonts,noto-fonts,Google Noto TTF fonts
 fonts,otf-font-awesome,Iconic font designed for Bootstrap
@@ -98,8 +97,6 @@ password,pass,Stores retrieves generates and synchronizes passwords securely
 password,pass-tessen,fuzzy data selection and copy-paste from password store
 password,pass-update,A pass extension that provides an easy flow for updating passwords.
 password,age,A simple modern and secure file encryption tool
-tmux,tmux,Terminal multiplexer
-tmux,tmuxp,Configure tmux session + windows + panes via config files
 notifier,dunst,Notification system
 notifier,libnotify,Notifier
 file_mngr,ranger,Simple vim-like file manager

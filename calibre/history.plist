@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>lineedit_history_choose_library_dialog</key>
+	<array>
+		<string>/media/gen_dta/Calibre Library</string>
+	</array>
+	<key>lineedit_history_find_duplicates_plugin:library_duplicate_combo</key>
+	<array/>
+	<key>lineedit_history_preferences_setting_auto_add_path</key>
+	<array>
+		<string>/home/ssserpent/Downloads/calibre</string>
+		<string>/home/ssserpent/Downloads</string>
+	</array>
+</dict>
+</plist>

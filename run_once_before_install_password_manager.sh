@@ -4,9 +4,9 @@
 # All the secrets are kept in ~/.password store directory and used by pass to fill
 # all necessary config secrets. Please make sure to transfer manually files:
 # privkey.asc, pubkey.asc, gpg-ownertrust.txt files to your ~/ directory and
-# ssh keys: id_ed25519 and id_ed_25519.pub to your ~/.ssh
+# ssh keys: id_ed25519 and id_ed_25519.pub to your ~/.ssh. You must do it PRIOR
 # to running command chezmoi --apply.
-#
+
 #!/bin/bash
 set -e  # Exit on error
 
@@ -25,6 +25,10 @@ fi
 
 if ! command -v ssh &>/dev/null; then
     sudo pacman -Sy --noconfirm openssh
+fi
+
+if ! command -v age &>/dev/null; then
+    sudo pacman -Sy --noconfirm age
 fi
 
 # Ensure SSH is set up correctly
@@ -77,9 +81,35 @@ if [ -f ~/gpg-ownertrust.txt ]; then
 fi
 
 # Ensure pass is initialized with the correct GPG key
-GPG_KEY=$(gpg --list-secret-keys --keyid-format LONG | awk -F: '/^sec:/ {print $5; exit}')
+GPG_KEY=$(gpg --list-secret-keys --keyid-format LONG | awk '/^sec/ {print $2}' | cut -d'/' -f2)
 if [ -n "$GPG_KEY" ]; then
     echo "Ensuring pass is using the correct GPG key: $GPG_KEY"
     pass init "$GPG_KEY"
 fi
 
+# Configure SSH daemon settings
+sudo sed -i '/^#Port /c\Port 61024' /etc/ssh/sshd_config
+sudo sed -i '/^#PubkeyAuthentication /c\PubkeyAuthentication yes' /etc/ssh/sshd_config
+sudo sed -i '/^#PermitRootLogin /c\PermitRootLogin prohibit-password' /etc/ssh/sshd_config
+sudo sed -i '/^#PasswordAuthentication /c\PasswordAuthentication no' /etc/ssh/sshd_config
+sudo sed -i '/^#PermitEmptyPasswords /c\PermitEmptyPasswords no' /etc/ssh/sshd_config
+sudo sed -i '/^#AllowAgentForwarding /c\AllowAgentForwarding yes' /etc/ssh/sshd_config
+
+# Ensure all values are set even if they were missing in the config
+grep -q '^Port ' /etc/ssh/sshd_config || echo 'Port 61024' | sudo tee -a /etc/ssh/sshd_config
+grep -q '^PubkeyAuthentication ' /etc/ssh/sshd_config || echo 'PubkeyAuthentication yes' | sudo tee -a /etc/ssh/sshd_config
+grep -q '^PermitRootLogin ' /etc/ssh/sshd_config || echo 'PermitRootLogin prohibit-password' | sudo tee -a /etc/ssh/sshd_config
+grep -q '^PasswordAuthentication ' /etc/ssh/sshd_config || echo 'PasswordAuthentication no' | sudo tee -a /etc/ssh/sshd_config
+grep -q '^PermitEmptyPasswords ' /etc/ssh/sshd_config || echo 'PermitEmptyPasswords no' | sudo tee -a /etc/ssh/sshd_config
+grep -q '^AllowAgentForwarding ' /etc/ssh/sshd_config || echo 'AllowAgentForwarding yes' | sudo tee -a /etc/ssh/sshd_config
+
+# Restart SSH service to apply changes
+sudo systemctl restart ssh
+
+# Add lines for pam-gnupg to work
+PAM_FILE="/etc/pam.d/system-local-login"
+
+# Add lines if they are missing
+for LINE in "auth     optional  pam_gnupg.so store-only" "session  optional  pam_gnupg.so"; do
+    grep -qxF "$LINE" "$PAM_FILE" || echo "$LINE" | sudo tee -a "$PAM_FILE"
+done

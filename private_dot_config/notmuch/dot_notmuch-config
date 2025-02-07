@@ -1,0 +1,24 @@
+[database]
+path=/home/ssserpent/.local/share/mail/
+hook_dir=/home/ssserpent/.local/share/mail/.notmuch/hooks
+
+[user]
+name=Marek Kloza
+primary_email=ssserpent@gmail.com
+other_email=kloza.marek@gmail.com
+
+[new]
+tags=new
+
+[search]
+exclude_tags=deleted;spam;
+
+[maildir]
+synchronize_flags=true
+
+[crypto]
+gpg_path=gpg
+
+[index]
+header.list=List-Id
+header.listid=List-ID

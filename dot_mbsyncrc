@@ -1,0 +1,96 @@
+Create Both
+Expunge Both
+SyncState *
+
+IMAPAccount ssserpent
+User ssserpent@gmail.com
+Host imap.gmail.com
+Port 993
+PassCmd "pass ADM/ssserpent@gmail.com"
+AuthMechs LOGIN
+TLSType IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+IMAPStore ssserpent-remote
+Account ssserpent
+
+MaildirStore ssserpent-local
+Subfolders Verbatim
+# The trailing "/" is important
+Path /home/ssserpent/.local/share/mail/ssserpent/
+Inbox /home/ssserpent/.local/share/mail/ssserpent/inbox
+
+Channel ssserpent-inbox
+Far :ssserpent-remote:
+Near :ssserpent-local:
+Patterns "INBOX"
+
+Channel ssserpent-sent
+Far :ssserpent-remote:"[Gmail]/Sent Mail"
+Near :ssserpent-local:sent
+
+Channel ssserpent-archives
+Far :ssserpent-remote:"[Gmail]/All Mail"
+Near :ssserpent-local:archives
+
+Channel ssserpent-trash
+Far :ssserpent-remote:"[Gmail]/Trash"
+Near :ssserpent-local:trash
+
+Channel ssserpent-drafts
+Far :ssserpent-remote:"[Gmail]/Drafts"
+Near :ssserpent-local:drafts
+
+Group ssserpent
+Channel ssserpent-inbox
+Channel ssserpent-sent
+Channel ssserpent-trash
+Channel ssserpent-archives
+Channel ssserpent-drafts
+# End profile
+
+IMAPAccount klozamarek
+Host imap.gmail.com
+User kloza.marek@gmail.com
+Port 993
+PassCmd "pass ADM/kloza.marek@gmail.com"
+AuthMechs LOGIN
+TLSType IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+IMAPStore klozamarek-remote
+Account klozamarek
+
+MaildirStore klozamarek-local
+Subfolders Verbatim
+# The trailing "/" is important
+Path /home/ssserpent/.local/share/mail/klozamarek/
+Inbox /home/ssserpent/.local/share/mail/klozamarek/inbox
+
+Channel klozamarek-inbox
+Far :klozamarek-remote:
+Near :klozamarek-local:
+Patterns "INBOX"
+
+Channel klozamarek-archives
+Far :klozamarek-remote:"[Gmail]/All Mail"
+Near :klozamarek-local:archives
+
+Channel klozamarek-sent
+Far :klozamarek-remote:"[Gmail]/Sent Mail"
+Near :klozamarek-local:sent
+
+Channel klozamarek-trash
+Far :klozamarek-remote:"[Gmail]/Trash"
+Near :klozamarek-local:trash
+
+Channel klozamarek-drafts
+Far :klozamarek-remote:"[Gmail]/Drafts"
+Near :klozamarek-local:drafts
+
+Group klozamarek
+Channel klozamarek-inbox
+Channel klozamarek-sent
+Channel klozamarek-trash
+Channel klozamarek-archives
+Channel klozamarek-drafts

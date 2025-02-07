@@ -1,0 +1,18 @@
+[user_interface]
+text_editor = "/usr/bin/nvim`"
+default_protocol = "SFTP"
+show_hidden_files = true
+check_for_updates = true
+prompt_on_file_replace = true
+notifications = true
+notification_threshold = 536870912
+
+[remote]
+ssh_config = "/home/ssserpent/.ssh/config"
+
+[remote.ssh_keys]
+{{- if eq .chezmoi.hostname "texus" }}
+"ssserpent@samsarch" = "/home/ssserpent/.config/termscp/.ssh/ssserpent@samsarch.key"
+"ssserpent@lenspark" = "/home/ssserpent/.config/termscp/.ssh/ssserpent@lenspark.key"
+"ssserpent@imac" = "/home/ssserpent/.config/termscp/.ssh/ssserpent@imac.key"
+{{- end }}

@@ -1,0 +1,37 @@
+{
+  "add books dialog dir": "/home/ssserpent/Downloads/torrents/Linux Magazine Special Editions - Discover LibreOffice 2020",
+  "add books dialog dir-last-used-filter-spec-all-files": false,
+  "auto add path choose": "/home/ssserpent/Downloads/calibre",
+  "catalogs_to_be_synced": {
+    "__class__": "set",
+    "__value__": []
+  },
+  "choose library location": "/media/gen_dta/Calibre Library",
+  "database location dialog": "/home/ssserpent/Documents/Calibre Library",
+  "notified-version-updates": {
+    "__class__": "set",
+    "__value__": [
+      "7.1",
+      "7.22",
+      "7.23",
+      "7.25",
+      "7.0",
+      "7.2"
+    ]
+  },
+  "recursive book import root dir dialog": "/home/ssserpent/Downloads/aria2/[ FreeCourseWeb.com ] Linux Magazine USA - Full Year 2023 Collection (True PDF)/~Get Your Files Here !",
+  "recursive-archive-add": "/media/250_HDD/Books",
+  "s_r_search_mode": 0,
+  "sort_history": [
+    [
+      "timestamp",
+      false
+    ],
+    [
+      "timestamp",
+      false
+    ]
+  ],
+  "welcome_wizard_device": "kindle_pw",
+  "welcome_wizard_was_run": true
+}

@@ -1,0 +1,111 @@
+# This is the default filter chain
+[SpamFilter]
+[KillThreadsFilter]
+[ArchiveSentMailsFilter]
+[SentMailsFilter]
+sent_tag = sent
+[InboxFilter]
+[MeFilter]
+me_tag = me
+
+[Filter.0]
+message = Tagging archives
+query = (folder:ssserpent/archives or folder:klozamarek/archives) and not (folder:ssserpent/inbox or folder:klozamarek/inbox or tag:archived)
+tags = +archived;-inbox
+
+[Filter.1]
+message = Tagging inbox
+query = (folder:ssserpent/inbox or folder:klozamarek/inbox) and not tag:inbox
+tags = +inbox;-archived
+
+[Filter.2]
+message = Tagging drafts
+query = (folder:ssserpent/drafts or folder:klozamarek/drafts)
+tags = +draft;
+
+[Filter.3] 
+message = Tagging trash
+query = (folder:ssserpent/trash or folder:klozamarek/trash)
+tags = +deleted;-archived;-inbox
+
+[Filter.4]
+message = Tagging unread sent
+query = ((folder:ssserpent/sent or folder:klozamarek/sent) and tag:unread) and not tag:inbox
+tags = +inbox
+
+# this requires 'index.header.List List-Id'
+# see: https://notmuchmail.org/faq/#index8h2
+[Filter.5]
+message = Tagging lists
+query = list:
+tags = +list
+
+[Filter.6]
+message = Tagging patches
+query = mimetype:text/x-patch
+tags = +patch
+
+[Filter.7]
+message = Tagging PDFs
+query = mimetype:application/pdf
+tags = +pdf
+
+[Filter.8]
+message = Untagging any non-inbox mail
+query = tag:inbox and not (folder:ssserpent/inbox or folder:klozamarek/inbox)
+tags = -inbox
+
+[Filter.9]
+message = Cleaning up 'new' tag and leaving for mails without any tag
+query = tag:new
+tags = -new
+
+[Filter.10]
+message = tagging emails from:daxa
+query = 'from:biuro.daxa@gmail.com or from:daxa@op.pl or from:daxonia@wp.pl'
+tags = +daxa
+
+[Filter.11]
+message = Tagging PATROL
+query = 'from:*patrol.pl or from:*patrol.com.pl or from:*patrolgroup.com or from:*patrolgroup.com.pl or from:*gardeco.com.pl'
+tags = +patrol
+
+[Filter.12]
+message = Tagging CEDO
+query = 'from:*cedo.pl or from:*cedo.com.pl or from:*cedo.com'
+tags = +cedo
+
+[Filter.13]
+query = 'from:*allegro.pl or *allegromail.pl or from:*allegrolokalnie.pl or from:*olx.pl or from:*aliexpress.com'
+tags = +shop;-inbox
+message = tagging shops
+
+[Filter.14]
+query = 'from:*google.com'
+tags = +google;-inbox
+message = tagging google
+
+[Filter.15]
+query = 'from:*mailing.lot.com or from:*mailing.milesandmore.com'
+tags = +lot;-inbox
+message = tagging lot
+
+[Filter.16]
+query = 'from:*linkedin.com'
+tags = +linkedin;-inbox
+message = tagging linkedin
+
+[Filter.17]
+query = 'from:*bandcamp.com or from:*mail.goodreads.com or from:*netflix.com or from:*audiocave.pl'
+tags = +fun;-inbox
+message = tagging entertainment
+
+[MailMover]
+folders = inbox archives spam trash
+rename = True
+max_age = 15
+# rules
+inbox = 'folder:inbox and tag:deleted and not tag:inbox':trash 'folder:inbox and tag:archived and not tag:inbox':archives 'folder:inbox and tag:spam and not tag:inbox':spam "tag:deleted and not tag:inbox":trash
+spam = 'not tag:spam and tag:inbox':inbox 'not tag:spam and not folder:spam':archives
+archives = 'folder:archived and tag:inbox and not tag:archived':inbox 'folder:archived and tag:deleted and not tag:archived':trash 'folder:archived and tag:spam':spam "tag:deleted and not tag:archived":trash"
+trash = 'folder:trash and tag:archived and not tag:deleted':archives 'folder:trash and tag:spam':spam 'folder:trash and tag:inbox and not tag:deleted':inbox

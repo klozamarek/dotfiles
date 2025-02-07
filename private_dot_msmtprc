@@ -1,0 +1,26 @@
+# Set default values for all following accounts.
+
+defaults
+logfile         /home/ssserpent/.local/state/msmtp/msmtp.log
+tls_trust_file	/etc/ssl/certs/ca-certificates.crt
+auth            on
+tls             on
+tls_starttls    on
+
+# ssserpent
+account         ssserpent
+host            smtp.gmail.com
+port            587
+from            ssserpent@gmail.com
+user            ssserpent@gmail.com
+passwordeval    "pass ADM/ssserpent@gmail.com"
+
+# klozamarek
+account         klozamarek
+host            smtp.gmail.com
+port            587
+from            kloza.marek@gmail.com
+user            kloza.marek@gmail.com
+passwordeval    "pass ADM/kloza.marek@gmail.com"
+
+account default ssserpent

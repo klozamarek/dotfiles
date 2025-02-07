@@ -1,0 +1,22 @@
+.cache
+.config/cache
+.local/share/mail
+.moonchild productions
+.mozilla
+.npm
+.pki
+.rustup
+.terminfo
+.yarn
+.weechat
+go
+.config/BraveSoftware
+{{- if eq .chezmoi.hostname "texus" }}
+.cpanm
+Documents/OSCAR_Data
+remote
+Music
+{{- end}}
+{{- if eq .chezmoi.hostname "samsarch" }}
+Calibre Library
+{{- end}}

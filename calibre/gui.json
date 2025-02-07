@@ -1,0 +1,1256 @@
+{
+  "action-layout-menubar": [
+    "Find Duplicates"
+  ],
+  "action-layout-toolbar": [
+    "Add Books",
+    "Edit Metadata",
+    null,
+    "Convert Books",
+    "View",
+    null,
+    "Store",
+    "Donate",
+    "Fetch News",
+    "Help",
+    null,
+    "Preferences",
+    "Remove Books",
+    "Choose Library",
+    "Save To Disk",
+    "Connect Share",
+    "Tweak ePub",
+    "Find Duplicates"
+  ],
+  "action-layout-toolbar-device": [
+    "Add Books",
+    "Edit Metadata",
+    null,
+    "Convert Books",
+    "View",
+    "Send To Device",
+    null,
+    null,
+    "Location Manager",
+    null,
+    null,
+    "Fetch News",
+    "Save To Disk",
+    "Store",
+    "Connect Share",
+    null,
+    "Remove Books",
+    null,
+    "Help",
+    "Preferences",
+    "Find Duplicates"
+  ],
+  "advanced search dialog current tab": 1,
+  "auto_add_check_for_duplicates": true,
+  "auto_add_path": "/home/ssserpent/Downloads/calibre",
+  "basic_metadata_widget_splitter_state": {
+    "__class__": "bytearray",
+    "__value__": "AAAA/wAAAAEAAAADAAAB9wAABEsAAADEAf////8BAAAAAQA="
+  },
+  "book_details_splitter_horizontal_state": [
+    true,
+    200
+  ],
+  "book_details_splitter_vertical_state": [
+    true,
+    120
+  ],
+  "book_info_dialog_splitter_state": {
+    "__class__": "bytearray",
+    "__value__": "AAAA/wAAAAEAAAACAAABXgAAAV4B/////wEAAAABAA=="
+  },
+  "book_list_pin_splitter_state": {
+    "__class__": "bytearray",
+    "__value__": "AAAA/wAAAAEAAAACAAABAAAAAEYA/////wEAAAABAA=="
+  },
+  "booklist_grid": true,
+  "bulk-mde-casing-algorithm": "title_case",
+  "bulk_metadata_window_tab": 0,
+  "card_a_view books view state": {
+    "column_alignment": {
+      "size": "center",
+      "timestamp": "center"
+    },
+    "column_positions": {
+      "authors": 2,
+      "collections": 5,
+      "inlibrary": 0,
+      "size": 4,
+      "timestamp": 3,
+      "title": 1
+    },
+    "column_sizes": {
+      "authors": 102,
+      "collections": 118,
+      "inlibrary": 111,
+      "size": 62,
+      "timestamp": 74,
+      "title": 70
+    },
+    "formats_injected": true,
+    "hidden_columns": [],
+    "id_injected": true,
+    "languages_injected": true,
+    "last_modified_injected": true,
+    "path_injected": true,
+    "sort_history": [
+      [
+        "timestamp",
+        false
+      ],
+      [
+        "inlibrary",
+        false
+      ],
+      [
+        "timestamp",
+        false
+      ],
+      [
+        "inlibrary",
+        false
+      ],
+      [
+        "timestamp",
+        false
+      ]
+    ]
+  },
+  "card_b_view books view state": {
+    "column_alignment": {
+      "size": "center",
+      "timestamp": "center"
+    },
+    "column_positions": {
+      "authors": 2,
+      "collections": 5,
+      "inlibrary": 0,
+      "size": 4,
+      "timestamp": 3,
+      "title": 1
+    },
+    "column_sizes": {
+      "authors": 102,
+      "collections": 118,
+      "inlibrary": 111,
+      "size": 62,
+      "timestamp": 74,
+      "title": 70
+    },
+    "formats_injected": true,
+    "hidden_columns": [],
+    "id_injected": true,
+    "languages_injected": true,
+    "last_modified_injected": true,
+    "path_injected": true,
+    "sort_history": [
+      [
+        "timestamp",
+        false
+      ],
+      [
+        "inlibrary",
+        false
+      ],
+      [
+        "timestamp",
+        false
+      ],
+      [
+        "inlibrary",
+        false
+      ],
+      [
+        "timestamp",
+        false
+      ]
+    ]
+  },
+  "color_palette": "dark",
+  "cover_browser_splitter_horizontal_state": [
+    false,
+    550
+  ],
+  "cover_browser_splitter_vertical_state": [
+    false,
+    300
+  ],
+  "cover_grid_color": [
+    80,
+    80,
+    80
+  ],
+  "cover_grid_show_title": true,
+  "cover_grid_texture": ":dark_wood.png",
+  "custom_colors_for_color_dialog": [
+    [
+      255,
+      255,
+      255,
+      255
+    ],
+    [
+      255,
+      255,
+      255,
+      255
+    ],
+    [
+      255,
+      255,
+      255,
+      255
+    ],
+    [
+      255,
+      255,
+      255,
+      255
+    ],
+    [
+      255,
+      255,
+      255,
+      255
+    ],
+    [
+      255,
+      255,
+      255,
+      255
+    ],
+    [
+      255,
+      255,
+      255,
+      255
+    ],
+    [
+      255,
+      255,
+      255,
+      255
+    ],
+    [
+      255,
+      255,
+      255,
+      255
+    ],
+    [
+      255,
+      255,
+      255,
+      255
+    ],
+    [
+      255,
+      255,
+      255,
+      255
+    ],
+    [
+      255,
+      255,
+      255,
+      255
+    ],
+    [
+      255,
+      255,
+      255,
+      255
+    ],
+    [
+      255,
+      255,
+      255,
+      255
+    ],
+    [
+      255,
+      255,
+      255,
+      255
+    ],
+    [
+      255,
+      255,
+      255,
+      255
+    ]
+  ],
+  "default_author_link": null,
+  "do_not_show_device_open_popup_message_KINDLE2": true,
+  "duplicate finder plugin:duplicate dialog": {
+    "__class__": "bytearray",
+    "__value__": "AdnQywADAAAAAAKCAAAAkgAABPEAAAOMAAAChAAAAKQAAATvAAADigAAAAEAAAAAB4AAAAKEAAAApAAABO8AAAOK"
+  },
+  "filename_pattern_history": [
+    "(?P<title>.+) - (?P<author>[^_]+)",
+    "(?P<title>.+)",
+    "(?P<author>[^_-]+) -?\\s*(?P<series>[^_0-9-]*)(?P<series_index>[0-9]*)\\s*-\\s*(?P<title>[^_].+) ?"
+  ],
+  "find_duplicates_plugin:library_duplicate_dialog": {
+    "__class__": "bytearray",
+    "__value__": "AdnQywADAAAAAAKfAAAAhQAABNAAAAN1AAACoQAAAJcAAATOAAADcwAAAAEAAAAAB4AAAAKhAAAAlwAABM4AAANz"
+  },
+  "font": [
+    "Inconsolata Nerd Font Mono",
+    12,
+    500,
+    false
+  ],
+  "font_stretch": 0,
+  "geometry-of-Plugin Updater plugin:plugin updater dialog": {
+    "frame_geometry": {
+      "height": 507,
+      "width": 1030,
+      "x": 445,
+      "y": 278
+    },
+    "full_screened": false,
+    "geometry": {
+      "height": 487,
+      "width": 1026,
+      "x": 447,
+      "y": 296
+    },
+    "maximized": false,
+    "normal_geometry": {
+      "height": 487,
+      "width": 1026,
+      "x": 447,
+      "y": 296
+    },
+    "qt": {
+      "__class__": "bytearray",
+      "__value__": "AdnQywADAAAAAAG9AAABFgAABcIAAAMQAAABvwAAASgAAAXAAAADDgAAAAEAAAAAB4AAAAG/AAABKAAABcAAAAMO"
+    },
+    "screen": {
+      "depth": 24,
+      "device_pixel_ratio": 1.0,
+      "geometry_in_logical_pixels": {
+        "height": 1080,
+        "width": 1920,
+        "x": 0,
+        "y": 0
+      },
+      "index_in_screens_list": 1,
+      "manufacturer": "",
+      "model": "",
+      "name": "DisplayPort-0",
+      "serial": "",
+      "size_in_logical_pixels": {
+        "height": 1080,
+        "width": 1920
+      },
+      "virtual_geometry": {
+        "height": 1080,
+        "width": 3360,
+        "x": 0,
+        "y": 0
+      }
+    }
+  },
+  "geometry-of-add-saved-search-geometry": {
+    "frame_geometry": {
+      "height": 369,
+      "width": 488,
+      "x": 718,
+      "y": 415
+    },
+    "full_screened": false,
+    "geometry": {
+      "height": 349,
+      "width": 484,
+      "x": 720,
+      "y": 433
+    },
+    "maximized": false,
+    "normal_geometry": {
+      "height": 349,
+      "width": 484,
+      "x": 720,
+      "y": 433
+    },
+    "qt": {
+      "__class__": "bytearray",
+      "__value__": "AdnQywADAAAAAALOAAABnwAABLUAAAMPAAAC0AAAAbEAAASzAAADDQAAAAEAAAAAB4AAAALQAAABsQAABLMAAAMN"
+    },
+    "screen": {
+      "depth": 24,
+      "device_pixel_ratio": 1.0,
+      "geometry_in_logical_pixels": {
+        "height": 1080,
+        "width": 1920,
+        "x": 0,
+        "y": 0
+      },
+      "index_in_screens_list": 1,
+      "manufacturer": "",
+      "model": "",
+      "name": "DisplayPort-0",
+      "serial": "",
+      "size_in_logical_pixels": {
+        "height": 1080,
+        "width": 1920
+      },
+      "virtual_geometry": {
+        "height": 1080,
+        "width": 3360,
+        "x": 0,
+        "y": 0
+      }
+    }
+  },
+  "geometry-of-book_info_dialog_geometry": {
+    "frame_geometry": {
+      "height": 1000,
+      "width": 914,
+      "x": 906,
+      "y": 33
+    },
+    "full_screened": false,
+    "geometry": {
+      "height": 980,
+      "width": 910,
+      "x": 908,
+      "y": 51
+    },
+    "maximized": false,
+    "normal_geometry": {
+      "height": 980,
+      "width": 910,
+      "x": 908,
+      "y": 51
+    },
+    "qt": {
+      "__class__": "bytearray",
+      "__value__": "AdnQywADAAAAAAOKAAAAIQAABxsAAAQIAAADjAAAADMAAAcZAAAEBgAAAAEAAAAAB4AAAAOMAAAAMwAABxkAAAQG"
+    },
+    "screen": {
+      "depth": 24,
+      "device_pixel_ratio": 1.0,
+      "geometry_in_logical_pixels": {
+        "height": 1080,
+        "width": 1920,
+        "x": 0,
+        "y": 0
+      },
+      "index_in_screens_list": 1,
+      "manufacturer": "",
+      "model": "",
+      "name": "DisplayPort-0",
+      "serial": "",
+      "size_in_logical_pixels": {
+        "height": 1080,
+        "width": 1920
+      },
+      "virtual_geometry": {
+        "height": 1080,
+        "width": 3360,
+        "x": 0,
+        "y": 0
+      }
+    }
+  },
+  "geometry-of-bulk_metadata_window_geometry": {
+    "frame_geometry": {
+      "height": 1050,
+      "width": 1854,
+      "x": 480,
+      "y": 12
+    },
+    "full_screened": false,
+    "geometry": {
+      "height": 1030,
+      "width": 1850,
+      "x": 482,
+      "y": 30
+    },
+    "maximized": false,
+    "normal_geometry": {
+      "height": 1030,
+      "width": 1850,
+      "x": 482,
+      "y": 30
+    },
+    "qt": {
+      "__class__": "bytearray",
+      "__value__": "AdnQywADAAAAAAHgAAAADAAACR0AAAQlAAAB4gAAAB4AAAkbAAAEIwAAAAEAAAAAB4AAAAHiAAAAHgAACRsAAAQj"
+    },
+    "screen": {
+      "depth": 24,
+      "device_pixel_ratio": 1.0,
+      "geometry_in_logical_pixels": {
+        "height": 1080,
+        "width": 1920,
+        "x": 0,
+        "y": 0
+      },
+      "index_in_screens_list": 1,
+      "manufacturer": "",
+      "model": "",
+      "name": "DisplayPort-0",
+      "serial": "",
+      "size_in_logical_pixels": {
+        "height": 1080,
+        "width": 1920
+      },
+      "virtual_geometry": {
+        "height": 1080,
+        "width": 3360,
+        "x": 0,
+        "y": 0
+      }
+    }
+  },
+  "geometry-of-calibre_main_window_geometry": {
+    "frame_geometry": {
+      "height": 1061,
+      "width": 1920,
+      "x": 0,
+      "y": 0
+    },
+    "full_screened": false,
+    "geometry": {
+      "height": 1043,
+      "width": 1920,
+      "x": 0,
+      "y": 18
+    },
+    "maximized": true,
+    "normal_geometry": {
+      "height": 1043,
+      "width": 1920,
+      "x": 0,
+      "y": 18
+    },
+    "qt": {
+      "__class__": "bytearray",
+      "__value__": "AdnQywADAAAAAAAAAAAAAAAAB38AAAQkAAAAAAAAABIAAAd/AAAEJAAAAAECAAAAB4AAAAAAAAAAEgAAB38AAAQk"
+    },
+    "screen": {
+      "depth": 24,
+      "device_pixel_ratio": 1.0,
+      "geometry_in_logical_pixels": {
+        "height": 1080,
+        "width": 1920,
+        "x": 0,
+        "y": 0
+      },
+      "index_in_screens_list": 1,
+      "manufacturer": "",
+      "model": "",
+      "name": "DisplayPort-0",
+      "serial": "",
+      "size_in_logical_pixels": {
+        "height": 1080,
+        "width": 1920
+      },
+      "virtual_geometry": {
+        "height": 1080,
+        "width": 3360,
+        "x": 0,
+        "y": 0
+      }
+    }
+  },
+  "geometry-of-choose-icon-theme-dialog-geometry": {
+    "frame_geometry": {
+      "height": 713,
+      "width": 904,
+      "x": 225,
+      "y": 34
+    },
+    "full_screened": false,
+    "geometry": {
+      "height": 693,
+      "width": 900,
+      "x": 227,
+      "y": 52
+    },
+    "maximized": false,
+    "normal_geometry": {
+      "height": 693,
+      "width": 900,
+      "x": 227,
+      "y": 52
+    },
+    "qt": {
+      "__class__": "bytearray",
+      "__value__": "AdnQywADAAAAAADhAAAAIgAABGgAAALqAAAA4wAAADQAAARmAAAC6AAAAAAAAAAABVYAAADjAAAANAAABGYAAALo"
+    },
+    "screen": {
+      "depth": 24,
+      "device_pixel_ratio": 1.0,
+      "geometry_in_logical_pixels": {
+        "height": 768,
+        "width": 1366,
+        "x": 0,
+        "y": 0
+      },
+      "index_in_screens_list": 0,
+      "manufacturer": "",
+      "model": "",
+      "name": "LVDS-1",
+      "serial": "",
+      "size_in_logical_pixels": {
+        "height": 768,
+        "width": 1366
+      },
+      "virtual_geometry": {
+        "height": 768,
+        "width": 1366,
+        "x": 0,
+        "y": 0
+      }
+    }
+  },
+  "geometry-of-duplicates-question-dialog-geometry": {
+    "frame_geometry": {
+      "height": 399,
+      "width": 598,
+      "x": 702,
+      "y": 287
+    },
+    "full_screened": false,
+    "geometry": {
+      "height": 379,
+      "width": 594,
+      "x": 704,
+      "y": 305
+    },
+    "maximized": false,
+    "normal_geometry": {
+      "height": 379,
+      "width": 594,
+      "x": 704,
+      "y": 305
+    },
+    "qt": {
+      "__class__": "bytearray",
+      "__value__": "AdnQywADAAAAAAK+AAABHwAABRMAAAKtAAACwAAAATEAAAURAAACqwAAAAEAAAAAB4AAAALAAAABMQAABREAAAKr"
+    },
+    "screen": {
+      "depth": 24,
+      "device_pixel_ratio": 1.0,
+      "geometry_in_logical_pixels": {
+        "height": 1080,
+        "width": 1920,
+        "x": 0,
+        "y": 0
+      },
+      "index_in_screens_list": 1,
+      "manufacturer": "",
+      "model": "",
+      "name": "DisplayPort-0",
+      "serial": "",
+      "size_in_logical_pixels": {
+        "height": 1080,
+        "width": 1920
+      },
+      "virtual_geometry": {
+        "height": 1080,
+        "width": 3360,
+        "x": 0,
+        "y": 0
+      }
+    }
+  },
+  "geometry-of-edit-author-mapping-rules-geometry": {
+    "frame_geometry": {
+      "height": 383,
+      "width": 926,
+      "x": 226,
+      "y": 237
+    },
+    "full_screened": false,
+    "geometry": {
+      "height": 363,
+      "width": 922,
+      "x": 228,
+      "y": 255
+    },
+    "maximized": false,
+    "normal_geometry": {
+      "height": 363,
+      "width": 922,
+      "x": 228,
+      "y": 255
+    },
+    "qt": {
+      "__class__": "bytearray",
+      "__value__": "AdnQywADAAAAAADiAAAA7QAABH8AAAJrAAAA5AAAAP8AAAR9AAACaQAAAAAAAAAABVYAAADkAAAA/wAABH0AAAJp"
+    },
+    "screen": {
+      "depth": 24,
+      "device_pixel_ratio": 1.0,
+      "geometry_in_logical_pixels": {
+        "height": 768,
+        "width": 1366,
+        "x": 0,
+        "y": 0
+      },
+      "index_in_screens_list": 0,
+      "manufacturer": "",
+      "model": "",
+      "name": "LVDS-1",
+      "serial": "",
+      "size_in_logical_pixels": {
+        "height": 768,
+        "width": 1366
+      },
+      "virtual_geometry": {
+        "height": 768,
+        "width": 1366,
+        "x": 0,
+        "y": 0
+      }
+    }
+  },
+  "geometry-of-edit-file-filter-rules-geometry": {
+    "frame_geometry": {
+      "height": 434,
+      "width": 926,
+      "x": 226,
+      "y": 211
+    },
+    "full_screened": false,
+    "geometry": {
+      "height": 414,
+      "width": 922,
+      "x": 228,
+      "y": 229
+    },
+    "maximized": false,
+    "normal_geometry": {
+      "height": 414,
+      "width": 922,
+      "x": 228,
+      "y": 229
+    },
+    "qt": {
+      "__class__": "bytearray",
+      "__value__": "AdnQywADAAAAAADiAAAA0wAABH8AAAKEAAAA5AAAAOUAAAR9AAACggAAAAAAAAAABVYAAADkAAAA5QAABH0AAAKC"
+    },
+    "screen": {
+      "depth": 24,
+      "device_pixel_ratio": 1.0,
+      "geometry_in_logical_pixels": {
+        "height": 768,
+        "width": 1366,
+        "x": 0,
+        "y": 0
+      },
+      "index_in_screens_list": 0,
+      "manufacturer": "",
+      "model": "",
+      "name": "LVDS-1",
+      "serial": "",
+      "size_in_logical_pixels": {
+        "height": 768,
+        "width": 1366
+      },
+      "virtual_geometry": {
+        "height": 768,
+        "width": 1366,
+        "x": 0,
+        "y": 0
+      }
+    }
+  },
+  "geometry-of-edit-tag-mapper-rules-geometry": {
+    "frame_geometry": {
+      "height": 400,
+      "width": 926,
+      "x": 226,
+      "y": 228
+    },
+    "full_screened": false,
+    "geometry": {
+      "height": 380,
+      "width": 922,
+      "x": 228,
+      "y": 246
+    },
+    "maximized": false,
+    "normal_geometry": {
+      "height": 380,
+      "width": 922,
+      "x": 228,
+      "y": 246
+    },
+    "qt": {
+      "__class__": "bytearray",
+      "__value__": "AdnQywADAAAAAADiAAAA5AAABH8AAAJzAAAA5AAAAPYAAAR9AAACcQAAAAAAAAAABVYAAADkAAAA9gAABH0AAAJx"
+    },
+    "screen": {
+      "depth": 24,
+      "device_pixel_ratio": 1.0,
+      "geometry_in_logical_pixels": {
+        "height": 768,
+        "width": 1366,
+        "x": 0,
+        "y": 0
+      },
+      "index_in_screens_list": 0,
+      "manufacturer": "",
+      "model": "",
+      "name": "LVDS-1",
+      "serial": "",
+      "size_in_logical_pixels": {
+        "height": 768,
+        "width": 1366
+      },
+      "virtual_geometry": {
+        "height": 768,
+        "width": 1366,
+        "x": 0,
+        "y": 0
+      }
+    }
+  },
+  "geometry-of-manage-data-files-xx-geometry": {
+    "frame_geometry": {
+      "height": 520,
+      "width": 404,
+      "x": 752,
+      "y": 283
+    },
+    "full_screened": false,
+    "geometry": {
+      "height": 500,
+      "width": 400,
+      "x": 754,
+      "y": 301
+    },
+    "maximized": false,
+    "normal_geometry": {
+      "height": 500,
+      "width": 400,
+      "x": 754,
+      "y": 301
+    },
+    "qt": {
+      "__class__": "bytearray",
+      "__value__": "AdnQywADAAAAAALwAAABGwAABIMAAAMiAAAC8gAAAS0AAASBAAADIAAAAAEAAAAAB4AAAALyAAABLQAABIEAAAMg"
+    },
+    "screen": {
+      "depth": 24,
+      "device_pixel_ratio": 1.0,
+      "geometry_in_logical_pixels": {
+        "height": 1080,
+        "width": 1920,
+        "x": 0,
+        "y": 0
+      },
+      "index_in_screens_list": 1,
+      "manufacturer": "",
+      "model": "",
+      "name": "DisplayPort-0",
+      "serial": "",
+      "size_in_logical_pixels": {
+        "height": 1080,
+        "width": 1920
+      },
+      "virtual_geometry": {
+        "height": 1080,
+        "width": 3360,
+        "x": 0,
+        "y": 0
+      }
+    }
+  },
+  "geometry-of-manage-saved-searches-geometry": {
+    "frame_geometry": {
+      "height": 520,
+      "width": 604,
+      "x": 656,
+      "y": 303
+    },
+    "full_screened": false,
+    "geometry": {
+      "height": 500,
+      "width": 600,
+      "x": 658,
+      "y": 321
+    },
+    "maximized": false,
+    "normal_geometry": {
+      "height": 500,
+      "width": 600,
+      "x": 658,
+      "y": 321
+    },
+    "qt": {
+      "__class__": "bytearray",
+      "__value__": "AdnQywADAAAAAAKQAAABLwAABOsAAAM2AAACkgAAAUEAAATpAAADNAAAAAEAAAAAB4AAAAKSAAABQQAABOkAAAM0"
+    },
+    "screen": {
+      "depth": 24,
+      "device_pixel_ratio": 1.0,
+      "geometry_in_logical_pixels": {
+        "height": 1080,
+        "width": 1920,
+        "x": 0,
+        "y": 0
+      },
+      "index_in_screens_list": 1,
+      "manufacturer": "",
+      "model": "",
+      "name": "DisplayPort-0",
+      "serial": "",
+      "size_in_logical_pixels": {
+        "height": 1080,
+        "width": 1920
+      },
+      "virtual_geometry": {
+        "height": 1080,
+        "width": 3360,
+        "x": 0,
+        "y": 0
+      }
+    }
+  },
+  "geometry-of-metasingle_window_geometry3": {
+    "frame_geometry": {
+      "height": 788,
+      "width": 1102,
+      "x": 810,
+      "y": 303
+    },
+    "full_screened": false,
+    "geometry": {
+      "height": 768,
+      "width": 1098,
+      "x": 812,
+      "y": 321
+    },
+    "maximized": false,
+    "normal_geometry": {
+      "height": 768,
+      "width": 1098,
+      "x": 812,
+      "y": 321
+    },
+    "qt": {
+      "__class__": "bytearray",
+      "__value__": "AdnQywADAAAAAAMqAAABLwAAB3cAAARCAAADLAAAAUEAAAd1AAAEQAAAAAEAAAAAB4AAAAMsAAABQQAAB3UAAARA"
+    },
+    "screen": {
+      "depth": 24,
+      "device_pixel_ratio": 1.0,
+      "geometry_in_logical_pixels": {
+        "height": 1080,
+        "width": 1920,
+        "x": 0,
+        "y": 0
+      },
+      "index_in_screens_list": 1,
+      "manufacturer": "",
+      "model": "",
+      "name": "DisplayPort-0",
+      "serial": "",
+      "size_in_logical_pixels": {
+        "height": 1080,
+        "width": 1920
+      },
+      "virtual_geometry": {
+        "height": 1080,
+        "width": 3360,
+        "x": 0,
+        "y": 0
+      }
+    }
+  },
+  "geometry-of-preferences dialog geometry": {
+    "frame_geometry": {
+      "height": 764,
+      "width": 1366,
+      "x": 293,
+      "y": 302
+    },
+    "full_screened": false,
+    "geometry": {
+      "height": 744,
+      "width": 1362,
+      "x": 295,
+      "y": 320
+    },
+    "maximized": false,
+    "normal_geometry": {
+      "height": 744,
+      "width": 1362,
+      "x": 295,
+      "y": 320
+    },
+    "qt": {
+      "__class__": "bytearray",
+      "__value__": "AdnQywADAAAAAAElAAABLgAABnoAAAQpAAABJwAAAUAAAAZ4AAAEJwAAAAEAAAAAB4AAAAEnAAABQAAABngAAAQn"
+    },
+    "screen": {
+      "depth": 24,
+      "device_pixel_ratio": 1.0,
+      "geometry_in_logical_pixels": {
+        "height": 1080,
+        "width": 1920,
+        "x": 0,
+        "y": 0
+      },
+      "index_in_screens_list": 1,
+      "manufacturer": "",
+      "model": "",
+      "name": "DisplayPort-0",
+      "serial": "",
+      "size_in_logical_pixels": {
+        "height": 1080,
+        "width": 1920
+      },
+      "virtual_geometry": {
+        "height": 1080,
+        "width": 3360,
+        "x": 0,
+        "y": 0
+      }
+    }
+  },
+  "geometry-of-quickview_dialog_geometry": {
+    "frame_geometry": {
+      "height": 1061,
+      "width": 960,
+      "x": 960,
+      "y": 0
+    },
+    "full_screened": false,
+    "geometry": {
+      "height": 1041,
+      "width": 956,
+      "x": 962,
+      "y": 18
+    },
+    "maximized": false,
+    "normal_geometry": {
+      "height": 1041,
+      "width": 956,
+      "x": 962,
+      "y": 18
+    },
+    "qt": {
+      "__class__": "bytearray",
+      "__value__": "AdnQywADAAAAAAPAAAAAAAAAB38AAAQkAAADwgAAABIAAAd9AAAEIgAAAAEAAAAAB4AAAAPCAAAAEgAAB30AAAQi"
+    },
+    "screen": {
+      "depth": 24,
+      "device_pixel_ratio": 1.0,
+      "geometry_in_logical_pixels": {
+        "height": 1080,
+        "width": 1920,
+        "x": 0,
+        "y": 0
+      },
+      "index_in_screens_list": 1,
+      "manufacturer": "",
+      "model": "",
+      "name": "DisplayPort-0",
+      "serial": "",
+      "size_in_logical_pixels": {
+        "height": 1080,
+        "width": 1920
+      },
+      "virtual_geometry": {
+        "height": 1080,
+        "width": 3360,
+        "x": 0,
+        "y": 0
+      }
+    }
+  },
+  "geometry-of-scheduler_dialog_geometry": {
+    "frame_geometry": {
+      "height": 620,
+      "width": 900,
+      "x": 522,
+      "y": 266
+    },
+    "full_screened": false,
+    "geometry": {
+      "height": 600,
+      "width": 896,
+      "x": 524,
+      "y": 284
+    },
+    "maximized": false,
+    "normal_geometry": {
+      "height": 600,
+      "width": 896,
+      "x": 524,
+      "y": 284
+    },
+    "qt": {
+      "__class__": "bytearray",
+      "__value__": "AdnQywADAAAAAAIKAAABCgAABY0AAAN1AAACDAAAARwAAAWLAAADcwAAAAEAAAAAB4AAAAIMAAABHAAABYsAAANz"
+    },
+    "screen": {
+      "depth": 24,
+      "device_pixel_ratio": 1.0,
+      "geometry_in_logical_pixels": {
+        "height": 1080,
+        "width": 1920,
+        "x": 0,
+        "y": 0
+      },
+      "index_in_screens_list": 1,
+      "manufacturer": "",
+      "model": "",
+      "name": "DisplayPort-0",
+      "serial": "",
+      "size_in_logical_pixels": {
+        "height": 1080,
+        "width": 1920
+      },
+      "virtual_geometry": {
+        "height": 1080,
+        "width": 3360,
+        "x": 0,
+        "y": 0
+      }
+    }
+  },
+  "gpm_template_editor_font": "Inconsolata Nerd Font Mono",
+  "gpm_template_editor_word_wrap_mode": true,
+  "grid view visible": true,
+  "library_usage_stats": {
+    "/home/ssserpent/Calibre Library": 154,
+    "/home/ssserpent/Documents/Calibre Library": 24,
+    "/media/gen_dta/Calibre Library": 65
+  },
+  "main_window_central_widget_state": {
+    "layout": "wide",
+    "narrow_desires": {
+      "book_details_height": 0.14705882352941177,
+      "cover_browser_width": 0.40263543191800877,
+      "quick_view_height": 0.28431372549019607,
+      "tag_browser_width": 0.24963396778916544
+    },
+    "narrow_visibility": {
+      "book_details": true,
+      "book_list": true,
+      "cover_browser": false,
+      "quick_view": false,
+      "tag_browser": true
+    },
+    "wide_desires": {
+      "book_details_width": 0.14641288433382138,
+      "cover_browser_height": 0.30120481927710846,
+      "quick_view_height": 0.23293172690763053,
+      "tag_browser_width": 0.14641288433382138
+    },
+    "wide_visibility": {
+      "book_details": true,
+      "book_list": true,
+      "cover_browser": false,
+      "quick_view": false,
+      "tag_browser": true
+    }
+  },
+  "manual_add_auto_convert": true,
+  "memory_view books view state": {
+    "column_alignment": {
+      "size": "center",
+      "timestamp": "center"
+    },
+    "column_positions": {
+      "authors": 2,
+      "collections": 5,
+      "inlibrary": 0,
+      "size": 4,
+      "timestamp": 3,
+      "title": 1
+    },
+    "column_sizes": {
+      "authors": 350,
+      "collections": 118,
+      "inlibrary": 111,
+      "size": 71,
+      "timestamp": 107,
+      "title": 350
+    },
+    "formats_injected": true,
+    "hidden_columns": [],
+    "id_injected": true,
+    "languages_injected": true,
+    "last_modified_injected": true,
+    "path_injected": true,
+    "sort_history": [
+      [
+        "timestamp",
+        false
+      ],
+      [
+        "inlibrary",
+        false
+      ],
+      [
+        "timestamp",
+        false
+      ],
+      [
+        "inlibrary",
+        false
+      ],
+      [
+        "timestamp",
+        false
+      ]
+    ]
+  },
+  "previous_sort_order_BooksView": {
+    "title": true
+  },
+  "quick_start_guide_added": true,
+  "quickview visible": false,
+  "quickview_dialog_books_table_widths": [
+    535,
+    289,
+    289
+  ],
+  "qv_open_at_shutdown": false,
+  "recently_used_languages": [],
+  "replace_scene_breaks_history": [
+    "",
+    "<hr />",
+    "∗ ∗ ∗",
+    "• • •",
+    "♦ ♦ ♦",
+    "† †",
+    "‡ ‡ ‡",
+    "∞ ∞ ∞",
+    "¤ ¤ ¤"
+  ],
+  "search bar visible": true,
+  "server3_warning_done": true,
+  "show_emblems": false,
+  "tag browser search box visible": false,
+  "tag_browser_splitter_horizontal_state": [
+    true,
+    200
+  ],
+  "tb_search_order": {
+    "0": 1,
+    "1": 2,
+    "2": 3,
+    "3": 4,
+    "4": 0
+  },
+  "template_functions_prefs_st_show_help": true,
+  "template_functions_prefs_tf_show_help": true,
+  "toolbar_icon_size": "off",
+  "wrap_toolbar_text": true
+}

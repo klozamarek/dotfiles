@@ -1,0 +1,142 @@
+separator_block_width=14
+
+[weather]
+command=echo "$(curl -Ss 'https://wttr.in?0&T&Q' | cut -c 16- | head -1 | sed 's/[^[:alpha:][:space:]]//g')"
+interval=1800
+color=#A4C2F4
+separator=false
+
+[Weather]
+command=echo "$($XDG_CONFIG_HOME/i3/scripts/IconicWeather.sh "32-020")"
+interval=1800
+color=#A4C2F4
+
+separator=true
+
+[volume]
+command=echo "$(pactl list sinks | grep 'Volume:' | head -n 1 | awk -F/ '{print $2}' | tr -d '[:space:]')"
+label= 
+interval=once
+color=#a89984
+
+[mail]
+label=S: 
+command=$XDG_CONFIG_HOME/i3/scripts/.mails.sh.x
+interval=1800
+color=#b16286 
+
+[mail]
+label=T: 
+command=$XDG_CONFIG_HOME/i3/scripts/.mailt.sh.x
+interval=1800
+color=#d3869b 
+
+[disk]
+command=$XDG_CONFIG_HOME/i3/scripts/disk
+LABEL=:
+DIR=/
+ALERT_LOW=10
+interval=30
+color=#859900
+
+{{- if eq .chezmoi.hostname "texus" }}
+[disk]
+command=$XDG_CONFIG_HOME/i3/scripts/disk
+LABEL=:
+DIR=/media/gen_dta
+ALERT_LOW=10
+interval=30
+color=#b8bb26
+{{- end}}
+
+[AUR]
+label=AUR:
+command=echo "$(updates=$(yay -Qua 2>/dev/null | wc -l); echo "$updates")"
+interval=7200
+color=#cc241d
+
+[PAC]
+label=PAC:
+command=echo "$(updates=$(checkupdates 2>/dev/null | wc -l); echo "$updates")"
+interval=7200
+color=#fb4934
+
+{{- if eq .chezmoi.hostname "texus" }}
+[ethernet]
+label=:
+command=echo "$(ip addr show eno1 | grep -oP '(?<=inet\s)\d+\.\d+\.\d+\.\d+')"
+interval=1800
+color=#98971a
+{{- end}}
+
+{{ if eq .chezmoi.hostname "samsarch" }}
+[wifi]
+command=echo "$(nmcli -t -f active,ssid,signal dev wifi | grep yes | cut -d: -f2,3) $(ip -4 -o addr show wlp2s0 | awk '{print $4}' | cut -d/ -f1)" 
+label= 
+interval=10
+color=#689d6a
+
+[ethernet]
+label=:
+command=echo "$(ip addr show enp4s0 | grep -oP '(?<=inet\s)\d+\.\d+\.\d+\.\d+')"
+interval=1800
+color=#98971a
+{{- end}}
+
+[memory]
+command=$XDG_CONFIG_HOME/i3/scripts/memory
+label=MEM 
+interval=30
+color=#b16286
+
+[temperature]
+command=$XDG_CONFIG_HOME/i3/scripts/temperature
+label= 
+interval=10
+T_WARN=70
+T_CRIT=90
+#SENSOR_CHIP=""
+color=#b58900
+
+[cpu_usage]
+command=$XDG_CONFIG_HOME/i3/scripts/cpu_usage
+interval=10
+LABEL=CPU 
+#min_width=CPU: 100%
+T_WARN=50
+T_CRIT=80
+DECIMALS=0
+COLOR_NORMAL=#EBDBB2
+COLOR_WARN=#FFFC00
+COLOR_CRIT=#FF0000
+
+[load]
+label= 
+#command=echo "$(top -bn1 | grep 'Cpu(s)' | awk '{print $2 + $4}' | head -n 1)%" # snapshot of temp
+command=echo "$(uptime | awk -F'[a-z]:' '{printf "%.2f%\n", 100 * $2 / $(NF-2)}')" # average load 5min
+interval=10
+color=#6c71c4
+
+{{- if eq .chezmoi.hostname "texus" }}
+[gpu-load]
+command=$XDG_CONFIG_HOME/i3/scripts/gpu-load
+label=GPU
+interval=10
+#min_width=GPU 100% 100% 100% 100%
+GPU_BRAND=AMD
+#T_WARN=70
+#T_CRIT=90
+{{- end}}
+
+{{ if eq .chezmoi.hostname "samsarch" }}
+[battery2]
+command=$XDG_CONFIG_HOME/i3/scripts/battery2
+markup=pango
+interval=30
+{{- end}}
+
+[time]
+label= 
+command=date '+%a %d-%m-%y %k:%M:%S'
+interval=1
+color=#50C878

@@ -1,0 +1,133 @@
+# vim: filetype=neomuttrc
+set editor = `echo \$EDITOR`
+set sendmail = "/usr/bin/msmtp"
+
+set wait_key = no
+set timeout = 3
+set mail_check = 300
+set mail_check_stats = yes
+set quit
+set beep_new
+set thorough_search
+set smart_wrap
+set include = yes
+set edit_headers = no
+
+set send_charset="ISO 8859-2:utf-8"
+set sort = threads
+set sort_aux = reverse-last-date-received
+set sort_re
+set date_format = "%d-%m-%y %I:%M%p"
+set mailcap_path = "$XDG_CONFIG_HOME/neomutt/.mailcap"
+
+# tells Mutt to automatically view files with these mime types
+auto_view text/plain
+# order to try and show multipart emails
+alternative_order text/plain text/enriched text/html
+
+set forward_format = "Fwd: %s"
+
+# tag-transforms "inbox" "inbox"  \
+#                "unread" "u" \
+#                "sent" "st" \
+#                "attachment" "att" \
+#                "replied" "re" \
+#                "deleted" "del"
+
+# The formats must start with 'G' and the entire sequence is case sensitive.
+tag-formats "inbox" "GI" \
+            "unread" "GU" \
+            "replied" "GR" \
+            "sent" "GS" \
+            "deleted" "GD" \
+            "attachment" "GA" \
+            "encrypted" "GE"
+
+set index_format='%2C %S %<[y?%<[m?%<[d?%[%H:%M ]&%[%a %d]>&%[%b %d]>&%[%m/%y ]> %-18.18n • %s (%g)'
+color index_tag white black "inbox"
+color index_tag white red "deleted"
+color index_tags yellow default
+
+# colorscheme
+source ./gruvbox-powerline.neomuttrc
+
+# Folder hooks
+folder-hook 'ssserpent.neomuttrc' 'source ~/.config/neomutt/ssserpent.neomuttrc'
+folder-hook 'klozamarek.neomuttrc' 'source ~/.config/neomutt/klozamarek.neomuttrc'
+
+# default account
+source ./ssserpent.neomuttrc
+
+# Macros for switching accounts
+macro index <f2> '<sync-mailbox><enter-command>source ~/.config/neomutt/ssserpent.neomuttrc<enter><change-folder>!<enter>'
+macro index <f3> '<sync-mailbox><enter-command>source ~/.config/neomutt/klozamarek.neomuttrc<enter><change-folder>!<enter>'
+macro index S "<shell-escape>syncmail<enter>" "run syncmail"
+
+set sidebar_visible
+set sidebar_short_path
+set sidebar_folder_indent
+set sidebar_format = "%D%* %N/%F/%S"
+
+# enable caching
+set header_cache = "~/.cache/neomutt/headers"
+set header_cache_backend = "lmdb"
+set message_cachedir = "~/.cache/neomutt/bodies"
+
+# save history
+set save_history = 10000
+set history_remove_dups = yes
+
+set status_format = "[%f, %b\/%m%?n? (%n new)?%?d? (%d to del)?%?t? (%t tagged)?]%> %?p?(%p postponed)?"
+
+set fast_reply = yes
+set mark_old = no
+set mime_forward = yes
+
+# use very high $read_inc to speed up reading hcache'd maildirs
+folder-hook . 'set read_inc=1000'
+unset help
+
+bind index,pager @ compose-to-sender
+#source ./vim-keys.rc
+
+# sidebar operations
+bind index,pager \CP sidebar-prev  # Ctrl-Shift-P - Previous Mailbox
+bind index,pager \CN sidebar-next  # Ctrl-Shift-N - Next Mailbox
+bind index,pager \CB sidebar-toggle-visible # Use 'B' to switch the Sidebar on and off
+bind index,pager \CO sidebar-open  # Ctrl-Shift-O - Open Highlighted Mailbox
+bind index,pager \CF vfolder-from-query
+
+# # jump/move/copy between folders
+# bind index,pager g noop
+# bind index,pager M noop
+# bind index,pager C noop
+# macro index,pager gi "<change-folder>=inbox<enter>" "go to inbox"
+# macro index,pager Mi ";<save-message>=inbox<enter>" "move mail to inbox"
+# macro index,pager Ci ";<copy-message>=inbox<enter>" "copy mail to inbox"
+# macro index,pager gd "<change-folder>=drafts<enter>" "go to drafts"
+# macro index,pager Md ";<save-message>=drafts<enter>" "move mail to drafts"
+# macro index,pager Cd ";<copy-message>=drafts<enter>" "copy mail to drafts"
+# macro index,pager gt "<change-folder>=trash<enter>" "go to trash"
+# macro index,pager Mt ";<save-message>=trash<enter>" "move mail to trash"
+# macro index,pager Ct ";<copy-message>=trash<enter>" "copy mail to trash"
+# macro index,pager gs "<change-folder>=sent<enter>" "go to sent"
+# macro index,pager Ms ";<save-message>=sent<enter>" "move mail to sent"
+# macro index,pager Cs ";<copy-message>=sent<enter>" "copy mail to sent"
+# macro index,pager ga "<change-folder>=archives<enter>" "go to archives"
+# macro index,pager Ma ";<save-message>=archives<enter>" "move mail to archives"
+# macro index,pager Ca ";<copy-message>=archives<enter>" "copy mail to archives"
+
+# notmuch
+bind index,pager - modify-labels
+macro index,pager ! "<modify-labels>!unread\n" "Toggle the 'unread' tag"
+macro index A "<modify-labels>+archived -unread -inbox<enter>" "Archive message"
+macro index D "<modify-labels>+deleted -unread -inbox -archived<enter>" "Delete message"
+macro index d "<modify-labels>+deleted -unread -inbox -archived<enter>" "Delete message"
+macro index c "<change-vfolder>?" "Change to vfolder overview"
+macro index \\\\ "<vfolder-from-query>" "Search mailbox"
+
+set query_command = "abook --mutt-query '%s'"
+bind editor <Tab> complete-query
+macro index,pager \Ca "<enter-command>set my_pipe_decode=\$pipe_decode pipe_decode<return><pipe-message>abook --add-email<return><enter-command>set pipe_decode=\$my_pipe_decode; unset my_pipe_decode<return>" "add the sender address to abook"
+# set query_command = "notmuch address %s"
+# set query_format = "%5c %t %a %n %?e?(%e)?"

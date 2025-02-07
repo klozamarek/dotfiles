@@ -1,0 +1,20 @@
+{
+  "accounts": {
+    "ssserpent@kindle.com": [
+      "AZW3",
+      true,
+      true
+    ]
+  },
+  "aliases": {},
+  "encryption": "TLS",
+  "from_": "ssserpent@gmail.com",
+  "relay_host": null,
+  "relay_password": "",
+  "relay_port": 25,
+  "relay_username": null,
+  "subjects": {
+    "ssserpent@kindle.com": "New Kindle stuff"
+  },
+  "tags": {}
+}

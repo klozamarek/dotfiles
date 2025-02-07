@@ -1,0 +1,80 @@
+# ==============================================================================
+# ShellGPT
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# if which sgpt >/dev/null 2>&1; then
+# # ------------------------------------------------------------------------------
+
+alias sgpt-chat="sgpt --repl chat"
+alias sgpt-code="sgpt --repl code --code"
+alias sgpt-describe-shell="sgpt --repl describe-shell --describe-shell"
+alias sgpt-shell="sgpt --repl shell --shell"
+alias sgpt-temp-chat="sgpt --repl temp"
+alias sgpt-temp-code="sgpt --repl temp --code"
+alias sgpt-temp-describe-shell="sgpt --repl temp --describe-shell"
+alias sgpt-temp-shell="sgpt --repl temp --shell"
+
+sgpt-clear-all() { (source ${XDG_CONFIG_HOME:-"$HOME"/.config}/shell_gpt/.sgptrc && find "${CACHE_PATH:?}" "${CHAT_CACHE_PATH:?}" -maxdepth 1 -mindepth 1 -type f -delete); }
+sgpt-clear-cache() { (source ${XDG_CONFIG_HOME:-"$HOME"/.config}/shell_gpt/.sgptrc && find "${CACHE_PATH:?}" -maxdepth 1 -mindepth 1 -type f -delete); }
+sgpt-clear-chats() { (source ${XDG_CONFIG_HOME:-"$HOME"/.config}/shell_gpt/.sgptrc && find "${CHAT_CACHE_PATH:?}" -maxdepth 1 -mindepth 1 -type f -delete); }
+
+# chat (q = gpt-3.5-turbo | Q = gpt-4-turbo | QQ = gpt-4o | - = clear chat | -- = clear cache | --- = clear all)
+q:() { if [ -z "$*" ]; then sgpt --repl chat; else sgpt --chat chat "$*"; fi; }
+q:-() { (source ${XDG_CONFIG_HOME:-"$HOME"/.config}/shell_gpt/.sgptrc && find "${CHAT_CACHE_PATH:?}" -maxdepth 1 -mindepth 1 -name chat -type f -delete); }
+q:--() { (source ${XDG_CONFIG_HOME:-"$HOME"/.config}/shell_gpt/.sgptrc && find "${CACHE_PATH:?}" -maxdepth 1 -mindepth 1 -type f -delete); }
+q:---() { q:-; q:--; }
+Q:() { if [ -z "$*" ]; then sgpt --model gpt-4-turbo --repl chat; else sgpt --model gpt-4-turbo --chat chat "$*"; fi; }
+Q:-() { q:-; }
+Q:--() { q:--; }
+Q:---() { q:---; }
+QQ:() { if [ -z "$*" ]; then sgpt --model gpt-4o --repl chat; else sgpt --model gpt-4o --chat chat "$*"; fi; }
+QQ:-() { q:-; }
+QQ:--() { q:--; }
+QQ:---() { q:---; }
+
+# shell (s = gpt-3.5-turbo | S = gpt-4-turbo | SS = gpt-4o | - = clear chat | -- = clear cache | --- = clear all)
+s:() { if [ -z "$*" ]; then sgpt --shell --repl shell; else sgpt --shell --chat shell "$*"; fi; }
+s:-() { (source ${XDG_CONFIG_HOME:-"$HOME"/.config}/shell_gpt/.sgptrc && find "${CHAT_CACHE_PATH:?}" -maxdepth 1 -mindepth 1 -name shell -type f -delete); }
+s:--() { (source ${XDG_CONFIG_HOME:-"$HOME"/.config}/shell_gpt/.sgptrc && find "${CACHE_PATH:?}" -maxdepth 1 -mindepth 1 -type f -delete); }
+s:---() { s:-; s:--; }
+S:() { if [ -z "$*" ]; then sgpt --model gpt-4-turbo --shell --repl shell; else sgpt --model gpt-4-turbo --shell --chat shell "$*"; fi; }
+S:-() { s:-; }
+S:--() { s:--; }
+S:---() { s:---; }
+SS:() { if [ -z "$*" ]; then sgpt --model gpt-4o --shell --repl shell; else sgpt --model gpt-4o --shell --chat shell "$*"; fi; }
+SS:-() { s:-; }
+SS:--() { s:--; }
+SS:---() { s:---; }
+
+# describe-shell (d = gpt-3.5-turbo | D = gpt-4-turbo | DD = gpt-4o | - = clear chat | -- = clear cache | --- = clear all)
+d:() { if [ -z "$*" ]; then sgpt --describe-shell --repl describe-shell; else sgpt --describe-shell --chat describe-shell "$*"; fi; }
+d:-() { (source ${XDG_CONFIG_HOME:-"$HOME"/.config}/shell_gpt/.sgptrc && find "${CHAT_CACHE_PATH:?}" -maxdepth 1 -mindepth 1 -name describe-shell -type f -delete); }
+d:--() { (source ${XDG_CONFIG_HOME:-"$HOME"/.config}/shell_gpt/.sgptrc && find "${CACHE_PATH:?}" -maxdepth 1 -mindepth 1 -type f -delete); }
+d:---() { d:-; d:--; }
+D:() { if [ -z "$*" ]; then sgpt --model gpt-4-turbo --describe-shell --repl describe-shell; else sgpt --model gpt-4-turbo --describe-shell --chat describe-shell "$*"; fi; }
+D:-() { d:-; }
+D:--() { d:--; }
+D:---() { d:---; }
+DD:() { if [ -z "$*" ]; then sgpt --model gpt-4o --describe-shell --repl describe-shell; else sgpt --model gpt-4o --describe-shell --chat describe-shell "$*"; fi; }
+DD:-() { d:-; }
+DD:--() { d:--; }
+DD:---() { d:---; }
+
+# code (c = gpt-3.5-turbo | C = gpt-4-turbo | CC = gpt-4o | - = clear chat | -- = clear cache | --- = clear all)
+c:() { if [ -z "$*" ]; then sgpt --code --repl code; else sgpt --code --chat code "$*"; fi; }
+c:-() { (source ${XDG_CONFIG_HOME:-"$HOME"/.config}/shell_gpt/.sgptrc && find "${CHAT_CACHE_PATH:?}" -maxdepth 1 -mindepth 1 -name code -type f -delete); }
+c:--() { (source ${XDG_CONFIG_HOME:-"$HOME"/.config}/shell_gpt/.sgptrc && find "${CACHE_PATH:?}" -maxdepth 1 -mindepth 1 -type f -delete); }
+c:---() { c:-; c:--; }
+C:() { if [ -z "$*" ]; then sgpt --model gpt-4-turbo --code --repl code; else sgpt --model gpt-4-turbo --code --chat code "$*"; fi; }
+C:-() { c:-; }
+C:--() { c:--; }
+C:---() { c:---; }
+CC:() { if [ -z "$*" ]; then sgpt --model gpt-4o --code --repl code; else sgpt --model gpt-4o --code --chat code "$*"; fi; }
+CC:-() { c:-; }
+CC:--() { c:--; }
+CC:---() { c:---; }
+
+# ------------------------------------------------------------------------------
+# fi
+# # ------------------------------------------------------------------------------

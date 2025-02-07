@@ -1,0 +1,3 @@
+# ~/.config/grv/grvrc
+set commit-graph true
+set theme classic

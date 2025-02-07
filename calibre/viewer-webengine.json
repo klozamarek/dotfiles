@@ -1,0 +1,299 @@
+{
+  "geometry-of-main_window_geometry": {
+    "frame_geometry": {
+      "height": 1061,
+      "width": 960,
+      "x": 960,
+      "y": 0
+    },
+    "full_screened": false,
+    "geometry": {
+      "height": 1041,
+      "width": 956,
+      "x": 962,
+      "y": 18
+    },
+    "maximized": false,
+    "normal_geometry": {
+      "height": 1041,
+      "width": 956,
+      "x": 962,
+      "y": 18
+    },
+    "qt": {
+      "__class__": "bytearray",
+      "__value__": "AdnQywADAAAAAAPAAAAAAAAAB38AAAQkAAADwgAAABIAAAd9AAAEIgAAAAEAAAAAB4AAAAPCAAAAEgAAB30AAAQi"
+    },
+    "screen": {
+      "depth": 24,
+      "device_pixel_ratio": 1.0,
+      "geometry_in_logical_pixels": {
+        "height": 1080,
+        "width": 1920,
+        "x": 0,
+        "y": 0
+      },
+      "index_in_screens_list": 1,
+      "manufacturer": "",
+      "model": "",
+      "name": "DisplayPort-0",
+      "serial": "",
+      "size_in_logical_pixels": {
+        "height": 1080,
+        "width": 1920
+      },
+      "virtual_geometry": {
+        "height": 1080,
+        "width": 3360,
+        "x": 0,
+        "y": 0
+      }
+    }
+  },
+  "main_window_state": {
+    "__class__": "bytearray",
+    "__value__": "AAAA/wAAAAH9AAAAAgAAAAAAAAEvAAAEEfwCAAAAAvsAAAAQAHQAbwBjAC0AZABvAGMAawEAAAAAAAAEEQAAAIcA////+wAAABYAcwBlAGEAcgBjAGgALQBkAG8AYwBrAAAAAAD/////AAAAlgD///8AAAABAAAAAAAAAAD8AgAAAAT7AAAAFgBsAG8AbwBrAHUAcAAtAGQAbwBjAGsAAAAAAP////8AAAB+AP////sAAAAcAGIAbwBvAGsAbQBhAHIAawBzAC0AZABvAGMAawAAAAAA/////wAAAOsA////+wAAABwAaQBuAHMAcABlAGMAdABvAHIALQBkAG8AYwBrAAAAAAD/////AAAAEgD////7AAAAHgBoAGkAZwBoAGwAaQBnAGgAdABzAC0AZABvAGMAawAAAAAA/////wAAANIA////AAAChwAABBEAAAAEAAAABAAAAAgAAAAI/AAAAAEAAAAAAAAAAQAAAB4AYQBjAHQAaQBvAG4AcwBfAHQAbwBvAGwAYgBhAHICAAAAAP////8AAAAAAAAAAA=="
+  },
+  "old_prefs_migrated": true,
+  "session_data": {
+    "base_font_size": 20,
+    "controls_help_shown_count": 2,
+    "current_color_scheme": "sepia-dark",
+    "paged_wheel_scrolls_by_screen": false,
+    "paged_wheel_section_jumps": true,
+    "read_mode": "flow",
+    "standalone_font_settings": {
+      "minimum_font_size": 10,
+      "mono_family": "Inconsolata NF",
+      "sans_family": "Inconsolata NF",
+      "serif_family": "Inconsolata NF"
+    },
+    "standalone_misc_settings": {
+      "remember_last_read": true,
+      "remember_window_geometry": false,
+      "save_annotations_in_ebook": true,
+      "singleinstance": false
+    },
+    "standalone_recently_opened": [
+      {
+        "key": "/home/ssserpent/Calibre Library/Unknown/Latest Magazines & Wallpapers Collection (2379)/Latest Magazines & Wallpapers Collection - Unknown.epub",
+        "pathtoebook": "/home/ssserpent/Calibre Library/Unknown/Latest Magazines & Wallpapers Collection (2379)/Latest Magazines & Wallpapers Collection - Unknown.epub",
+        "timestamp": "2025-01-28T14:57:00.636Z",
+        "title": "Latest Magazines & Wallpapers Collection"
+      },
+      {
+        "key": "/home/ssserpent/Calibre Library/Unknown/free audiobook version _ important info (please read) (2382)/free audiobook version _ important info (p - Unknown.epub",
+        "pathtoebook": "/home/ssserpent/Calibre Library/Unknown/free audiobook version _ important info (please read) (2382)/free audiobook version _ important info (p - Unknown.epub",
+        "timestamp": "2025-01-28T14:56:24.303Z",
+        "title": "free audiobook version + important info (please read)"
+      },
+      {
+        "authors": [
+          "Andrzej Sarwa"
+        ],
+        "key": "/media/HDD500_1/Books/Znaki i przepowiednie nadchodza - Andrzej Sarwa.epub",
+        "pathtoebook": "/media/HDD500_1/Books/Znaki i przepowiednie nadchodza - Andrzej Sarwa.epub",
+        "timestamp": "2025-01-27T19:21:15.206Z",
+        "title": "Znaki i przepowiednie nadchodzącego końca świata"
+      },
+      {
+        "authors": [
+          "calibre"
+        ],
+        "key": "/home/ssserpent/Calibre Library/calibre/LWN Linux Weekly News (Free) (2215)/LWN Linux Weekly News (Free) - calibre.mobi",
+        "pathtoebook": "/home/ssserpent/Calibre Library/calibre/LWN Linux Weekly News (Free) (2215)/LWN Linux Weekly News (Free) - calibre.mobi",
+        "timestamp": "2025-01-25T07:25:24.867Z",
+        "title": "LWN Linux Weekly News (Free)"
+      },
+      {
+        "authors": [
+          "Debra Cameron",
+          "James Elliott",
+          "Marc Loy",
+          "Eric S. Raymond",
+          "Bill Rosenblatt"
+        ],
+        "key": "/home/ssserpent/Calibre Library/Debra Cameron/Learning GNU Emacs, 3rd Edition (2220)/Learning GNU Emacs, 3rd Edition - Debra Cameron.epub",
+        "pathtoebook": "/home/ssserpent/Calibre Library/Debra Cameron/Learning GNU Emacs, 3rd Edition (2220)/Learning GNU Emacs, 3rd Edition - Debra Cameron.epub",
+        "timestamp": "2025-01-25T06:32:39.009Z",
+        "title": "Learning GNU Emacs, 3rd Edition"
+      },
+      {
+        "authors": [
+          "Jacek Artymiak"
+        ],
+        "key": "/home/ssserpent/Calibre Library/Jacek Artymiak/vi(1) Tips,_ Essential vi_vim Editor Skills (2221)/vi(1) Tips,_ Essential vi_vim Editor Skill - Jacek Artymiak.mobi",
+        "pathtoebook": "/home/ssserpent/Calibre Library/Jacek Artymiak/vi(1) Tips,_ Essential vi_vim Editor Skills (2221)/vi(1) Tips,_ Essential vi_vim Editor Skill - Jacek Artymiak.mobi",
+        "timestamp": "2025-01-25T06:31:18.407Z",
+        "title": "vi(1) Tips,: Essential vi/vim Editor Skills"
+      },
+      {
+        "authors": [
+          "Sujata Biswas"
+        ],
+        "key": "/home/ssserpent/Calibre Library/Sujata Biswas/Learning VIM gently (2222)/Learning VIM gently - Sujata Biswas.azw3",
+        "pathtoebook": "/home/ssserpent/Calibre Library/Sujata Biswas/Learning VIM gently (2222)/Learning VIM gently - Sujata Biswas.azw3",
+        "timestamp": "2025-01-25T06:29:05.130Z",
+        "title": "Learning VIM gently"
+      },
+      {
+        "authors": [
+          "Drew Neil"
+        ],
+        "key": "/home/ssserpent/Calibre Library/Drew Neil/Modern Vim (163)/Modern Vim - Drew Neil.mobi",
+        "pathtoebook": "/home/ssserpent/Calibre Library/Drew Neil/Modern Vim (163)/Modern Vim - Drew Neil.mobi",
+        "timestamp": "2025-01-24T13:06:02.743Z",
+        "title": "Modern Vim"
+      },
+      {
+        "authors": [
+          "Mastering Vim Build a software development environment",
+          "Vim",
+          "Neovim-Packt Publishing (2018)"
+        ],
+        "key": "/home/ssserpent/Calibre Library/Mastering Vim Build a software development environment/Ruslan Osipov (166)/Ruslan Osipov - Mastering Vim Build a software development.mobi",
+        "pathtoebook": "/home/ssserpent/Calibre Library/Mastering Vim Build a software development environment/Ruslan Osipov (166)/Ruslan Osipov - Mastering Vim Build a software development.mobi",
+        "timestamp": "2025-01-24T13:00:29.928Z",
+        "title": "Ruslan Osipov"
+      },
+      {
+        "authors": [
+          "calibre"
+        ],
+        "key": "/home/ssserpent/Calibre Library/calibre/LWN Linux Weekly News (Free) (2209)/LWN Linux Weekly News (Free) - calibre.mobi",
+        "pathtoebook": "/home/ssserpent/Calibre Library/calibre/LWN Linux Weekly News (Free) (2209)/LWN Linux Weekly News (Free) - calibre.mobi",
+        "timestamp": "2025-01-20T04:28:13.208Z",
+        "title": "LWN Linux Weekly News (Free)"
+      },
+      {
+        "authors": [
+          "calibre"
+        ],
+        "key": "/home/ssserpent/Calibre Library/calibre/Linux Magazine (2210)/Linux Magazine - calibre.mobi",
+        "pathtoebook": "/home/ssserpent/Calibre Library/calibre/Linux Magazine (2210)/Linux Magazine - calibre.mobi",
+        "timestamp": "2025-01-20T04:14:32.007Z",
+        "title": "Linux Magazine"
+      },
+      {
+        "key": "/home/ssserpent/Downloads/sparkylinux-7.5-i686-minimalcli.iso.package-list.txt",
+        "pathtoebook": "/home/ssserpent/Downloads/sparkylinux-7.5-i686-minimalcli.iso.package-list.txt",
+        "timestamp": "2025-01-01T06:00:00.983Z",
+        "title": "sparkylinux-7.5-i686-minimalcli.iso.package-list"
+      },
+      {
+        "authors": [
+          "Turchin, Peter"
+        ],
+        "key": "/home/ssserpent/Calibre Library/Turchin, Peter/War and Peace and War (205)/War and Peace and War - Turchin, Peter.epub",
+        "pathtoebook": "/home/ssserpent/Calibre Library/Turchin, Peter/War and Peace and War (205)/War and Peace and War - Turchin, Peter.epub",
+        "timestamp": "2024-07-30T19:07:18.534Z",
+        "title": "War and Peace and War"
+      },
+      {
+        "authors": [
+          "calibre"
+        ],
+        "key": "/home/ssserpent/Calibre Library/calibre/New York Times Book Review (196)/New York Times Book Review - calibre.mobi",
+        "pathtoebook": "/home/ssserpent/Calibre Library/calibre/New York Times Book Review (196)/New York Times Book Review - calibre.mobi",
+        "timestamp": "2024-06-24T07:52:38.159Z",
+        "title": "New York Times Book Review"
+      },
+      {
+        "authors": [
+          "calibre"
+        ],
+        "key": "/home/ssserpent/Calibre Library/calibre/Linux Magazine (197)/Linux Magazine - calibre.mobi",
+        "pathtoebook": "/home/ssserpent/Calibre Library/calibre/Linux Magazine (197)/Linux Magazine - calibre.mobi",
+        "timestamp": "2024-06-24T07:50:15.179Z",
+        "title": "Linux Magazine"
+      },
+      {
+        "authors": [
+          "Bronnie Ware"
+        ],
+        "key": "/home/ssserpent/Downloads/Ware, Bronnie - The Top Five Regrets of the Dying_ A Life Transformed by the Dearly Departing-Hay House (2012).azw3",
+        "pathtoebook": "/home/ssserpent/Downloads/Ware, Bronnie - The Top Five Regrets of the Dying_ A Life Transformed by the Dearly Departing-Hay House (2012).azw3",
+        "timestamp": "2024-06-07T12:09:34.168Z",
+        "title": "The Top Five Regrets of the Dying: A Life Transformed by the Dearly Departing"
+      },
+      {
+        "authors": [
+          "calibre"
+        ],
+        "key": "/home/ssserpent/Calibre Library/calibre/Foreign Affairs (May_June 2024) (182)/Foreign Affairs (May_June 2024) - calibre.mobi",
+        "pathtoebook": "/home/ssserpent/Calibre Library/calibre/Foreign Affairs (May_June 2024) (182)/Foreign Affairs (May_June 2024) - calibre.mobi",
+        "timestamp": "2024-05-11T13:04:51.827Z",
+        "title": "Foreign Affairs (May/June 2024)"
+      },
+      {
+        "authors": [
+          "calibre"
+        ],
+        "key": "/home/ssserpent/Calibre Library/calibre/The Nation (183)/The Nation - calibre.mobi",
+        "pathtoebook": "/home/ssserpent/Calibre Library/calibre/The Nation (183)/The Nation - calibre.mobi",
+        "timestamp": "2024-05-11T10:34:07.008Z",
+        "title": "The Nation"
+      },
+      {
+        "authors": [
+          "calibre"
+        ],
+        "key": "/home/ssserpent/Calibre Library/calibre/Linux Magazine (181)/Linux Magazine - calibre.mobi",
+        "pathtoebook": "/home/ssserpent/Calibre Library/calibre/Linux Magazine (181)/Linux Magazine - calibre.mobi",
+        "timestamp": "2024-05-11T10:12:41.527Z",
+        "title": "Linux Magazine"
+      },
+      {
+        "authors": [
+          "Ken Liu"
+        ],
+        "key": "/home/ssserpent/Calibre Library/Ken Liu/Invisible Planets (186)/Invisible Planets - Ken Liu.epub",
+        "pathtoebook": "/home/ssserpent/Calibre Library/Ken Liu/Invisible Planets (186)/Invisible Planets - Ken Liu.epub",
+        "timestamp": "2024-05-11T07:59:30.150Z",
+        "title": "Invisible Planets"
+      },
+      {
+        "key": "/home/ssserpent/.config/cache/mutt-wizard/files/neomutt.html",
+        "pathtoebook": "/home/ssserpent/.config/cache/mutt-wizard/files/neomutt.html",
+        "timestamp": "2024-01-05T04:52:34.652Z",
+        "title": "neomutt"
+      },
+      {
+        "authors": [
+          "calibre"
+        ],
+        "key": "/home/ssserpent/Calibre Library/calibre/The Nation (177)/The Nation - calibre.mobi",
+        "pathtoebook": "/home/ssserpent/Calibre Library/calibre/The Nation (177)/The Nation - calibre.mobi",
+        "timestamp": "2023-12-16T07:53:01.428Z",
+        "title": "The Nation"
+      },
+      {
+        "authors": [
+          "calibre"
+        ],
+        "key": "/home/ssserpent/Calibre Library/calibre/New York Times Book Review (175)/New York Times Book Review - calibre.mobi",
+        "pathtoebook": "/home/ssserpent/Calibre Library/calibre/New York Times Book Review (175)/New York Times Book Review - calibre.mobi",
+        "timestamp": "2023-12-16T07:49:49.643Z",
+        "title": "New York Times Book Review"
+      },
+      {
+        "authors": [
+          "calibre"
+        ],
+        "key": "/home/ssserpent/Calibre Library/calibre/LWN Linux Weekly News (Free) (174)/LWN Linux Weekly News (Free) - calibre.mobi",
+        "pathtoebook": "/home/ssserpent/Calibre Library/calibre/LWN Linux Weekly News (Free) (174)/LWN Linux Weekly News (Free) - calibre.mobi",
+        "timestamp": "2023-12-16T07:48:47.189Z",
+        "title": "LWN Linux Weekly News (Free)"
+      },
+      {
+        "authors": [
+          "calibre"
+        ],
+        "key": "/home/ssserpent/Calibre Library/calibre/Linux Magazine (173)/Linux Magazine - calibre.mobi",
+        "pathtoebook": "/home/ssserpent/Calibre Library/calibre/Linux Magazine (173)/Linux Magazine - calibre.mobi",
+        "timestamp": "2023-12-16T07:40:49.524Z",
+        "title": "Linux Magazine"
+      }
+    ]
+  }
+}
