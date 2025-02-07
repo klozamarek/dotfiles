@@ -377,6 +377,11 @@ cmexauthority() {chezmoi edit /home/ssserpent/.Xauthority ;}
 cmechezmoi() {$EDITOR /home/ssserpent/.config/chezmoi/chezmoi.toml ;}
 cmechezmoiignore() {$EDITOR /home/ssserpent/.local/share/chezmoi/.chezmoiignore ;}
 cmechezmoiexternal() {$EDITOR /home/ssserpent/.local/share/chezmoi/.chezmoiexternal.toml ;}
+cmeapps() {$EDITOR /home/ssserpent/.local/share/chezmoi/apps.csv ;}
+cmeapps_installer() {$EDITOR /home/ssserpent/.local/share/chezmoi/run_onchange_after_install_apps.sh.tmpl ;}
+cmepipx_installer() {$EDITOR /home/ssserpent/.local/share/chezmoi/run_once_install_pipx_apps.sh ;}
+cmepass_installer() {$EDITOR /home/ssserpent/.local/share/chezmoi/run_once_before_install_password_manager.sh ;}
+cmeapps() {$EDITOR /home/ssserpent/.local/share/chezmoi/apps.csv ;}
 cmegitconfig() {chezmoi edit /home/ssserpent/.gitconfig ;}
 cmembsyncrc() {chezmoi edit /home/ssserpent/.mbsyncrc ;}
 cmemsmtprc() {chezmoi edit /home/ssserpent/.msmtprc ;}
@@ -427,7 +432,6 @@ cmemimelist() {chezmoi edit /home/ssserpent/.config/mimeapps.list ;}
 cmepavucontrol() {chezmoi edit /home/ssserpent/.config/pavucontrol.ini ;}
 cmestarship() {chezmoi edit /home/ssserpent/.config/starship.toml ;}
 cmeuserdirs() {chezmoi edit /home/ssserpent/.config/user-dirs.dirs ;}
-cmeapps() {chezmoi edit /home/ssserpent/apps.csv ;}
 cmew3m() {chezmoi edit /home/ssserpent/.w3m/config ;}
 cmew3mkeymap() {chezmoi edit /home/ssserpent/.w3m/keymap ;}
 cmew3mmailcap() {chezmoi edit /home/ssserpent/.w3m/mailcap ;}
