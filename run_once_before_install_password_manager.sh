@@ -113,3 +113,4 @@ PAM_FILE="/etc/pam.d/system-local-login"
 for LINE in "auth     optional  pam_gnupg.so store-only" "session  optional  pam_gnupg.so"; do
     grep -qxF "$LINE" "$PAM_FILE" || echo "$LINE" | sudo tee -a "$PAM_FILE"
 done
+echo "%wheel ALL=(ALL) ALL" | sudo tee -a /etc/sudoers
