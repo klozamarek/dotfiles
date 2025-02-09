@@ -25,6 +25,7 @@ network,expressvpn,Proprietary VPN client for Linux
 network,arp-scan,A tool that uses ARP to discover and fingerprint IP hosts on the local network
 network,warpinator,LAN file sender send and receive files across the network
 tools,rsync,Synchronizing files across computers
+tools,xdotool,Command-line X11 automation tool
 tools,arandr,xrandr GUI
 tools,aria2,Download utility that supports HTTP(S) FTP BitTorrent and Metalink
 tools,xsel,Manipulate the X selection
