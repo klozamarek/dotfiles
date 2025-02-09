@@ -22,10 +22,7 @@ require("lazy").setup({
   { "vim-airline/vim-airline", init = function() vim.g.airline_powerline_fonts = 1 end },
   {"tpope/vim-fugitive"},
   {"nvim-lua/plenary.nvim"},
-  {"nvim-telescope/telescope.nvim", tag = "0.1.8",
-    config = function()
-     -- You dont need to set any of these options. These are the default ones. Only
-     -- the loading is important
+  {"nvim-telescope/telescope.nvim", tag = "0.1.8", config = function()
         require('telescope').setup {
           extensions = {
             fzf = {
@@ -33,11 +30,12 @@ require("lazy").setup({
               override_generic_sorter = true,  -- override the generic sorter
               override_file_sorter = true,     -- override the file sorter
               case_mode = "smart_case",        -- or "ignore_case" or "respect_case"
-                                               -- the default case_mode is "smart_case"
-             }
+            },
+            chezmoi = {} 
           }
         }
       require("telescope").load_extension("fzf")
+      require("telescope").load_extension("chezmoi")
     end },
   {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
   {'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons',
@@ -51,7 +49,37 @@ require("lazy").setup({
   {"tpope/vim-eunuch"},
   {"tpope/vim-obsession"},
   {"tpope/vim-commentary"},
-  {"alker0/chezmoi.vim"}
+  --{"alker0/chezmoi.vim"}
+  {"rcarriga/nvim-notify"},
+  {'xvzc/chezmoi.nvim', dependencies = { 'nvim-lua/plenary.nvim' }, config = function()
+      require("chezmoi").setup {
+        -- your configurations
+        edit = {
+          watch = true, -- Set true to automatically apply on save.
+          force = true, -- Set true to force apply. Works only when watch = true.
+        },
+        notification = {
+          on_open = true, -- vim.notify when start editing chezmoi-managed file.
+          on_apply = true, -- vim.notify on apply.
+          on_watch = false,
+        },
+        telescope = {
+          select = { "<CR>" },
+        },
+      }
+    end},
+})
+
+-- Configure nvim-notify
+local notify = require("notify")
+vim.notify = notify
+notify.setup({
+  stages = "fade_in_slide_out",  -- Animation style
+  timeout = 3000,                -- Notification duration in ms
+  render = "default",            -- Default notification UI
+  background_colour = "#000000",  -- Background color
+  max_width = 50,
+  max_height = 5,
 })
 
 -- General Settings
@@ -69,6 +97,9 @@ vim.g['airline#extensions#tabline#enabled'] = 0
 vim.api.nvim_set_keymap("n", "<space>", "<nop>", { noremap = true })
 vim.api.nvim_set_keymap("n", "<leader><F5>", ":tabedit $MYVIMRC<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader><F6>", ":source $MYVIMRC<CR>", { noremap = true, silent = true })
+
+-- Keybinding for chezmoi.nvim using telescope
+vim.keymap.set('n', '<leader>cme', require("telescope").extensions.chezmoi.find_files, {})
 
 -- Clipboard
 vim.opt.clipboard:append("unnamedplus")
