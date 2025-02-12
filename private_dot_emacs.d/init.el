@@ -65,33 +65,29 @@
  ;; If there is more than one, they won't work right.
  )
 
-(defun my-set-signature ()
-  "Set a custom email signature based on the From field."
-  (let* ((from (or (message-fetch-field "from") user-mail-address "")))
-    (setq message-signature
-          (cond
-           ((string-match "ssserpent@gmail.com" from)
-            "Best regards,\nMarek Kloza\nssserpent@gmail.com\n")
-           ((string-match "kloza.marek@gmail.com" from)
-            "Best wishes,\nMarek Kloza\nkloza.marek@gmail.com\n")
-           (t "Best,\nMarek Kloza"))))
-  (message "Signature applied: %s" message-signature))
-
-(add-hook 'message-setup-hook #'my-set-signature)
-
-(defun my-choose-from-address ()
-  "Prompt the user to select a From address before composing an email and set the corresponding signature."
+(defun my-setup-email ()
+  "Prompt user to select a From address and set the correct signature."
   (interactive)
-  (let ((chosen-from (completing-read "Choose From: "
-                                      '("ssserpent@gmail.com" "kloza.marek@gmail.com") nil t)))
+  (let* ((chosen-from (completing-read "Choose From: "
+                                       '("ssserpent@gmail.com" "kloza.marek@gmail.com") nil t)))
+    ;; Set the user-mail-address dynamically
     (setq user-mail-address chosen-from)
+
+    ;; Set the From header explicitly without inserting duplicates
+    (message-remove-header "From")
     (message-add-header (format "From: %s" user-mail-address))
+
+    ;; Apply the correct signature immediately
     (setq message-signature
           (cond
-           ((string-match "ssserpent@gmail.com" chosen-from)
-            "Best regards,\nMarek Kloza\nssserpent@gmail.com\n")
-           ((string-match "kloza.marek@gmail.com" chosen-from)
-            "Best wishes,\nMarek Kloza\nkloza.marek@gmail.com\n")
-           (t "Best,\nMarek Kloza")))))
+           ((string= chosen-from "ssserpent@gmail.com")
+            "Pozdrowienia,\nMarek Kloza\nssserpent@gmail.com\n")
+           ((string= chosen-from "kloza.marek@gmail.com")
+            "Pozdrawiam,\nMarek Kloza\nkloza.marek@gmail.com\n")
+           (t "Best,\nMarek Kloza")))
+    
+    ;; Debug message to confirm signature was set
+    (message "Signature applied: %s" message-signature)))
 
-(add-hook 'message-setup-hook #'my-choose-from-address)
+;; Ensure the function runs on message composition
+(add-hook 'message-setup-hook #'my-setup-email)
