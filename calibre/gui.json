@@ -118,6 +118,22 @@
       [
         "timestamp",
         false
+      ],
+      [
+        "inlibrary",
+        false
+      ],
+      [
+        "timestamp",
+        false
+      ],
+      [
+        "inlibrary",
+        false
+      ],
+      [
+        "timestamp",
+        false
       ]
     ]
   },
@@ -149,6 +165,22 @@
     "last_modified_injected": true,
     "path_injected": true,
     "sort_history": [
+      [
+        "timestamp",
+        false
+      ],
+      [
+        "inlibrary",
+        false
+      ],
+      [
+        "timestamp",
+        false
+      ],
+      [
+        "inlibrary",
+        false
+      ],
       [
         "timestamp",
         false
@@ -1074,28 +1106,28 @@
   },
   "geometry-of-scheduler_dialog_geometry": {
     "frame_geometry": {
-      "height": 620,
+      "height": 622,
       "width": 900,
-      "x": 522,
-      "y": 266
+      "x": 524,
+      "y": 284
     },
     "full_screened": false,
     "geometry": {
       "height": 600,
       "width": 896,
-      "x": 524,
-      "y": 284
+      "x": 526,
+      "y": 304
     },
     "maximized": false,
     "normal_geometry": {
       "height": 600,
       "width": 896,
-      "x": 524,
-      "y": 284
+      "x": 526,
+      "y": 304
     },
     "qt": {
       "__class__": "bytearray",
-      "__value__": "AdnQywADAAAAAAIKAAABCgAABY0AAAN1AAACDAAAARwAAAWLAAADcwAAAAEAAAAAB4AAAAIMAAABHAAABYsAAANz"
+      "__value__": "AdnQywADAAAAAAIMAAABHAAABY8AAAOJAAACDgAAATAAAAWNAAADhwAAAAEAAAAAB4AAAAIOAAABMAAABY0AAAOH"
     },
     "screen": {
       "depth": 24,
@@ -1129,7 +1161,7 @@
   "library_usage_stats": {
     "/home/ssserpent/Calibre Library": 154,
     "/home/ssserpent/Documents/Calibre Library": 24,
-    "/media/gen_dta/Calibre Library": 73
+    "/media/gen_dta/Calibre Library": 81
   },
   "main_window_central_widget_state": {
     "layout": "wide",
@@ -1189,6 +1221,22 @@
     "last_modified_injected": true,
     "path_injected": true,
     "sort_history": [
+      [
+        "timestamp",
+        false
+      ],
+      [
+        "inlibrary",
+        false
+      ],
+      [
+        "timestamp",
+        false
+      ],
+      [
+        "inlibrary",
+        false
+      ],
       [
         "timestamp",
         false

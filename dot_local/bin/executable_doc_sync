@@ -3,11 +3,9 @@ rsync -avzu ssserpent@imac:/home/ssserpent/Documents/texo_marek_kloza /home/ssse
 rsync -avzu ssserpent@imac:/home/ssserpent/Documents/personal /home/ssserpent/Documents
 rsync -avzu ssserpent@imac:/home/ssserpent/Documents/main /home/ssserpent/Documents
 rsync -avzu ssserpent@imac:/home/ssserpent/Documents/mama /home/ssserpent/Documents
-rsync -avzu ssserpent@imac:/home/ssserpent/Documents/old_personal /home/ssserpent/Documents
 rsync -avzu ssserpent@imac:/home/ssserpent/Documents/literatura_techniczna /home/ssserpent/Documents
 rsync -avzu /home/ssserpent/Documents/texo_marek_kloza ssserpent@imac:/home/ssserpent/Documents
 rsync -avzu /home/ssserpent/Documents/personal ssserpent@imac:/home/ssserpent/Documents
 rsync -avzu /home/ssserpent/Documents/main ssserpent@imac:/home/ssserpent/Documents
 rsync -avzu /home/ssserpent/Documents/mama ssserpent@imac:/home/ssserpent/Documents
-rsync -avzu /home/ssserpent/Documents/old_personal ssserpent@imac:/home/ssserpent/Documents
 rsync -avzu /home/ssserpent/Documents/literatura_techniczna ssserpent@imac:/home/ssserpent/Documents

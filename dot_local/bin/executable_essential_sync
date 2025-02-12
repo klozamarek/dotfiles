@@ -21,12 +21,12 @@ fi
 # Cleanup old backups, keeping only the last $MAX_BACKUPS
 ls -tp "$BACKUP_DIR" | grep "backup-.*\.tar.gz" | tail -n +$((MAX_BACKUPS+1)) | xargs -I {} rm -- "$BACKUP_DIR/{}"
 
-# Sync files from remote to local if remote files are newer and bigger
+# Sync files from remote to local if remote files are newer
 for i in "${!LOCAL_FILES[@]}"; do
     LOCAL_FILE="${LOCAL_FILES[$i]}"
     REMOTE_FILE="${REMOTE_FILES[$i]}"
     
-    rsync -avz --ignore-existing --update --size-only "$REMOTE_USER@$REMOTE_HOST:$REMOTE_FILE" "$LOCAL_FILE"
-    rsync -avz --ignore-existing --update --size-only "$LOCAL_FILE" "$REMOTE_USER@$REMOTE_HOST:$REMOTE_FILE"
+    rsync -avz --update "$REMOTE_USER@$REMOTE_HOST:$REMOTE_FILE" "$LOCAL_FILE"
+    rsync -avz --update "$LOCAL_FILE" "$REMOTE_USER@$REMOTE_HOST:$REMOTE_FILE"
 
 done

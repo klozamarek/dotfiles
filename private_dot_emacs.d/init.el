@@ -15,16 +15,21 @@
 (setq user-mail-address "ssserpent@gmail.com")
 
 ;; Set up directory for drafts
-(setq message-auto-save-directory "ssserpent/drafts/cur")
+(setq message-auto-save-directory "/home/ssserpent/.local/share/mail/ssserpent/drafts")
 (setq message-kill-buffer-on-exit t)
 
 ;; Optional: Set up Notmuch maildir location
 (setq notmuch-search-oldest-first nil)
-(setq notmuch-fcc-dirs "ssserpent/sent/cur")
+;; (setq notmuch-fcc-dirs "/home/ssserpent/.local/share/mail/ssserpent/sent")
+;; (setq notmuch-fcc-dirs '(("ssserpent@gmail.com" . "sent/")))
+;; (setq notmuch-fcc-dirs '(("ssserpent@gmail.com" . "maildir:/home/ssserpent/.local/share/mail/ssserpent/sent")))
+(setq notmuch-fcc-dirs
+      '(("ssserpent@gmail.com" . "ssserpent/sent")
+        ("kloza.marek@gmail.com" . "klozamarek/sent")))
 
 ;; Set up Trash folder
 (setq notmuch-message-reject-fcc nil) ;; Ensure Sent messages are saved
-(setq notmuch-trash-folder "ssserpent/trash/cur")
+(setq notmuch-trash-folder "/home/ssserpent/.local/share/mail/ssserpent/trash")
 
 ;; Load gruvbox theme
 (setq custom-safe-themes t) ;; Trust all themes

@@ -15,6 +15,7 @@ exclude_tags=deleted;spam;
 
 [maildir]
 synchronize_flags=true
+sent=ssserpent/sent
 
 [crypto]
 gpg_path=gpg
