@@ -64,3 +64,17 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+(defun my-set-signature ()
+  "Set a custom email signature based on the From field."
+  (let* ((from (or (message-fetch-field "from") user-mail-address "")))
+    (setq message-signature
+          (cond
+           ((string-match "ssserpent@gmail.com" from)
+            "Best regards,\nMarek Kloza\nssserpent@gmail.com\n")
+           ((string-match "kloza.marek@gmail.com" from)
+            "Best wishes,\nMarek Kloza\nkloza.marek@gmail.com\n")
+           (t "Best,\nMarek Kloza"))))
+  (message "Signature applied: %s" message-signature))
+
+(add-hook 'message-setup-hook #'my-set-signature)
