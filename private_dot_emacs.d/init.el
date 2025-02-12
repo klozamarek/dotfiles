@@ -73,11 +73,11 @@
     ;; Set the user-mail-address dynamically
     (setq user-mail-address chosen-from)
 
-    ;; Set the From header explicitly without inserting duplicates
+    ;; Remove old From field and set the new one
     (message-remove-header "From")
     (message-add-header (format "From: %s" user-mail-address))
 
-    ;; Apply the correct signature immediately
+    ;; Set the correct signature
     (setq message-signature
           (cond
            ((string= chosen-from "ssserpent@gmail.com")
@@ -85,9 +85,19 @@
            ((string= chosen-from "kloza.marek@gmail.com")
             "Pozdrawiam,\nMarek Kloza\nkloza.marek@gmail.com\n")
            (t "Best,\nMarek Kloza")))
-    
-    ;; Debug message to confirm signature was set
-    (message "Signature applied: %s" message-signature)))
+
+    ;; Remove any existing signature and extra "--"
+    (save-excursion
+      (goto-char (point-min))
+      (while (re-search-forward "^-- $" nil t)
+        (delete-region (line-beginning-position) (line-end-position)))
+      (goto-char (point-min))
+      (when (re-search-forward "^-- $" nil t)
+        (delete-region (point) (point-max)))
+      (goto-char (point-max))
+      (insert "\n-- \n" message-signature)))
+
+  (message "Signature applied: %s" message-signature))
 
 ;; Ensure the function runs on message composition
 (add-hook 'message-setup-hook #'my-setup-email)
