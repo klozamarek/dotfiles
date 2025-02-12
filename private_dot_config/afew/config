@@ -100,6 +100,11 @@ query = 'from:*bandcamp.com or from:*mail.goodreads.com or from:*netflix.com or 
 tags = +fun;-inbox
 message = tagging entertainment
 
+[Filter.18]
+message = Tagging all sent mails
+query = (folder:ssserpent/sent or folder:klozamarek/sent)
+tags = +sent
+
 [MailMover]
 folders = inbox archives spam trash
 rename = True
