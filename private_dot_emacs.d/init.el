@@ -78,3 +78,20 @@
   (message "Signature applied: %s" message-signature))
 
 (add-hook 'message-setup-hook #'my-set-signature)
+
+(defun my-choose-from-address ()
+  "Prompt the user to select a From address before composing an email and set the corresponding signature."
+  (interactive)
+  (let ((chosen-from (completing-read "Choose From: "
+                                      '("ssserpent@gmail.com" "kloza.marek@gmail.com") nil t)))
+    (setq user-mail-address chosen-from)
+    (message-add-header (format "From: %s" user-mail-address))
+    (setq message-signature
+          (cond
+           ((string-match "ssserpent@gmail.com" chosen-from)
+            "Best regards,\nMarek Kloza\nssserpent@gmail.com\n")
+           ((string-match "kloza.marek@gmail.com" chosen-from)
+            "Best wishes,\nMarek Kloza\nkloza.marek@gmail.com\n")
+           (t "Best,\nMarek Kloza")))))
+
+(add-hook 'message-setup-hook #'my-choose-from-address)
