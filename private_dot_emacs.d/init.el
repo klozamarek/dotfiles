@@ -33,7 +33,7 @@
 
 ;; Load gruvbox theme
 (setq custom-safe-themes t) ;; Trust all themes
-(load-theme 'gruvbox-dark-medium t)
+(load-theme 'wombat t)
 
 ;; Enable MELPA
 (require 'package)
@@ -56,15 +56,17 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(fido-vertical-mode t)
- '(package-install-selected-packages '(undo-tree csv-mode magit-delta gruvbox-theme)))
+ '(fido-vertical-mode nil)
+ '(icomplete-mode nil)
+ '(package-install-selected-packages '(undo-tree csv-mode magit-delta gruvbox-theme))
+ '(package-selected-packages
+   '(marginalia vertico consult chezmoi undo-tree magit-delta gruvbox-theme goto-chg csv-mode annalist)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
-
 (defun my-setup-email ()
   "Prompt user to select a From address and set the correct signature."
   (interactive)
@@ -101,3 +103,55 @@
 
 ;; Ensure the function runs on message composition
 (add-hook 'message-setup-hook #'my-setup-email)
+
+;; Configure chezmoi.el with magit support
+(use-package chezmoi
+  :ensure t
+  :config
+  (global-set-key (kbd "C-c C-f") #'chezmoi-find)
+  (global-set-key (kbd "C-c C-s") #'chezmoi-write)
+  (setq-default chezmoi-template-display-p t))
+  
+;; Ensure magit is installed and setup chezmoi-magit-status
+(use-package magit
+  :ensure t
+  :config
+  (defun chezmoi-magit-status ()
+    "Open magit-status for the chezmoi repository."
+    (interactive)
+    (magit-status (expand-file-name "~/.local/share/chezmoi")))
+  (global-set-key (kbd "C-c m") #'chezmoi-magit-status))
+
+;; Install and configure consult
+(use-package consult
+  :ensure t
+  :bind
+  (("C-x b" . consult-buffer)           ;; Better buffer switching
+   ("M-y" . consult-yank-pop)           ;; Improved kill-ring history
+   ("C-x r b" . consult-bookmark)       ;; Quickly jump to bookmarks
+   ("M-g g" . consult-goto-line)        ;; Go to a specific line
+   ("M-g o" . consult-outline)          ;; Navigate document headings
+   ("M-g i" . consult-imenu)            ;; Jump to function or class in code
+   ("M-g m" . consult-mark)             ;; Jump to marks
+   ("M-s d" . consult-find)             ;; Search for files using `find`
+   ("M-s g" . consult-grep)             ;; Search files using `grep`
+   ("M-s r" . consult-ripgrep)          ;; Use `ripgrep` for searching
+   ("M-s l" . consult-line)             ;; Search for lines in buffer
+   ("M-s k" . consult-keep-lines)       ;; Keep only matching lines
+   ("M-s u" . consult-focus-lines)))    ;; Focus on certain lines
+
+;; Enable preview feature
+(setq consult-preview-key 'any)
+
+;; Use vertico for completion
+(use-package vertico
+  :ensure t
+  :init
+  (vertico-mode))
+
+;; Optional: Enable marginalia for richer descriptions
+(use-package marginalia
+  :ensure t
+  :init
+  (marginalia-mode))
+
