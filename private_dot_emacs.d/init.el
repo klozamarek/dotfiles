@@ -60,7 +60,7 @@
  '(custom-enabled-themes '(gruvbox-dark-hard))
  '(fido-vertical-mode nil)
  '(icomplete-mode nil)
- '(mu4e-headers-date-format "%d/%m/%Y")
+ '(mu4e-headers-date-format "%d/%m/%Y %H:%M")
  '(package-install-selected-packages '(undo-tree csv-mode magit-delta gruvbox-theme))
  '(package-selected-packages
    '(marginalia vertico consult chezmoi undo-tree magit-delta gruvbox-theme goto-chg csv-mode annalist)))
@@ -199,17 +199,18 @@
                 (mu4e-get-mail-command . "mbsync -a")))))
 
 ;; Additonal settings for mu4e
-;; Use the first matching context automatically
-(setq mu4e-context-policy 'pick-first)
-;; use 'fancy' non-ascii characters in various places in mu4e
-(setq mu4e-use-fancy-chars t)
-;; save attachment to my desktop (this can also be a function)
-(setq mu4e-attachment-dir "~/Downloads")
-;; attempt to show images when viewing messages
-(setq mu4e-view-show-images t)
-;; don't save messages to Sent Messages, Gmail/IMAP takes care of this
-(setq mu4e-sent-messages-behavior 'delete)
+(setq mu4e-context-policy 'pick-first) ; Use the first matching context automatically
+(setq mu4e-use-fancy-chars t) ; use fancy non-ascii characters for mail therads
+(setq mu4e-attachment-dir "~/Downloads") ; save attachment to my desktop (this can also be a function)
+(setq mu4e-view-show-images t) ; attempt to show images when viewing messages
+(setq mu4e-sent-messages-behavior 'delete) ; don't save messages to Sent Messages, Gmail/IMAP takes care of this
 (setq mu4e-view-attachment-default-handler "xdg-open")
+(setq mu4e-html2text-command "w3m -T text/html") ; how to hanfle html-formatted emails
+(setq mu4e-headers-fields '((:human-date . 20)
+                            (:flags . 6)
+                            (:mailing-list . 10)
+                            (:from . 22)
+                            (:subject)))
 
 ;; Require and configure mu4e-alert
 (require 'mu4e-alert)
