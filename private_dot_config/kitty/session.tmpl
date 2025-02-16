@@ -30,7 +30,7 @@ launch newsboat
 enabled_layouts splits
 
 new_tab emacs
-launch emacs --no-window-system -f notmuch
+launch emacs --no-window-system --eval '(mu4e)' --eval '(notmuch)'
 enabled_layouts splits
 
 # Create a new OS window

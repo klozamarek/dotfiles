@@ -1,5 +1,7 @@
 (autoload 'notmuch "notmuch" "notmuch mail" t)
 (global-set-key (kbd "C-c n") #'notmuch)
+(autoload 'mu4e "mu4e" "Launch mu4e email client." t)
+(global-set-key (kbd "C-c u") #'mu4e)
 
 ;; Mail User Agent (MUA) configuration
 (setq mail-user-agent 'message-user-agent)
@@ -20,9 +22,6 @@
 
 ;; Optional: Set up Notmuch maildir location
 (setq notmuch-search-oldest-first nil)
-;; (setq notmuch-fcc-dirs "/home/ssserpent/.local/share/mail/ssserpent/sent")
-;; (setq notmuch-fcc-dirs '(("ssserpent@gmail.com" . "sent/")))
-;; (setq notmuch-fcc-dirs '(("ssserpent@gmail.com" . "maildir:/home/ssserpent/.local/share/mail/ssserpent/sent")))
 (setq notmuch-fcc-dirs
       '(("ssserpent@gmail.com" . "ssserpent/sent")
         ("kloza.marek@gmail.com" . "klozamarek/sent")))
@@ -56,6 +55,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(custom-enabled-themes '(gruvbox-dark-hard))
  '(fido-vertical-mode nil)
  '(icomplete-mode nil)
  '(package-install-selected-packages '(undo-tree csv-mode magit-delta gruvbox-theme))
@@ -197,4 +197,17 @@
 
 ;; Use the first matching context automatically
 (setq mu4e-context-policy 'pick-first)
+
+;; Require and configure mu4e-alert
+(require 'mu4e-alert)
+(mu4e-alert-set-default-style 'libnotify)
+(add-hook 'after-init-hook #'mu4e-alert-enable-notifications)
+(add-hook 'after-init-hook #'mu4e-alert-enable-mode-line-display)
+
+;; Optionally customize which mails trigger alerts
+(setq mu4e-alert-interesting-mail-query "flag:unread AND NOT flag:trashed")
+
+(use-package mu4e-column-faces
+  :after mu4e
+  :config (mu4e-column-faces-mode))
 
