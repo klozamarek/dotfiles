@@ -47,6 +47,7 @@
   "jobs_search_history": [],
   "lrf_viewer_search_history": [],
   "main_search_history": [
+    "emacs",
     "search:\"=Linux Magazine\" 2024",
     "Linux Magazine Special",
     "2020",
@@ -70,8 +71,7 @@
     "Linux USA",
     "tags:\"=Linux Magazine\" 2023",
     "linux",
-    "Linux",
-    "expert"
+    "Linux"
   ],
   "main_window_geometry": null,
   "match_tags_type": "any",

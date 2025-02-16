@@ -3,6 +3,8 @@
 (autoload 'mu4e "mu4e" "Launch mu4e email client." t)
 (global-set-key (kbd "C-c u") #'mu4e)
 
+(setq mailcap-prefer-mailcap-viewers t)
+
 ;; Mail User Agent (MUA) configuration
 (setq mail-user-agent 'message-user-agent)
 
@@ -58,6 +60,7 @@
  '(custom-enabled-themes '(gruvbox-dark-hard))
  '(fido-vertical-mode nil)
  '(icomplete-mode nil)
+ '(mu4e-headers-date-format "%d/%m/%Y")
  '(package-install-selected-packages '(undo-tree csv-mode magit-delta gruvbox-theme))
  '(package-selected-packages
    '(marginalia vertico consult chezmoi undo-tree magit-delta gruvbox-theme goto-chg csv-mode annalist)))
@@ -195,8 +198,18 @@
                 (mu4e-refile-folder    . "/klozamarek/archives")
                 (mu4e-get-mail-command . "mbsync -a")))))
 
+;; Additonal settings for mu4e
 ;; Use the first matching context automatically
 (setq mu4e-context-policy 'pick-first)
+;; use 'fancy' non-ascii characters in various places in mu4e
+(setq mu4e-use-fancy-chars t)
+;; save attachment to my desktop (this can also be a function)
+(setq mu4e-attachment-dir "~/Downloads")
+;; attempt to show images when viewing messages
+(setq mu4e-view-show-images t)
+;; don't save messages to Sent Messages, Gmail/IMAP takes care of this
+(setq mu4e-sent-messages-behavior 'delete)
+(setq mu4e-view-attachment-default-handler "xdg-open")
 
 ;; Require and configure mu4e-alert
 (require 'mu4e-alert)
