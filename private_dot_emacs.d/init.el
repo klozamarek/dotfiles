@@ -109,7 +109,7 @@
   :ensure t
   :config
   (global-set-key (kbd "C-c C-f") #'chezmoi-find)
-  (global-set-key (kbd "C-c C-s") #'chezmoi-write)
+  (global-set-key (kbd "C-c C-w") #'chezmoi-write)
   (setq-default chezmoi-template-display-p t))
   
 ;; Ensure magit is installed and setup chezmoi-magit-status
