@@ -155,3 +155,46 @@
   :init
   (marginalia-mode))
 
+;; Set the base maildir path (adjust if your mail directory is elsewhere)
+(setq mu4e-maildir "~/.local/share/mail")
+
+;; Define maildir shortcuts (for fast access in the mu4e view)
+(setq mu4e-maildir-shortcuts
+      '( ("/ssserpent/inbox" . ?s)
+         ("/klozamarek/inbox" . ?k) ))
+
+;; Define contexts for each account using mu4easy/mu4e context support:
+(require 'mu4e)         ;; Ensure mu4e is loaded
+(require 'mu4e-context) ;; If using context support
+
+(setq mu4e-contexts
+      (list
+       (make-mu4e-context
+        :name "ssserpent"
+        :match-func (lambda (msg)
+                      (when msg
+                        (string-match-p "^/ssserpent" (mu4e-message-field msg :maildir))))
+        :vars '((user-mail-address     . "ssserpent@gmail.com")
+                (user-full-name        . "Marek Kloza")
+                (mu4e-drafts-folder    . "/ssserpent/drafts")
+                (mu4e-sent-folder      . "/ssserpent/sent")
+                (mu4e-trash-folder     . "/ssserpent/trash")
+                (mu4e-refile-folder    . "/ssserpent/archives")
+                (mu4e-get-mail-command . "mbsync -a")))
+
+       (make-mu4e-context
+        :name "klozamarek"
+        :match-func (lambda (msg)
+                      (when msg
+                        (string-match-p "^/klozamarek" (mu4e-message-field msg :maildir))))
+        :vars '((user-mail-address     . "klozamarek@gmail.com")
+                (user-full-name        . "Marek KLoza")
+                (mu4e-drafts-folder    . "/klozamarek/drafts")
+                (mu4e-sent-folder      . "/klozamarek/sent")
+                (mu4e-trash-folder     . "/klozamarek/trash")
+                (mu4e-refile-folder    . "/klozamarek/archives")
+                (mu4e-get-mail-command . "mbsync -a")))))
+
+;; Use the first matching context automatically
+(setq mu4e-context-policy 'pick-first)
+
