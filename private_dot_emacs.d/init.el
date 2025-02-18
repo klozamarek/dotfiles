@@ -168,7 +168,9 @@
 ;; Define maildir shortcuts (for fast access in the mu4e view)
 (setq mu4e-maildir-shortcuts
       '( ("/ssserpent/inbox" . ?s)
-         ("/klozamarek/inbox" . ?k) ))
+         ("/ssserpent/archives" . ?a)
+         ("/klozamarek/inbox" . ?k)
+         ("/klozamarek/archives" . ?r) ))
 
 ;; Define contexts for each account using mu4easy/mu4e context support:
 (require 'mu4e)         ;; Ensure mu4e is loaded
@@ -221,15 +223,20 @@
    mu4e-headers-new-mark       '("N" . "🔥")
    mu4e-headers-passed-mark    '("P" . "❯")
    mu4e-headers-replied-mark   '("R" . "❮")
-   mu4e-headers-seen-mark      '("S" . "☑")
+   mu4e-headers-seen-mark      '("S" . "✔ ")
    mu4e-headers-trashed-mark   '("T" . "💀")
    mu4e-headers-attach-mark    '("a" . "📎")
    mu4e-headers-encrypted-mark '("x" . "🔒")
    mu4e-headers-signed-mark    '("s" . "🔑")
-   mu4e-headers-unread-mark    '("u" . "⎕")
+   mu4e-headers-unread-mark    '("u" . "📨")
    mu4e-headers-list-mark      '("l" . "🔈")
    mu4e-headers-personal-mark  '("p" . "👨")
    mu4e-headers-calendar-mark  '("c" . "📅"))
+(setq message-kill-buffer-on-exit t)
+(setq headers-auto-update t)
+(setq update-interval (* 10 60))
+(setq mu4e-change-filenames-when-moving t)
+(setq mu4e-compose-dont-reply-to-self t)
 
 ;; Require and configure mu4e-alert
 (require 'mu4e-alert)
