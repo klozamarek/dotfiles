@@ -3,6 +3,10 @@
 (autoload 'mu4e "mu4e" "Launch mu4e email client." t)
 (global-set-key (kbd "C-c u") #'mu4e)
 
+(when (equal window-system 'x)
+      (set-fontset-font "fontset-default" 'unicode "Dejavu Sans Mono")
+      (set-face-font 'default "Inconsolata-10"))
+
 (setq mailcap-prefer-mailcap-viewers t)
 
 ;; Mail User Agent (MUA) configuration
@@ -211,6 +215,21 @@
                             (:mailing-list . 10)
                             (:from . 22)
                             (:subject)))
+(setq
+   mu4e-headers-draft-mark     '("D" . "💈")
+   mu4e-headers-flagged-mark   '("F" . "📍")
+   mu4e-headers-new-mark       '("N" . "🔥")
+   mu4e-headers-passed-mark    '("P" . "❯")
+   mu4e-headers-replied-mark   '("R" . "❮")
+   mu4e-headers-seen-mark      '("S" . "☑")
+   mu4e-headers-trashed-mark   '("T" . "💀")
+   mu4e-headers-attach-mark    '("a" . "📎")
+   mu4e-headers-encrypted-mark '("x" . "🔒")
+   mu4e-headers-signed-mark    '("s" . "🔑")
+   mu4e-headers-unread-mark    '("u" . "⎕")
+   mu4e-headers-list-mark      '("l" . "🔈")
+   mu4e-headers-personal-mark  '("p" . "👨")
+   mu4e-headers-calendar-mark  '("c" . "📅"))
 
 ;; Require and configure mu4e-alert
 (require 'mu4e-alert)

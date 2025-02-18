@@ -231,7 +231,7 @@
 
 	<recipe_customization keep_issues="0" id="builtin:foreign_policy" add_title_tag="yes" custom_tags=""/>
 
-	<scheduled_recipe id="builtin:foreignaffairs" title="Foreign Affairs" last_downloaded="2025-01-17T06:01:20.586375+00:00"><schedule type="interval">31.000000</schedule></scheduled_recipe>
+	<scheduled_recipe id="builtin:foreignaffairs" title="Foreign Affairs" last_downloaded="2025-02-17T06:01:20.586375+00:00"><schedule type="interval">31.000000</schedule></scheduled_recipe>
 
 	<recipe_customization keep_issues="0" id="builtin:foreignaffairs" add_title_tag="yes" custom_tags=""/>
 
@@ -331,7 +331,7 @@
 
 	<recipe_customization keep_issues="0" id="builtin:lightspeed_magazine" add_title_tag="yes" custom_tags=""/>
 
-	<scheduled_recipe id="builtin:linux_magazine" title="Linux Magazine" last_downloaded="2025-01-17T06:01:10.565397+00:00"><schedule type="interval">31.000000</schedule></scheduled_recipe>
+	<scheduled_recipe id="builtin:linux_magazine" title="Linux Magazine" last_downloaded="2025-02-17T06:01:10.565397+00:00"><schedule type="interval">31.000000</schedule></scheduled_recipe>
 
 	<recipe_customization keep_issues="0" id="builtin:linux_magazine" add_title_tag="yes" custom_tags=""/>
 
@@ -425,7 +425,7 @@
 
 	<recipe_customization keep_issues="0" id="builtin:new_york_review_of_books_no_sub" add_title_tag="yes" custom_tags=""/>
 
-	<scheduled_recipe id="builtin:nytimesbook" title="New York Times Book Review" last_downloaded="2025-02-10T05:00:28.776818+00:00"><schedule type="days_of_week">0:6:0</schedule></scheduled_recipe>
+	<scheduled_recipe id="builtin:nytimesbook" title="New York Times Book Review" last_downloaded="2025-02-17T05:31:07.791116+00:00"><schedule type="days_of_week">0:6:0</schedule></scheduled_recipe>
 
 	<recipe_customization keep_issues="0" id="builtin:nytimesbook" add_title_tag="yes" custom_tags=""/>
 
@@ -829,7 +829,7 @@
 
 	<recipe_customization keep_issues="0" id="builtin:linuxportal_pl" add_title_tag="yes" custom_tags=""/>
 
-	<scheduled_recipe id="builtin:atlantic" title="The Atlantic" last_downloaded="2025-01-17T06:01:34.589856+00:00"><schedule type="interval">31.000000</schedule></scheduled_recipe>
+	<scheduled_recipe id="builtin:atlantic" title="The Atlantic" last_downloaded="2025-02-17T06:01:34.589856+00:00"><schedule type="interval">31.000000</schedule></scheduled_recipe>
 
 	<recipe_customization keep_issues="0" id="builtin:atlantic" add_title_tag="yes" custom_tags=""/>
 
