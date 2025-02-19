@@ -12,6 +12,7 @@ ssh_config = "/home/ssserpent/.ssh/config"
 
 [remote.ssh_keys]
 {{- if eq .chezmoi.hostname "texus" }}
+"ssserpent@soyoarch" = "/home/ssserpent/.config/termscp/.ssh/ssserpent@soyoarch.key"
 "ssserpent@samsarch" = "/home/ssserpent/.config/termscp/.ssh/ssserpent@samsarch.key"
 "ssserpent@lenspark" = "/home/ssserpent/.config/termscp/.ssh/ssserpent@lenspark.key"
 "ssserpent@imac" = "/home/ssserpent/.config/termscp/.ssh/ssserpent@imac.key"
