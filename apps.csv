@@ -182,6 +182,7 @@ utilities,transmission-cli,Fast easy and free BitTorrent client (CLI tools daemo
 utilities,afew,Initial tagging script for notmuch mail
 utilities,pam-gnupg,Unlock GnuPG keys on login
 utilities,weechat,Fast light and extensible IRC client (curses UI)
+utilities,mu,Maildir indexer/searcher and Emacs client (mu4e)
 office,zathura-pdf-mupdf,PDF support for Zathura
 office,neomutt,A version of mutt with added features
 office,zathura-djvu,DjVu support for Zathura
