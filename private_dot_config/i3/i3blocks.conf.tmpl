@@ -15,25 +15,25 @@ separator=true
 
 [volume]
 command=echo "$(pactl list sinks | grep 'Volume:' | head -n 1 | awk -F/ '{print $2}' | tr -d '[:space:]')"
-label= 
+label=  
 interval=once
 color=#a89984
 
 [mail]
-label=S: 
+label=S:  
 command=$XDG_CONFIG_HOME/i3/scripts/.mails.sh.x
 interval=1800
 color=#b16286 
 
 [mail]
-label=T: 
+label=T:  
 command=$XDG_CONFIG_HOME/i3/scripts/.mailt.sh.x
 interval=1800
 color=#d3869b 
 
 [disk]
 command=$XDG_CONFIG_HOME/i3/scripts/disk
-LABEL=:
+LABEL= :
 DIR=/
 ALERT_LOW=10
 interval=30
@@ -42,7 +42,7 @@ color=#859900
 {{- if eq .chezmoi.hostname "texus" }}
 [disk]
 command=$XDG_CONFIG_HOME/i3/scripts/disk
-LABEL=:
+LABEL= :
 DIR=/media/gen_dta
 ALERT_LOW=10
 interval=30
@@ -63,7 +63,7 @@ color=#fb4934
 
 {{- if eq .chezmoi.hostname "texus" }}
 [ethernet]
-label=:
+label=🖧 
 command=echo "$(ip addr show eno1 | grep -oP '(?<=inet\s)\d+\.\d+\.\d+\.\d+')"
 interval=1800
 color=#98971a
@@ -72,13 +72,28 @@ color=#98971a
 {{ if eq .chezmoi.hostname "samsarch" }}
 [wifi]
 command=echo "$(nmcli -t -f active,ssid,signal dev wifi | grep yes | cut -d: -f2,3) $(ip -4 -o addr show wlp2s0 | awk '{print $4}' | cut -d/ -f1)" 
-label= 
+label=📶 
 interval=10
 color=#689d6a
 
 [ethernet]
-label=:
+label=🖧 
 command=echo "$(ip addr show enp4s0 | grep -oP '(?<=inet\s)\d+\.\d+\.\d+\.\d+')"
+interval=1800
+color=#98971a
+{{- end}}
+
+{{ if eq .chezmoi.hostname "soyoarch" }}
+[wifi]
+command=echo "$(nmcli -t -f active,ssid,signal dev wifi | grep yes | cut -d: -f2,3) $(ip -4 -o addr show wlp1s0 | awk '{print $4}' | cut -d/ -f1)" 
+label=📶 
+interval=10
+color=#689d6a
+
+[ethernet]
+label=🖧 
+command=echo "$(ip addr show enp4s0 | grep -oP '(?<=inet\s)\d+\.\d+\.\d+\.\d+')"
+command=echo "$(ip addr show enp2s0 | grep -oP '(?<=inet\s)\d+\.\d+\.\d+\.\d+')"
 interval=1800
 color=#98971a
 {{- end}}
@@ -91,7 +106,7 @@ color=#b16286
 
 [temperature]
 command=$XDG_CONFIG_HOME/i3/scripts/temperature
-label= 
+label=🌡️
 interval=10
 T_WARN=70
 T_CRIT=90
@@ -111,7 +126,7 @@ COLOR_WARN=#FFFC00
 COLOR_CRIT=#FF0000
 
 [load]
-label= 
+label=  
 #command=echo "$(top -bn1 | grep 'Cpu(s)' | awk '{print $2 + $4}' | head -n 1)%" # snapshot of temp
 command=echo "$(uptime | awk -F'[a-z]:' '{printf "%.2f%\n", 100 * $2 / $(NF-2)}')" # average load 5min
 interval=10
@@ -120,12 +135,19 @@ color=#6c71c4
 {{- if eq .chezmoi.hostname "texus" }}
 [gpu-load]
 command=$XDG_CONFIG_HOME/i3/scripts/gpu-load
-label=GPU
-interval=10
+label=GPU 
+interval=1
 #min_width=GPU 100% 100% 100% 100%
 GPU_BRAND=AMD
 #T_WARN=70
 #T_CRIT=90
+{{- end}}
+
+{{- if eq .chezmoi.hostname "soyoarch" }}
+[gpu_load]
+command=$XDG_CONFIG_HOME/i3/scripts/gpu_load
+label=GPU 
+interval=1
 {{- end}}
 
 {{ if eq .chezmoi.hostname "samsarch" }}
@@ -136,7 +158,7 @@ interval=30
 {{- end}}
 
 [time]
-label= 
+label=📅 
 command=date '+%a %d-%m-%y %k:%M:%S'
 interval=1
 color=#50C878

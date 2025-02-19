@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Extract GPU load from the 7th column (adjust if necessary)
+gpu_load=$(timeout 1 intel_gpu_top -l 1 2>/dev/null | awk 'NR==3 {print $7; exit}')
+
+# If no value is retrieved, set to "N/A"
+if [[ -z "$gpu_load" ]]; then
+    gpu_load="N/A"
+fi
+
+# Output in i3blocks format
+echo "GPU: ${gpu_load}%"
