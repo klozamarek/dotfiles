@@ -72,7 +72,7 @@ color=#98971a
 {{ if eq .chezmoi.hostname "samsarch" }}
 [wifi]
 command=echo "$(nmcli -t -f active,ssid,signal dev wifi | grep yes | cut -d: -f2,3) $(ip -4 -o addr show wlp2s0 | awk '{print $4}' | cut -d/ -f1)" 
-label=📶 
+label=📶
 interval=10
 color=#689d6a
 
@@ -86,7 +86,7 @@ color=#98971a
 {{ if eq .chezmoi.hostname "soyoarch" }}
 [wifi]
 command=echo "$(nmcli -t -f active,ssid,signal dev wifi | grep yes | cut -d: -f2,3) $(ip -4 -o addr show wlp1s0 | awk '{print $4}' | cut -d/ -f1)" 
-label=📶 
+label=📶
 interval=10
 color=#689d6a
 
@@ -146,7 +146,6 @@ GPU_BRAND=AMD
 {{- if eq .chezmoi.hostname "soyoarch" }}
 [gpu_load]
 command=$XDG_CONFIG_HOME/i3/scripts/gpu_load
-label=GPU 
 interval=1
 {{- end}}
 
