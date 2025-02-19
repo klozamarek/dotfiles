@@ -1,12 +1,25 @@
 #!/bin/bash
 
-# Extract GPU load from the 7th column (adjust if necessary)
-gpu_load=$(timeout 1 intel_gpu_top -l 1 2>/dev/null | awk 'NR==3 {print $7; exit}')
+# Extract GPU load (integer only)
+gpu_load=$(timeout 1 intel_gpu_top -l 1 2>/dev/null | awk 'NR==3 {print int($7); exit}')
 
-# If no value is retrieved, set to "N/A"
-if [[ -z "$gpu_load" ]]; then
-    gpu_load="N/A"
+# Default color (gray if no value is found)
+color="#888888"
+
+# Assign colors based on GPU load percentage
+if [[ "$gpu_load" -le 40 ]]; then
+    color="#00FF00"  # Green
+elif [[ "$gpu_load" -le 70 ]]; then
+    color="#FFA500"  # Orange
+else
+    color="#FF0000"  # Red
 fi
 
-# Output in i3blocks format
-echo "GPU: ${gpu_load}%"
+# If no value is retrieved, set "N/A"
+if [[ -z "$gpu_load" ]]; then
+    gpu_load="N/A"
+    color="#888888"  # Gray for missing data
+fi
+
+# Output in i3blocks format with color
+echo "<span color=\"$color\">GPU: ${gpu_load}%</span>"
