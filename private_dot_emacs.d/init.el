@@ -17,17 +17,24 @@
 ;; ---------------------------
 (setq apropos-sort-by-scores t)
 (setq backup-directory-alist '(("." . "~/.emacs.d/backups")))
+(icomplete-mode -1)  ;; Ensure icomplete-mode is disabled
 
 ;; ---------------------------
 ;; Helm Configuration
 ;; ---------------------------
 (use-package helm
   :ensure t
-  :bind (("M-x"     . helm-M-x)
-         ("C-x C-f" . helm-find-files)
-         ("C-x b"   . helm-buffers-list))
+  :bind (("M-x" . helm-M-x))
   :config
-  (helm-mode 1))
+    (require 'helm) ;; Ensure Helm is loaded before accessing helm-map
+    (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action)  ;; Rebind tab to do persistent action
+    (define-key helm-map (kbd "C-i") 'helm-execute-persistent-action)    ;; Make TAB work in terminal
+    (define-key helm-map (kbd "C-z") 'helm-select-action))               ;; List actions using C-z
+    (helm-mode 1)
+(global-set-key (kbd "M-y") 'helm-show-kill-ring)
+(global-set-key (kbd "C-x b") 'helm-mini)
+(setq helm-buffers-fuzzy-matching t
+      helm-recentf-fuzzy-match    t)
 
 ;; ---------------------------
 ;; Wttr Configuration
@@ -198,6 +205,7 @@ Uses the --vimgrep flag so that results are compatible with grep-mode."
   (setq update-interval (* 10 60))
   (setq mu4e-change-filenames-when-moving t)
   (setq mu4e-compose-dont-reply-to-self t))
+  (setq mu4e-headers-date-format "%d/%m/%Y %H:%M")  ;; Set mu4e date format
 
 ;; ---------------------------
 ;; mu4e-alert Configuration
@@ -267,6 +275,14 @@ Uses the --vimgrep flag so that results are compatible with grep-mode."
 (add-hook 'message-setup-hook #'my-setup-email)
 
 ;; ---------------------------
+;; Gruvbox theme
+;; ---------------------------
+(use-package gruvbox-theme
+  :ensure t
+  :config
+  (load-theme 'gruvbox-dark-hard t))
+
+;; ---------------------------
 ;; Custom Set Variables and Faces
 ;; ---------------------------
 (custom-set-variables
@@ -274,13 +290,7 @@ Uses the --vimgrep flag so that results are compatible with grep-mode."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-enabled-themes '(gruvbox-dark-hard))
- '(fido-vertical-mode nil)
- '(icomplete-mode nil)
- '(mu4e-headers-date-format "%d/%m/%Y %H:%M")
- '(package-install-selected-packages '(undo-tree csv-mode magit-delta gruvbox-theme))
- '(package-selected-packages
-   '(wttrin helm fzf gruvbox-theme auto-complete csv-mode magit chezmoi mu4e-alert mu4e-column-faces)))
+ '(package-selected-packages '(helm auto-complete)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
