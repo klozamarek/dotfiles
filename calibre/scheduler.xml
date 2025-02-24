@@ -425,7 +425,7 @@
 
 	<recipe_customization keep_issues="0" id="builtin:new_york_review_of_books_no_sub" add_title_tag="yes" custom_tags=""/>
 
-	<scheduled_recipe id="builtin:nytimesbook" title="New York Times Book Review" last_downloaded="2025-02-17T05:31:07.791116+00:00"><schedule type="days_of_week">0:6:0</schedule></scheduled_recipe>
+	<scheduled_recipe id="builtin:nytimesbook" title="New York Times Book Review" last_downloaded="2025-02-24T05:14:09.828941+00:00"><schedule type="days_of_week">0:6:0</schedule></scheduled_recipe>
 
 	<recipe_customization keep_issues="0" id="builtin:nytimesbook" add_title_tag="yes" custom_tags=""/>
 
@@ -839,11 +839,11 @@
 
 	<recipe_customization keep_issues="0" id="builtin:lwn_free" add_title_tag="yes" custom_tags="" recipe_specific_options="{}"/>
 
-	<scheduled_recipe id="builtin:spectator_magazine" title="Spectator Magazine" last_downloaded="2025-02-15T05:00:12.801407+00:00"><schedule type="days_of_week">5:6:0</schedule></scheduled_recipe>
+	<scheduled_recipe id="builtin:spectator_magazine" title="Spectator Magazine" last_downloaded="2025-02-22T05:08:20.871915+00:00"><schedule type="days_of_week">5:6:0</schedule></scheduled_recipe>
 
 	<recipe_customization keep_issues="0" id="builtin:spectator_magazine" add_title_tag="yes" custom_tags="" recipe_specific_options="{}"/>
 
-	<scheduled_recipe id="builtin:the_nation" title="The Nation" last_downloaded="2025-02-15T05:00:21.760822+00:00"><schedule type="days_of_week">5:6:0</schedule></scheduled_recipe>
+	<scheduled_recipe id="builtin:the_nation" title="The Nation" last_downloaded="2025-02-22T05:08:31.830891+00:00"><schedule type="days_of_week">5:6:0</schedule></scheduled_recipe>
 
 	<recipe_customization keep_issues="0" id="builtin:the_nation" add_title_tag="yes" custom_tags="" recipe_specific_options="{}"/>
 

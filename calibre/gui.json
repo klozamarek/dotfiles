@@ -134,6 +134,46 @@
       [
         "timestamp",
         false
+      ],
+      [
+        "inlibrary",
+        false
+      ],
+      [
+        "timestamp",
+        false
+      ],
+      [
+        "inlibrary",
+        false
+      ],
+      [
+        "timestamp",
+        false
+      ],
+      [
+        "inlibrary",
+        false
+      ],
+      [
+        "timestamp",
+        false
+      ],
+      [
+        "inlibrary",
+        false
+      ],
+      [
+        "timestamp",
+        false
+      ],
+      [
+        "inlibrary",
+        false
+      ],
+      [
+        "timestamp",
+        false
       ]
     ]
   },
@@ -165,6 +205,46 @@
     "last_modified_injected": true,
     "path_injected": true,
     "sort_history": [
+      [
+        "timestamp",
+        false
+      ],
+      [
+        "inlibrary",
+        false
+      ],
+      [
+        "timestamp",
+        false
+      ],
+      [
+        "inlibrary",
+        false
+      ],
+      [
+        "timestamp",
+        false
+      ],
+      [
+        "inlibrary",
+        false
+      ],
+      [
+        "timestamp",
+        false
+      ],
+      [
+        "inlibrary",
+        false
+      ],
+      [
+        "timestamp",
+        false
+      ],
+      [
+        "inlibrary",
+        false
+      ],
       [
         "timestamp",
         false
@@ -849,6 +929,57 @@
       }
     }
   },
+  "geometry-of-jobs_dialog_geometry": {
+    "frame_geometry": {
+      "height": 360,
+      "width": 384,
+      "x": 1107,
+      "y": 439
+    },
+    "full_screened": false,
+    "geometry": {
+      "height": 338,
+      "width": 380,
+      "x": 1109,
+      "y": 459
+    },
+    "maximized": false,
+    "normal_geometry": {
+      "height": 338,
+      "width": 380,
+      "x": 1109,
+      "y": 459
+    },
+    "qt": {
+      "__class__": "bytearray",
+      "__value__": "AdnQywADAAAAAARTAAABtwAABdIAAAMeAAAEVQAAAcsAAAXQAAADHAAAAAEAAAAAB4AAAARVAAABywAABdAAAAMc"
+    },
+    "screen": {
+      "depth": 24,
+      "device_pixel_ratio": 1.0,
+      "geometry_in_logical_pixels": {
+        "height": 1080,
+        "width": 1920,
+        "x": 0,
+        "y": 0
+      },
+      "index_in_screens_list": 1,
+      "manufacturer": "",
+      "model": "",
+      "name": "DisplayPort-0",
+      "serial": "",
+      "size_in_logical_pixels": {
+        "height": 1080,
+        "width": 1920
+      },
+      "virtual_geometry": {
+        "height": 1080,
+        "width": 3360,
+        "x": 0,
+        "y": 0
+      }
+    }
+  },
   "geometry-of-manage-data-files-xx-geometry": {
     "frame_geometry": {
       "height": 520,
@@ -1158,10 +1289,14 @@
   "gpm_template_editor_font": "Inconsolata Nerd Font Mono",
   "gpm_template_editor_word_wrap_mode": true,
   "grid view visible": true,
+  "jobs view column layout3": {
+    "__class__": "bytearray",
+    "__value__": "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAfQAAAAFAQEBAAAAAAAAAAAAAAAAAGT/////AAAAhAAAAAAAAAAFAAAAZAAAAAEAAAAAAAAAZAAAAAEAAAAAAAAAZAAAAAEAAAAAAAAAZAAAAAEAAAAAAAAAZAAAAAEAAAAAAAAD6AAAAAAAAAAAAA=="
+  },
   "library_usage_stats": {
     "/home/ssserpent/Calibre Library": 154,
     "/home/ssserpent/Documents/Calibre Library": 24,
-    "/media/gen_dta/Calibre Library": 121
+    "/media/gen_dta/Calibre Library": 131
   },
   "main_window_central_widget_state": {
     "layout": "wide",
@@ -1221,6 +1356,46 @@
     "last_modified_injected": true,
     "path_injected": true,
     "sort_history": [
+      [
+        "timestamp",
+        false
+      ],
+      [
+        "inlibrary",
+        false
+      ],
+      [
+        "timestamp",
+        false
+      ],
+      [
+        "inlibrary",
+        false
+      ],
+      [
+        "timestamp",
+        false
+      ],
+      [
+        "inlibrary",
+        false
+      ],
+      [
+        "timestamp",
+        false
+      ],
+      [
+        "inlibrary",
+        false
+      ],
+      [
+        "timestamp",
+        false
+      ],
+      [
+        "inlibrary",
+        false
+      ],
       [
         "timestamp",
         false

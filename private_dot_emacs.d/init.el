@@ -16,18 +16,52 @@
 ;; Global Settings
 ;; ---------------------------
 (setq apropos-sort-by-scores t)
+(setq backup-directory-alist '(("." . "~/.emacs.d/backups")))
+
+;; ---------------------------
+;; Helm Configuration
+;; ---------------------------
+(use-package helm
+  :ensure t
+  :bind (("M-x"     . helm-M-x)
+         ("C-x C-f" . helm-find-files)
+         ("C-x b"   . helm-buffers-list))
+  :config
+  (helm-mode 1))
+
+;; ---------------------------
+;; Wttr Configuration
+;; ---------------------------
+(use-package wttrin
+  :ensure t
+  :commands (wttrin)
+  :bind ("C-c w" . wttrin)
+  :custom
+  (wttrin-default-locations '("Wieliczka" "Brusy" "Gdańsk" "Warszawa"))
+  (wttrin-default-languages '("Accept-Language" . "pl-PL")))
+
+;; ---------------------------
+;; Auto-Complete Configuration
+;; ---------------------------
+(use-package auto-complete
+  :ensure t
+  :config
+  (require 'auto-complete-config)
+  (ac-config-default)
+  (global-auto-complete-mode t))
 
 ;; ---------------------------
 ;; fzf-find-file
 ;; ---------------------------
 (use-package fzf
-  :commands (fzf-find-file)
-  :bind (("C-x f" . fzf-find-file)))
-  (setq fzf/args "-x --preview 'bat --color=always {}'")
-  (defun fzf-in-dired ()
-    (interactive)
-    (fzf-find-file-in-dir (dired-current-directory)))
-  (global-set-key (kbd "C-c d f") 'fzf-in-dired)
+  :bind ("C-x f" . fzf-find-file)
+  :config
+  (setq fzf/args "-x --color bw --print-query --margin=1,0 --no-hscroll"
+        fzf/executable "fzf"
+        fzf/git-grep-args "-i --line-number %s"
+        fzf/grep-command "grep -nrH"
+        fzf/position-bottom t
+        fzf/window-height 15))
 
 ;; ---------------------------
 ;; ripgrep-all: Search for content snippets within files
@@ -42,7 +76,6 @@ Uses the --vimgrep flag so that results are compatible with grep-mode."
     (compilation-start
      (format "/usr/bin/rga --vimgrep %s" (shell-quote-argument query))
      'grep-mode)))
-
 (global-set-key (kbd "C-c g") 'my-rga)
 
 ;; ---------------------------
@@ -108,7 +141,6 @@ Uses the --vimgrep flag so that results are compatible with grep-mode."
           ("/ssserpent/archives" . ?a)
           ("/klozamarek/inbox" . ?k)
           ("/klozamarek/archives" . ?r)))
-  ;; Load mu4e context support
   (require 'mu4e-context)
   (setq mu4e-contexts
         (list
@@ -187,76 +219,6 @@ Uses the --vimgrep flag so that results are compatible with grep-mode."
   (mu4e-column-faces-mode))
 
 ;; ---------------------------
-;; Consult, Vertico, and Marginalia
-;; ---------------------------
-; (use-package consult
-;   :bind (("C-x c" . consult-buffer)
-;          ("M-y" . consult-yank-pop)
-;          ("C-x r b" . consult-bookmark)
-;          ("M-g g" . consult-goto-line)
-;          ("M-g o" . consult-outline)
-;          ("M-g i" . consult-imenu)
-;          ("M-g m" . consult-mark)
-;          ("M-s d" . consult-find)
-;          ("M-s g" . consult-grep)
-;          ("M-s r" . consult-ripgrep)
-;          ("M-s l" . consult-line)
-;          ("M-s k" . consult-keep-lines)
-;          ("M-s u" . consult-focus-lines))
-;   :config
-;   (setq consult-preview-key 'any))
-
-;; Enable Vertico (completion UI)
-(use-package vertico
-  :ensure t
-  :init
-  (vertico-mode))
-
-;; Enable Orderless (fuzzy matching)
-(use-package orderless
-  :ensure t
-  :custom
-  (completion-styles '(orderless basic))
-  (completion-category-defaults nil)
-  (completion-category-overrides '((file (styles partial-completion)))))
-
-;; Enable Marginalia (extra metadata in completions)
-(use-package marginalia
-  :ensure t
-  :init (marginalia-mode))
-
-;; Enable Consult (enhanced searching and navigation)
-(use-package consult
-  :ensure t
-  :bind (("C-x b" . consult-buffer)
-         ("M-s l" . consult-line)
-         ("M-s g" . consult-grep)))
-
-;; Enable Embark (actions on minibuffer results)
-(use-package embark
-  :ensure t
-  :bind (("M-." . embark-act)
-         ("M-;" . embark-dwim))
-  :init
-  (setq prefix-help-command #'embark-prefix-help-command))
-
-;; Integrate Embark with Consult for previews
-(use-package embark-consult
-  :ensure t
-  :hook (embark-collect-mode . consult-preview-at-point-mode))
-
-;; ---------------------------
-;; Helm Configuration
-;; ---------------------------
-; (use-package helm
-;   :ensure t
-;   :bind (("M-x" . helm-M-x)
-         ; ("C-x C-f" . helm-find-files)
-         ; ("C-x b" . helm-buffers-list))
-  ; :config
-  ; (helm-mode 1))
-
-;; ---------------------------
 ;; Chezmoi and Magit Integration
 ;; ---------------------------
 (use-package chezmoi
@@ -318,13 +280,10 @@ Uses the --vimgrep flag so that results are compatible with grep-mode."
  '(mu4e-headers-date-format "%d/%m/%Y %H:%M")
  '(package-install-selected-packages '(undo-tree csv-mode magit-delta gruvbox-theme))
  '(package-selected-packages
-   '(marginalia vertico consult chezmoi undo-tree magit-delta gruvbox-theme goto-chg csv-mode annalist)))
+   '(wttrin helm fzf gruvbox-theme auto-complete csv-mode magit chezmoi mu4e-alert mu4e-column-faces)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
-
-;; ---------------------------
-;; End of init file
