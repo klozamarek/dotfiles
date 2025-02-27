@@ -229,7 +229,7 @@ Uses the --vimgrep flag so that results are compatible with grep-mode."
             :query "tag:list"
             :sort-order newest-first
             :key ,(kbd "l"))
-          ( :name "🧹 thrash"
+          ( :name "🧹 trash"
             :query "tag:deleted"
             :sort-order newest-first
             :key ,(kbd "d"))
