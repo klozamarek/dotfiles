@@ -244,6 +244,12 @@ Add this to `notmuch-mua-send-hook'."
 (declare-function notmuch-common-do-stash "notmuch-lib" (text))
 
 ;;;###autoload
+(defun prot-notmuch-search-archive ()
+  "Archive the selected thread by removing the 'inbox' tag."
+  (interactive)
+  (notmuch-search-tag '("-inbox")))
+
+;;;###autoload
 (defun prot-notmuch-stash-sourcehut-link (&optional current)
   "Stash web link to current SourceHut thread.
 With optional CURRENT argument, produce a link to the current

@@ -25,15 +25,15 @@ formatter = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s - %(messag
 handler.setFormatter(formatter)
 root.addHandler(handler)
 
-# PERSONAL_EMAIL and WORK_EMAIL is automatically by 'chezmoi apply'.
-# The variables '.email', '.workconf' and '.work.workmail' is located in dotfiles/.chezmoi.yaml.tmpl
+# SSSERPENT_EMAIL and KLOZAMAREK_EMAIL is automatically by 'chezmoi apply'.
+# The variables '.email', '.klozamarekconf' and '.klozamarek.klozamarekmail' is located in dotfiles/.chezmoi.yaml.tmpl
 MAILDIR = "/home/ssserpent/.local/share/mail"
-PERSONAL_EMAIL = "ssserpent@gmail.com"
-WORK_EMAIL = "kloza.marek@gmail.com"
+SSSERPENT_EMAIL = "ssserpent@gmail.com"
+KLOZAMAREK_EMAIL = "kloza.marek@gmail.com"
 
 MAILDIR = pathlib.Path(MAILDIR)
-PERSONAL_MAILDIR = MAILDIR.joinpath("personal")
-WORK_MAILDIR = MAILDIR.joinpath("work") if len(WORK_EMAIL) else None
+SSSERPENT_MAILDIR = MAILDIR.joinpath("ssserpent")
+KLOZAMAREK_MAILDIR = MAILDIR.joinpath("klozamarek") if len(KLOZAMAREK_EMAIL) else None
 
 NOTMUCH_BIN = "notmuch"
 AFEW_BIN = "afew"
@@ -105,8 +105,8 @@ def lock_acquire(should_exit=True):
 
 def main():
     ensure_dir(MAILDIR)
-    ensure_dir(PERSONAL_MAILDIR)
-    ensure_dir(WORK_MAILDIR) if WORK_MAILDIR else None
+    ensure_dir(SSSERPENT_MAILDIR)
+    ensure_dir(KLOZAMAREK_MAILDIR) if KLOZAMAREK_MAILDIR else None
 
     afew_move = run_afew(["--all", "-m", "-v"])
     mbsync_ok = call_mbsync() if afew_move else False

@@ -2,31 +2,34 @@
 [SpamFilter]
 [KillThreadsFilter]
 [ArchiveSentMailsFilter]
+[InboxFilter]
 [SentMailsFilter]
 sent_tag = sent
-[InboxFilter]
 [MeFilter]
 me_tag = me
+[FolderNameFilter]
+maildir_separator = /
+folder_lowercases = true
 
 [Filter.0]
 message = Tagging archives
-query = (folder:ssserpent/archives or folder:klozamarek/archives) and not (folder:ssserpent/inbox or folder:klozamarek/inbox or tag:archived)
-tags = +archived;-inbox
+query = (folder:ssserpent/archives or folder:klozamarek/archives) and not (folder:ssserpent/inbox or folder:klozamarek/inbox)
+tags = -inbox
 
 [Filter.1]
 message = Tagging inbox
 query = (folder:ssserpent/inbox or folder:klozamarek/inbox) and not tag:inbox
-tags = +inbox;-archived
+tags = +inbox;+archives
 
 [Filter.2]
 message = Tagging drafts
 query = (folder:ssserpent/drafts or folder:klozamarek/drafts)
-tags = +draft;
+tags = +draft
 
 [Filter.3] 
 message = Tagging trash
 query = (folder:ssserpent/trash or folder:klozamarek/trash)
-tags = +deleted;-archived;-inbox
+tags = +deleted;-inbox
 
 [Filter.4]
 message = Tagging unread sent
@@ -77,27 +80,27 @@ tags = +cedo
 
 [Filter.13]
 query = 'from:*allegro.pl or *allegromail.pl or from:*allegrolokalnie.pl or from:*olx.pl or from:*aliexpress.com'
-tags = +shop;-inbox
+tags = +shop
 message = tagging shops
 
 [Filter.14]
 query = 'from:*google.com'
-tags = +google;-inbox
+tags = +google
 message = tagging google
 
 [Filter.15]
-query = 'from:*mailing.lot.com or from:*mailing.milesandmore.com'
-tags = +lot;-inbox
-message = tagging lot
+query = 'from:*mailing.lot.com or from:*mailing.milesandmore.com or from:*ryanairemail.pl or from:*ryanair.com or from:*esky.pl'
+tags = +flying
+message = tagging flying
 
 [Filter.16]
 query = 'from:*linkedin.com'
-tags = +linkedin;-inbox
+tags = +linkedin
 message = tagging linkedin
 
 [Filter.17]
 query = 'from:*bandcamp.com or from:*mail.goodreads.com or from:*netflix.com or from:*audiocave.pl'
-tags = +fun;-inbox
+tags = +fun
 message = tagging entertainment
 
 [Filter.18]
@@ -106,11 +109,22 @@ query = (folder:ssserpent/sent or folder:klozamarek/sent)
 tags = +sent
 
 [MailMover]
-folders = inbox archives spam trash
+folders = ssserpent/inbox klozamarek/inbox ssserpent/archives klozamarek/archives ssserpent/spam klozamarek/spam ssserpent/trash klozamarek/trash
 rename = True
-max_age = 15
+max_age = 90
 # rules
-inbox = 'folder:inbox and tag:deleted and not tag:inbox':trash 'folder:inbox and tag:archived and not tag:inbox':archives 'folder:inbox and tag:spam and not tag:inbox':spam "tag:deleted and not tag:inbox":trash
-spam = 'not tag:spam and tag:inbox':inbox 'not tag:spam and not folder:spam':archives
-archives = 'folder:archived and tag:inbox and not tag:archived':inbox 'folder:archived and tag:deleted and not tag:archived':trash 'folder:archived and tag:spam':spam "tag:deleted and not tag:archived":trash"
-trash = 'folder:trash and tag:archived and not tag:deleted':archives 'folder:trash and tag:spam':spam 'folder:trash and tag:inbox and not tag:deleted':inbox
+ssserpent/inbox = 'tag:deleted and not tag:inbox':ssserpent/trash 'tag:archives and not tag:inbox and not tag:deleted':ssserpent/archives 'tag:spam and not tag:inbox':ssserpent/spam
+
+klozamarek/inbox = 'tag:deleted and not tag:inbox':klozamarek/trash 'tag:archives and and not tag:inbox and not tag:deleted':klozamarek/archives 'tag:spam and not tag:inbox':klozamarek/spam
+
+ssserpent/spam = 'not tag:spam and tag:inbox':ssserpent/inbox 'not tag:spam and not folder:ssserpent/spam':ssserpent/archives
+
+klozamarek/spam = 'not tag:spam and tag:inbox':klozamarek/inbox 'not tag:spam and not folder:klozamarek/spam':klozamarek/archives
+
+ssserpent/archives = 'tag:deleted and not tag:archives':ssserpent/trash 'tag:spam':ssserpent/spam
+
+klozamarek/archives = 'tag:deleted and not tag:archives':klozamarek/trash 'tag:spam':klozamarek/spam
+
+ssserpent/trash = 'not tag:deleted':ssserpent/archives 'tag:spam':ssserpent/spam 'tag:inbox and not tag:deleted':ssserpent/inbox
+
+klozamarek/trash = 'not tag:deleted':klozamarek/archives 'tag:spam':klozamarek/spam 'tag:inbox and not tag:deleted':klozamarek/inbox

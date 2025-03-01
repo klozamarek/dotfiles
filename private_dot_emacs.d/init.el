@@ -144,8 +144,30 @@ Uses the --vimgrep flag so that results are compatible with grep-mode."
                            ("kloza.marek@gmail.com" . "klozamarek/sent")))
   (setq notmuch-message-reject-fcc t)
   (setq notmuch-trash-folder "/home/ssserpent/.local/share/mail/ssserpent/trash"))
-  (setq message-signature "Pozdrowienia,\nMarek Kloza")
-;  (add-hook 'message-setup-hook 'message-insert-signature)
+
+;;;; Message composition (`message')
+(use-package message
+  :ensure nil
+  :defer t
+  :hook
+  (message-setup . message-sort-headers)
+  :config
+  (setq mail-user-agent 'message-user-agent
+        message-mail-user-agent t) ; use `mail-user-agent'
+  (setq mail-header-separator "--text follows this line--")
+  (setq message-elide-ellipsis "\n> [... %l lines elided]\n")
+  (setq compose-mail-user-agent-warnings nil)
+  (setq message-signature "Pozdrowienia,\nMarek Kloza\n"
+        mail-signature message-signature)
+  (setq message-citation-line-function #'message-insert-formatted-citation-line)
+  (setq message-citation-line-format (concat "> From: %f\n"
+                                             "> Date: %a, %e %b %Y %T %z\n"
+                                             ">")
+        message-ignored-cited-headers "") ; default is "." for all headers
+  (setq message-confirm-send nil)
+  (setq message-kill-buffer-on-exit t)
+  ;; (add-to-list 'mm-body-charset-encoding-alist '(utf-8 . base64))
+  (setq message-wide-reply-confirm-recipients nil))
 
   ;;;; General UI
   (use-package notmuch
@@ -194,11 +216,11 @@ Uses the --vimgrep flag so that results are compatible with grep-mode."
   (setq notmuch-show-empty-saved-searches t)
   (setq notmuch-saved-searches
         `(( :name "📥 inbox: ssserpent"
-            :query "tag:inbox and folder:ssserpent/inbox/"
+            :query "folder:ssserpent/inbox/"
             :sort-order newest-first
             :key ,(kbd "s"))
           ( :name "📚 inbox: klozamarek"
-            :query "tag:inbox and folder:klozamarek/inbox/"
+            :query "folder:klozamarek/inbox/"
             :sort-order newest-first
             :key ,(kbd "k"))
           ( :name "📮 all mail: ssserpent"
@@ -221,27 +243,43 @@ Uses the --vimgrep flag so that results are compatible with grep-mode."
             :query "tag:sent"
             :sort-order newest-first
             :key ,(kbd "t"))
+          ( :name "💼 from: daxa"
+            :query "tag:daxa"
+            :sort-order newest-first
+            :key ,(kbd "x"))
           ( :name "📎 has: pdf"
             :query "tag:pdf"
             :sort-order newest-first
             :key ,(kbd "p"))
+          ( :name "🎇 entertainment"
+            :query "tag:fun"
+            :sort-order newest-first
+            :key ,(kbd "n"))
+          ( :name "🛒 shops"
+            :query "tag:shop"
+            :sort-order newest-first
+            :key ,(kbd "s"))
           ( :name "📣 lists"
             :query "tag:list"
             :sort-order newest-first
             :key ,(kbd "l"))
+          ( :name "🛫 flying"
+            :query "tag:flying"
+            :sort-order newest-first
+            :key ,(kbd "f"))
+          ( :name "👾 spam"
+            :query "tag:spam"
+            :sort-order newest-first
+            :key ,(kbd "m"))
           ( :name "🧹 trash"
             :query "tag:deleted"
             :sort-order newest-first
-            :key ,(kbd "d"))
-          ( :name "💼 from: daxa"
-            :query "tag:daxa"
-            :sort-order newest-first
-            :key ,(kbd "x")))))
+            :key ,(kbd "d")))))
 ;;;; Tags
 (use-package notmuch
   :defer t
   :config
-  (setq notmuch-archive-tags '("+archived")
+  (setq notmuch-archive-tags nil ; I do not archive mails
         notmuch-message-replied-tags '("+replied")
         notmuch-message-forwarded-tags '("+forwarded")
         notmuch-show-mark-read-tags '("-unread")
@@ -334,13 +372,13 @@ that and instead tries to complete against dictionary entries."
     ("C-c n" . notmuch)
     ("C-x n" . notmuch-mua-new-mail) ; override `compose-mail'
     :map notmuch-search-mode-map ; I normally don't use the tree view, otherwise check `notmuch-tree-mode-map'
-    ("a" . notmuch-search-add-tag) ; the default is too easy to hit accidentally and I do not archive stuff
-    ("A" . nil)
+    ("a" . nil) ; the default is too easy to hit accidentally and I do not archive stuff
+    ("A" . prot-notmuch-search-archive) ; substract inbox tag
     ("/" . notmuch-search-filter) ; alias for l
     ("r" . notmuch-search-reply-to-thread) ; easier to reply to all by default
     ("R" . notmuch-search-reply-to-thread-sender)
     :map notmuch-show-mode-map
-    ("a" . notmuch-show-advance-and-archive) ; the default is too easy to hit accidentally and I do not archive stuff
+    ("a" . nil) ; the default is too easy to hit accidentally and I do not archive stuff
     ("A" . nil)
     ("r" . notmuch-show-reply) ; easier to reply to all by default
     ("R" . notmuch-show-reply-sender)
@@ -413,221 +451,11 @@ that and instead tries to complete against dictionary entries."
 
   ;; I control its placement myself.  See prot-emacs-modeline.el where
   ;; I set the `mode-line-format'.
-  (setq notmuch-indicator-add-to-mode-line-misc-info nil)
+  (setq notmuch-indicator-add-to-mode-line-misc-info t)
 
   (notmuch-indicator-mode 1))
 
 (provide 'prot-emacs-notmuch)
-
-;; ---------------------------
-;; mu4e Configuration
-;; ---------------------------
-(use-package mu4e
-  :ensure nil  ;; Do not install; already installed externally
-  :commands mu4e
-  :bind (("C-c u" . mu4e))
-  :config
-  (setq mu4e-maildir "~/.local/share/mail")
-  (setq mu4e-attachment-dir (expand-file-name "~/Downloads/mail-attachments/"))
-  (setq mu4e-maildir-shortcuts
-        '(("/ssserpent/inbox" . ?s)
-          ("/ssserpent/archives" . ?a)
-          ("/klozamarek/inbox" . ?k)
-          ("/klozamarek/archives" . ?r)))
-  (setq mu4e-view-show-images t)
-  (setq mu4e-sent-messages-behavior 'delete)
-  (setq mu4e-view-attachment-default-handler "xdg-open")
-  (setq mu4e-html2text-command "w3m -T text/html")
-  ; (setq mu4e-headers-fields '((:human-date . 20)
-  ;                             (:flags . 6)
-  ;                             (:mailing-list . 10)
-  ;                             (:from . 22)
-  ;                             (:subject)))
-  (setq mu4e-use-fancy-chars t ; Cool idea, but they create misalignments
-        mu4e-headers-draft-mark     '("D" . "🛠️")
-        mu4e-headers-flagged-mark   '("F" . "🚩")
-        mu4e-headers-new-mark       '("N" . "🔥")
-        mu4e-headers-passed-mark    '("P" . "📨")
-        mu4e-headers-replied-mark   '("R" . "🖊️")
-        mu4e-headers-seen-mark      '("S" . "👁️")
-        mu4e-headers-trashed-mark   '("T" . "🚫")
-        mu4e-headers-attach-mark    '("a" . "📎")
-        mu4e-headers-encrypted-mark '("x" . "🔒")
-        mu4e-headers-signed-mark    '("s" . "🔑")
-        mu4e-headers-unread-mark    '("u" . "💬")
-        mu4e-headers-list-mark      '("l" . "📬")
-        mu4e-headers-personal-mark  '("p" . "👴")
-        mu4e-headers-calendar-mark  '("c" . "📅"))
-  (setq mu4e-headers-auto-update t)
-  (setq mu4e-get-mail-command "true" ; I auto-fetch with a systemd timer
-        mu4e-update-interval nil)
-  (setq mu4e-hide-index-messages t)
-  (setq mu4e-change-filenames-when-moving t)
-  (setq mu4e-compose-dont-reply-to-self t))
-  (setq mu4e-headers-date-format "%d/%m/%Y %H:%M")  ;; Set mu4e date format
-  (setq mu4e-marks
-        '((refile
-           :char ("r" . "▶")
-           :prompt "refile"
-           :dyn-target (lambda (target msg) (mu4e-get-refile-folder msg))
-           :action (lambda (docid msg target)
-                     (mu4e--server-move docid (mu4e--mark-check-target target) "-N")))
-          (delete
-           :char ("D" . "🚫")
-           :prompt "Delete"
-           :show-target (lambda (target) "delete")
-           :action (lambda (docid msg target) (mu4e--server-remove docid)))
-          (flag
-           :char ("+" . "🚩")
-           :prompt "+flag"
-           :show-target (lambda (target) "flag")
-           :action (lambda (docid msg target)
-                     (mu4e--server-move docid nil "+F-u-N")))
-          (move
-           :char ("m" . "▷")
-           :prompt "move"
-           :ask-target  mu4e--mark-get-move-target
-           :action (lambda (docid msg target)
-                     (mu4e--server-move docid (mu4e--mark-check-target target) "-N")))
-          (read
-           :char    ("!" . "👁️")
-           :prompt "!read"
-           :show-target (lambda (target) "read")
-           :action (lambda (docid msg target) (mu4e--server-move docid nil "+S-u-N")))
-          (trash
-           :char ("d" . "🚫")
-           :prompt "dtrash"
-           :dyn-target (lambda (target msg) (mu4e-get-trash-folder msg))
-           :action (lambda (docid msg target)
-                     (mu4e--server-move docid
-                                        (mu4e--mark-check-target target) "+T-N")))
-          (unflag
-           :char    ("-" . "➖")
-           :prompt "-unflag"
-           :show-target (lambda (target) "unflag")
-           :action (lambda (docid msg target) (mu4e--server-move docid nil "-F-N")))
-          (untrash
-           :char   ("=" . "▲")
-           :prompt "=untrash"
-           :show-target (lambda (target) "untrash")
-           :action (lambda (docid msg target) (mu4e--server-move docid nil "-T")))
-          (unread
-           :char    ("?" . "💬")
-           :prompt "?unread"
-           :show-target (lambda (target) "unread")
-           :action (lambda (docid msg target) (mu4e--server-move docid nil "-S+u-N")))
-          (unmark
-           :char  " "
-           :prompt "unmark"
-           :action (mu4e-error "No action for unmarking"))
-          (action
-           :char ( "a" . "◯")
-           :prompt "action"
-           :ask-target  (lambda () (mu4e-read-option "Action: " mu4e-headers-actions))
-           :action  (lambda (docid msg actionfunc)
-                      (save-excursion
-                        (when (mu4e~headers-goto-docid docid)
-                          (mu4e-headers-action actionfunc)))))
-          (something
-           :char  ("*" . "✱")
-           :prompt "*something"
-           :action (mu4e-error "No action for deferred mark"))))
-
-  (setq mu4e-modeline-support t
-        mu4e-modeline-unread-items '("U:" . "[U]")
-        mu4e-modeline-all-read '("R:" . "[R]")
-        mu4e-modeline-all-clear '("C:" . "[C]")
-        mu4e-modeline-max-width 42)
-
-  (setq mu4e-notification-support t
-        ;; TODO 2024-02-26: Write custom mu4e notification function.
-        mu4e-notification-filter #'mu4e--default-notification-filter)
-
-  (setq mu4e-headers-advance-after-mark nil)
-  (setq mu4e-headers-auto-update t)
-  (setq mu4e-headers-date-format "%F %a, %T")
-  (setq mu4e-headers-time-format "%R")
-  (setq mu4e-headers-long-date-format "%F, %R")
-  (setq mu4e-headers-leave-behavior 'apply)
-
-  (setq mu4e-headers-fields
-        '((:date . 26)
-          (:flags . 8)
-          (:from . 20)
-          (:subject)))
-
-  (setq mu4e-get-mail-command "true" ; I auto-fetch with a systemd timer
-        mu4e-update-interval nil)
-  (setq mu4e-hide-index-messages t)
-
-  (setq mu4e-read-option-use-builtin nil
-        mu4e-completing-read-function 'completing-read)
-
-  (setq mu4e-search-results-limit -1
-        mu4e-search-sort-field :date
-        mu4e-search-sort-direction 'descending)
-
-  (setq mu4e-view-show-addresses t)
-  (setq mu4e-split-view 'horizontal)
-
-  (setq mu4e-index-lazy-check t)
-  (setq mu4e-change-filenames-when-moving t) ; better for `mbsync'?
-  (setq mu4e-display-update-status-in-modeline nil)
-  (setq mu4e-headers-include-related nil)
-  (setq mu4e-view-auto-mark-as-read t)
-
-  (setq mu4e-compose-complete-addresses nil
-        mu4e-compose-complete-only-personal t)
-
-  (setq mu4e-context-policy 'pick-first
-        mu4e-compose-context-policy nil)
-
-(require 'mu4e-context)
-(setq mu4e-contexts
-        (list
-         (make-mu4e-context
-          :name "ssserpent"
-          :match-func (lambda (msg)
-                        (when msg
-                          (string-match-p "^/ssserpent" (mu4e-message-field msg :maildir))))
-          :vars '((user-mail-address     . "ssserpent@gmail.com")
-                  (user-full-name        . "Marek Kloza")
-                  (mu4e-drafts-folder    . "/ssserpent/drafts")
-                  (mu4e-sent-folder      . "/ssserpent/sent")
-                  (mu4e-trash-folder     . "/ssserpent/trash")
-                  (mu4e-refile-folder    . "/ssserpent/archives")
-                  (mu4e-get-mail-command . "mbsync -a")))
-         (make-mu4e-context
-          :name "klozamarek"
-          :match-func (lambda (msg)
-                        (when msg
-                          (string-match-p "^/klozamarek" (mu4e-message-field msg :maildir))))
-          :vars '((user-mail-address     . "klozamarek@gmail.com")
-                  (user-full-name        . "Marek KLoza")
-                  (mu4e-drafts-folder    . "/klozamarek/drafts")
-                  (mu4e-sent-folder      . "/klozamarek/sent")
-                  (mu4e-trash-folder     . "/klozamarek/trash")
-                  (mu4e-refile-folder    . "/klozamarek/archives")
-                  (mu4e-get-mail-command . "mbsync -a")))))
-
-;; ---------------------------
-;; mu4e-alert Configuration
-;; ---------------------------
-(use-package mu4e-alert
-  :after mu4e
-  :config
-  (mu4e-alert-set-default-style 'libnotify)
-  (add-hook 'after-init-hook #'mu4e-alert-enable-notifications)
-  (add-hook 'after-init-hook #'mu4e-alert-enable-mode-line-display)
-  (setq mu4e-alert-interesting-mail-query "flag:unread AND NOT flag:trashed"))
-
-;; ---------------------------
-;; mu4e-column-faces Configuration
-;; ---------------------------
-(use-package mu4e-column-faces
-  :after mu4e
-  :config
-  (mu4e-column-faces-mode))
 
 ;; ---------------------------
 ;; Chezmoi and Magit Integration
@@ -645,37 +473,6 @@ that and instead tries to complete against dictionary entries."
     (interactive)
     (magit-status (expand-file-name "~/.local/share/chezmoi")))
   (global-set-key (kbd "C-c m") #'chezmoi-magit-status))
-
-; ;; ---------------------------
-; ;; Custom Email Signature Setup
-; ;; ---------------------------
-; (defun my-setup-email ()
-;   "Prompt user to select a From address and set the correct signature."
-;   (interactive)
-;   (let* ((chosen-from (completing-read "Choose From: "
-;                                         '("ssserpent@gmail.com" "kloza.marek@gmail.com") nil t)))
-;     (setq user-mail-address chosen-from)
-;     (message-remove-header "From")
-;     (message-add-header (format "From: %s" user-mail-address))
-;     (setq message-signature
-;           (cond
-;            ((string= chosen-from "ssserpent@gmail.com")
-;             "Pozdrowienia,\nMarek Kloza\nssserpent@gmail.com\n")
-;            ((string= chosen-from "kloza.marek@gmail.com")
-;             "Pozdrawiam,\nMarek Kloza\nkloza.marek@gmail.com\n")
-;            (t "Best,\nMarek Kloza")))
-;     (save-excursion
-;       (goto-char (point-min))
-;       (while (re-search-forward "^-- $" nil t)
-;         (delete-region (line-beginning-position) (line-end-position)))
-;       (goto-char (point-min))
-;       (when (re-search-forward "^-- $" nil t)
-;         (delete-region (point) (point-max)))
-;       (goto-char (point-max))
-;       (insert "\n-- \n" message-signature))
-;     (message "Signature applied: %s" message-signature)))
-
-; (add-hook 'message-setup-hook #'my-setup-email)
 
 ;; ---------------------------
 ;; Gruvbox theme
@@ -700,3 +497,10 @@ that and instead tries to complete against dictionary entries."
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+
+(with-eval-after-load 'notmuch
+  (define-key notmuch-search-mode-map (kbd "A")
+    (lambda ()
+      (interactive)
+      (notmuch-search-tag '("-inbox")))))
