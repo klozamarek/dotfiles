@@ -1,4 +1,7 @@
 # This is the default filter chain
+[FolderNameFilter]
+maildir_separator = /
+folder_lowercases = true
 [SpamFilter]
 [KillThreadsFilter]
 [ArchiveSentMailsFilter]
@@ -7,9 +10,6 @@
 sent_tag = sent
 [MeFilter]
 me_tag = me
-[FolderNameFilter]
-maildir_separator = /
-folder_lowercases = true
 
 [Filter.0]
 message = Tagging archives
@@ -18,7 +18,7 @@ tags = -inbox
 
 [Filter.1]
 message = Tagging inbox
-query = (folder:ssserpent/inbox or folder:klozamarek/inbox) and not tag:inbox
+query = folder:ssserpent/inbox or folder:klozamarek/inbox
 tags = +inbox;+archives
 
 [Filter.2]
@@ -115,7 +115,7 @@ max_age = 90
 # rules
 ssserpent/inbox = 'tag:deleted and not tag:inbox':ssserpent/trash 'tag:archives and not tag:inbox and not tag:deleted':ssserpent/archives 'tag:spam and not tag:inbox':ssserpent/spam
 
-klozamarek/inbox = 'tag:deleted and not tag:inbox':klozamarek/trash 'tag:archives and and not tag:inbox and not tag:deleted':klozamarek/archives 'tag:spam and not tag:inbox':klozamarek/spam
+klozamarek/inbox = 'tag:deleted and not tag:inbox':klozamarek/trash 'tag:archives and not tag:inbox and not tag:deleted':klozamarek/archives 'tag:spam and not tag:inbox':klozamarek/spam
 
 ssserpent/spam = 'not tag:spam and tag:inbox':ssserpent/inbox 'not tag:spam and not folder:ssserpent/spam':ssserpent/archives
 

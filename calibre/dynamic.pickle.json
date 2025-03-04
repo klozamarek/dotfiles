@@ -11,13 +11,13 @@
   "notified-version-updates": {
     "__class__": "set",
     "__value__": [
-      "7.25",
-      "7.22",
-      "7.26",
-      "7.2",
       "7.23",
       "7.0",
-      "7.1"
+      "7.22",
+      "7.26",
+      "7.25",
+      "7.1",
+      "7.2"
     ]
   },
   "recursive book import root dir dialog": "/home/ssserpent/Downloads/aria2/[ FreeCourseWeb.com ] Linux Magazine USA - Full Year 2023 Collection (True PDF)/~Get Your Files Here !",

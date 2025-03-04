@@ -6,11 +6,148 @@
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 (package-initialize)
 
-(unless (package-installed-p 'use-package)
-  (package-refresh-contents)
-  (package-install 'use-package))
-(require 'use-package)
-(setq use-package-always-ensure t)
+(when (< emacs-major-version 29)
+  (unless (package-installed-p 'use-package)
+    (unless package-archive-contents
+      (package-refresh-contents))
+    (package-install 'use-package)))
+
+; prevent compile buffers to pop-up
+(add-to-list 'display-buffer-alist
+             '("\\`\\*\\(Warnings\\|Compile-Log\\)\\*\\'"
+               (display-buffer-no-window)
+               (allow-no-window . t)))
+
+; delete selected region before typing in
+(use-package delsel
+  :ensure nil ; no need to install it as it is built-in
+  :hook (after-init . delete-selection-mode))
+
+; make C-g a bit more helpful
+(defun prot/keyboard-quit-dwim ()
+  "Do-What-I-Mean behaviour for a general `keyboard-quit'.
+
+The generic `keyboard-quit' does not do the expected thing when
+the minibuffer is open.  Whereas we want it to close the
+minibuffer, even without explicitly focusing it.
+
+The DWIM behaviour of this command is as follows:
+
+- When the region is active, disable it.
+- When a minibuffer is open, but not focused, close the minibuffer.
+- When the Completions buffer is selected, close it.
+- In every other case use the regular `keyboard-quit'."
+  (interactive)
+  (cond
+   ((region-active-p)
+    (keyboard-quit))
+   ((derived-mode-p 'completion-list-mode)
+    (delete-completion-window))
+   ((> (minibuffer-depth) 0)
+    (abort-recursive-edit))
+   (t
+    (keyboard-quit))))
+
+(define-key global-map (kbd "C-g") #'prot/keyboard-quit-dwim)
+
+; disable graphical graphs
+(menu-bar-mode -1)
+(scroll-bar-mode -1)
+(tool-bar-mode -1)
+
+;use icons in various places
+(use-package nerd-icons
+  :ensure t)
+
+(use-package nerd-icons-completion
+  :ensure t
+  :after marginalia
+  :config
+  (add-hook 'marginalia-mode-hook #'nerd-icons-completion-marginalia-setup))
+
+(use-package nerd-icons-corfu
+  :ensure t
+  :after corfu
+  :config
+  (add-to-list 'corfu-margin-formatters #'nerd-icons-corfu-formatter))
+
+(use-package nerd-icons-dired
+  :ensure t
+  :hook
+  (dired-mode . nerd-icons-dired-mode))
+
+;;; Configure the minibuffer and completions
+
+(use-package vertico
+  :ensure t
+  :hook (after-init . vertico-mode))
+
+(use-package marginalia
+  :ensure t
+  :hook (after-init . marginalia-mode))
+
+(use-package orderless
+  :ensure t
+  :config
+  (setq completion-styles '(orderless basic))
+  (setq completion-category-defaults nil)
+  (setq completion-category-overrides nil))
+
+(use-package savehist
+  :ensure nil ; it is built-in
+  :hook (after-init . savehist-mode))
+
+(use-package corfu
+  :ensure t
+  :hook (after-init . global-corfu-mode)
+  :bind (:map corfu-map ("<tab>" . corfu-complete))
+  :config
+  (setq tab-always-indent 'complete)
+  (setq corfu-preview-current nil)
+  (setq corfu-min-width 20)
+
+  (setq corfu-popupinfo-delay '(1.25 . 0.5))
+  (corfu-popupinfo-mode 1) ; shows documentation after `corfu-popupinfo-delay'
+
+  ;; Sort by input history (no need to modify `corfu-sort-function').
+  (with-eval-after-load 'savehist
+    (corfu-history-mode 1)
+    (add-to-list 'savehist-additional-variables 'corfu-history)))
+
+;;; The file manager (Dired)
+
+(use-package dired
+  :ensure nil
+  :commands (dired)
+  :hook
+  ((dired-mode . dired-hide-details-mode)
+   (dired-mode . hl-line-mode))
+  :config
+  (setq dired-recursive-copies 'always)
+  (setq dired-recursive-deletes 'always)
+  (setq delete-by-moving-to-trash t)
+  (setq dired-dwim-target t))
+
+(use-package dired-subtree
+  :ensure t
+  :after dired
+  :bind
+  ( :map dired-mode-map
+    ("<tab>" . dired-subtree-toggle)
+    ("TAB" . dired-subtree-toggle)
+    ("<backtab>" . dired-subtree-remove)
+    ("S-TAB" . dired-subtree-remove))
+  :config
+  (setq dired-subtree-use-backgrounds nil))
+
+(use-package trashed
+  :ensure t
+  :commands (trashed)
+  :config
+  (setq trashed-action-confirmer 'y-or-n-p)
+  (setq trashed-use-header-line t)
+  (setq trashed-sort-key '("Date deleted" . t))
+  (setq trashed-date-format "%Y-%m-%d %H:%M:%S"))
 
 ;; ---------------------------
 ;; Global Settings
@@ -28,25 +165,33 @@
 (icomplete-mode -1)  ;; Ensure icomplete-mode is disabled
 (global-set-key (kbd "C-r") 'redraw-display)
 (add-hook 'window-configuration-change-hook 'redraw-display)
+;; Highlight current line
+(global-hl-line-mode 1)
+;; Highlight current column
+;(use-package 
+;  :ensure t
+;  :config
+;  (toggle-highlight-column-when-idle 0.1))
 
-;; ---------------------------
+;;---------------------------
 ;; Helm Configuration
 ;; ---------------------------
-(use-package helm
-  :ensure t
-  :bind (("M-x" . helm-M-x))
-  :config
-    (require 'helm) ;; Ensure Helm is loaded before accessing helm-map
-    (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action)  ;; Rebind tab to do persistent action
-    (define-key helm-map (kbd "C-i") 'helm-execute-persistent-action)    ;; Make TAB work in terminal
-    (define-key helm-map (kbd "C-z") 'helm-select-action))               ;; List actions using C-z
-    (helm-mode 1)
-(global-set-key (kbd "M-y") 'helm-show-kill-ring)
-(global-set-key (kbd "C-x b") 'helm-mini)
-(global-set-key (kbd "C-x C-f") 'helm-find-files)
-(setq helm-buffers-fuzzy-matching t
-      helm-recentf-fuzzy-match t
-      helm-M-x-fuzzy-match t)
+;(use-package helm
+;  :ensure t
+;  :bind (("M-x" . helm-M-x))
+;  :config
+;    (require 'helm) ;; Ensure Helm is loaded before accessing helm-map
+;    (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action)  ;; Rebind tab to do persistent action
+;    (define-key helm-map (kbd "C-i") 'helm-execute-persistent-action)    ;; Make TAB work in terminal
+;    (define-key helm-map (kbd "C-z") 'helm-select-action))               ;; List actions using C-z
+;    (helm-mode 1)
+;(global-set-key (kbd "M-y") 'helm-show-kill-ring)
+;(global-set-key (kbd "C-x b") 'helm-mini)
+;(global-set-key (kbd "C-x C-f") 'helm-find-files)
+;(setq helm-buffers-fuzzy-matching t
+;      helm-recentf-fuzzy-match t
+;      helm-M-x-fuzzy-match t)
+
 ;; ---------------------------
 ;; Wttr Configuration
 ;; ---------------------------
@@ -101,14 +246,6 @@ Uses the --vimgrep flag so that results are compatible with grep-mode."
 ;; ---------------------------
 (use-package csv-mode
   :mode ("\\.csv\\'" . csv-mode))
-
-;; ---------------------------
-;; Gruvbox Theme
-;; ---------------------------
-(use-package gruvbox-theme
-  :config
-  (setq custom-safe-themes t)
-  (load-theme 'gruvbox-dark-hard t))
 
 ;; ---------------------------
 ;; Email (Message) Configuration
@@ -498,9 +635,83 @@ that and instead tries to complete against dictionary entries."
  ;; If there is more than one, they won't work right.
  )
 
-
 (with-eval-after-load 'notmuch
   (define-key notmuch-search-mode-map (kbd "A")
     (lambda ()
       (interactive)
       (notmuch-search-tag '("-inbox")))))
+
+;; EMMS configuration using use-package (without MPD)
+(use-package emms
+  :ensure t
+  :config
+  (require 'emms-setup)
+  (require 'emms-player-simple)
+  (emms-all)
+  (emms-default-players)
+
+  ;; Set the default music directory
+  (setq emms-source-file-default-directory "~/Music/")
+
+  ;; Enable EMMS playlist mode
+  (require 'emms-mode-line)
+  (require 'emms-playing-time)
+  (emms-mode-line 1)
+  (emms-playing-time 1)
+
+  ;; Use VLC, MPV, and CMUS as players
+  (setq emms-player-list '(emms-player-vlc emms-player-mpv emms-player-cmus))
+
+  ;; Define VLC player
+  (require 'emms-player-vlc)
+  (add-to-list 'emms-player-list 'emms-player-vlc)
+
+  ;; Define MPV player
+  (require 'emms-player-mpv)
+  (add-to-list 'emms-player-list 'emms-player-mpv)
+
+  ;; Define CMUS player
+  (require 'emms-player-simple)
+  (define-emms-simple-player cmus '(streamlist url file)
+    "cmus-remote" "-q" "-p" "-n" "-s" "-u" "-r" "--play" "--pause" "--stop" "--next" "--prev")
+  (add-to-list 'emms-player-list 'emms-player-cmus)
+
+  :bind
+  (("C-c e p" . emms)
+   ("C-c e s" . emms-stop)
+   ("C-c e n" . emms-next)
+   ("C-c e b" . emms-previous)
+   ("C-c e r" . emms-random)
+   ("C-c e l" . emms-playlist-mode-go)))
+
+;;; Pass interface (password-store)
+(use-package password-store
+  :ensure t
+  :bind ("C-c k" . password-store-copy)
+  :config
+  (setq password-store-time-before-clipboard-restore 90))
+
+(use-package pass
+ :ensure t
+ :commands (pass))
+
+(use-package xclip
+  :ensure t)           
+(xclip-mode 1)
+
+;; Powerline modline
+
+(use-package smart-mode-line-powerline-theme
+   :ensure t
+   :after powerline
+   :after smart-mode-line
+   :config
+    (sml/setup)
+    (sml/apply-theme 'powerline)
+)
+(require 'powerline)
+(powerline-default-theme)
+
+;; don't keep message buffers around
+(setq message-kill-buffer-on-exit t)
+

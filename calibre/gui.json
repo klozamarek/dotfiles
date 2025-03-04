@@ -118,22 +118,6 @@
       [
         "timestamp",
         false
-      ],
-      [
-        "inlibrary",
-        false
-      ],
-      [
-        "timestamp",
-        false
-      ],
-      [
-        "inlibrary",
-        false
-      ],
-      [
-        "timestamp",
-        false
       ]
     ]
   },
@@ -165,22 +149,6 @@
     "last_modified_injected": true,
     "path_injected": true,
     "sort_history": [
-      [
-        "timestamp",
-        false
-      ],
-      [
-        "inlibrary",
-        false
-      ],
-      [
-        "timestamp",
-        false
-      ],
-      [
-        "inlibrary",
-        false
-      ],
       [
         "timestamp",
         false
@@ -1216,7 +1184,7 @@
   "library_usage_stats": {
     "/home/ssserpent/Calibre Library": 154,
     "/home/ssserpent/Documents/Calibre Library": 24,
-    "/media/gen_dta/Calibre Library": 155
+    "/media/gen_dta/Calibre Library": 177
   },
   "main_window_central_widget_state": {
     "layout": "wide",
@@ -1276,22 +1244,6 @@
     "last_modified_injected": true,
     "path_injected": true,
     "sort_history": [
-      [
-        "timestamp",
-        false
-      ],
-      [
-        "inlibrary",
-        false
-      ],
-      [
-        "timestamp",
-        false
-      ],
-      [
-        "inlibrary",
-        false
-      ],
       [
         "timestamp",
         false

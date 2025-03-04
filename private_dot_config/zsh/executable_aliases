@@ -155,6 +155,8 @@ alias wttr1='curl "wttr.in/wieliczka?format=v2"'
 alias wttr='curl "wttr.in/wieliczka"'
 alias moon='curl "wttr.in/Moon"'
 # }}}
-# -- special ssh into lenspark for plex management -- {{{
-alias lenspark-plex='s lenspark -L 8888:localhost:32400'
+# -- special ssh tunnel connections -- {{{
+alias shlenspark='s lenspark -L 8888:localhost:32400'
+alias shimac='s imac -L 9000:localhost:9000'
+alias weechat-connect="ssh -N -L 9000:localhost:9000 imac &"
 # }}}
