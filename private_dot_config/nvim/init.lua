@@ -67,7 +67,24 @@ require("lazy").setup({
           select = { "<CR>" },
         },
       }
-    end},
+      end},
+  {"christoomey/vim-tmux-navigator",
+    cmd = {
+      "TmuxNavigateLeft",
+      "TmuxNavigateDown",
+      "TmuxNavigateUp",
+      "TmuxNavigateRight",
+      "TmuxNavigatePrevious",
+      "TmuxNavigatorProcessList",
+    },
+    keys = {
+      { "<c-h>", "<cmd><C-U>TmuxNavigateLeft<cr>" },
+      { "<c-j>", "<cmd><C-U>TmuxNavigateDown<cr>" },
+      { "<c-k>", "<cmd><C-U>TmuxNavigateUp<cr>" },
+      { "<c-l>", "<cmd><C-U>TmuxNavigateRight<cr>" },
+      { "<c-\\>", "<cmd><C-U>TmuxNavigatePrevious<cr>" },
+    },
+  }    
 })
 
 -- Configure nvim-notify
@@ -138,10 +155,10 @@ vim.opt.cursorline = true
 vim.opt.cursorcolumn = true
 
 -- Window navigation mappings
-vim.api.nvim_set_keymap('n', '<M-h>', '<C-w>h', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<M-j>', '<C-w>j', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<M-k>', '<C-w>k', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<M-l>', '<C-w>l', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<M-h>', '<C-w>h', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<M-j>', '<C-w>j', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<M-k>', '<C-w>k', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<M-l>', '<C-w>l', { noremap = true, silent = true })
 
 -- Terminal mappings specific to Neovim
 if vim.fn.has('nvim') == 1 then
@@ -184,10 +201,10 @@ for i = 1, 9 do
 end
 
 -- Creating splits with empty buffers in all directions
-vim.api.nvim_set_keymap('n', '<Leader>hn', ':leftabove vnew<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<Leader>ln', ':rightbelow vnew<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<Leader>kn', ':leftabove new<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<Leader>jn', ':rightbelow new<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>nh', ':leftabove vnew<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>nl', ':rightbelow vnew<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>nk', ':leftabove new<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>nj', ':rightbelow new<CR>', { noremap = true, silent = true })
 
 -- Jump to split in the given direction, or create a new split if it doesn't exist
 -- If split in given direction exists - jump, else create new split

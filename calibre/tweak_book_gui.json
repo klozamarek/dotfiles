@@ -1,7 +1,7 @@
 {
   "check-book-splitter-state": {
     "__class__": "bytearray",
-    "__value__": "AAAA/wAAAAEAAAAC//////////8A/////wEAAAABAA=="
+    "__value__": "AAAA/wAAAAEAAAACAAAARgAAAEYA/////wEAAAABAA=="
   },
   "find-widget-state": {
     "case_sensitive": false,
@@ -13,50 +13,50 @@
   },
   "geometry-of-main_window_geometry": {
     "frame_geometry": {
-      "height": 748,
-      "width": 683,
-      "x": 683,
+      "height": 1060,
+      "width": 960,
+      "x": 960,
       "y": 0
     },
     "full_screened": false,
     "geometry": {
-      "height": 730,
-      "width": 681,
-      "x": 685,
-      "y": 18
+      "height": 1038,
+      "width": 956,
+      "x": 962,
+      "y": 20
     },
     "maximized": false,
     "normal_geometry": {
-      "height": 730,
-      "width": 681,
-      "x": 685,
-      "y": 18
+      "height": 1038,
+      "width": 956,
+      "x": 962,
+      "y": 20
     },
     "qt": {
       "__class__": "bytearray",
-      "__value__": "AdnQywADAAAAAAKrAAAAAAAABVUAAALrAAACrQAAABIAAAVVAAAC6wAAAAAAAAAABVYAAAKtAAAAEgAABVUAAALr"
+      "__value__": "AdnQywADAAAAAAPAAAAAAAAAB38AAAQjAAADwgAAABQAAAd9AAAEIQAAAAEAAAAAB4AAAAPCAAAAFAAAB30AAAQh"
     },
     "screen": {
       "depth": 24,
       "device_pixel_ratio": 1.0,
       "geometry_in_logical_pixels": {
-        "height": 768,
-        "width": 1366,
+        "height": 1080,
+        "width": 1920,
         "x": 0,
         "y": 0
       },
-      "index_in_screens_list": 0,
+      "index_in_screens_list": 1,
       "manufacturer": "",
       "model": "",
-      "name": "LVDS-1",
+      "name": "DisplayPort-0",
       "serial": "",
       "size_in_logical_pixels": {
-        "height": 768,
-        "width": 1366
+        "height": 1080,
+        "width": 1920
       },
       "virtual_geometry": {
-        "height": 768,
-        "width": 1366,
+        "height": 1080,
+        "width": 3360,
         "x": 0,
         "y": 0
       }
@@ -64,9 +64,11 @@
   },
   "main_window_state": {
     "__class__": "bytearray",
-    "__value__": "AAAA/wAAAAD9AAAABAAAAAAAAACrAAACh/wCAAAABfsAAAAkAGYAaQBsAGUAcwAtAGIAcgBvAHcAcwBlAHIALQBkAG8AYwBrAQAAAD0AAAKHAAAAWQD////7AAAAHgB0AG8AYwAtAHYAaQBlAHcAZQByAC0AZABvAGMAawAAAAAA/////wAAAFkA////+wAAACAAdABlAHgAdAAtAHMAZQBhAHIAYwBoAC0AZABvAGMAawAAAAAA/////wAAAHwA////+wAAACAAYwBoAGUAYwBrAHAAbwBpAG4AdABzAC0AZABvAGMAawAAAAAA/////wAAAIoA////+wAAACYAcwBhAHYAZQBkAC0AcwBlAGEAcgBjAGgAZQBzAC0AZABvAGMAawAAAAAA/////wAAAgYA////AAAAAQAAAXMAAAKH/AIAAAAC+wAAABgAcAByAGUAdgBpAGUAdwAtAGQAbwBjAGsBAAAAPQAAAocAAABRAP////sAAAAaAGwAaQB2AGUALQBjAHMAcwAtAGQAbwBjAGsAAAAAAP////8AAABZAP///wAAAAIAAAAAAAAAAPwBAAAAAfsAAAAeAGMAaABlAGMAawAtAGIAbwBvAGsALQBkAG8AYwBrAAAAAAD/////AAAAkAD///8AAAADAAAAAAAAAAD8AQAAAAH7AAAAHABpAG4AcwBwAGUAYwB0AG8AcgAtAGQAbwBjAGsAAAAAAP////8AAAA6AP///wAAAH8AAAKHAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAMAAAAUAGcAbABvAGIAYQBsAC0AYgBhAHIBAAAAAP////8AAAAAAAAAAAAAABIAdABvAG8AbABzAC0AYgBhAHIBAAABJv////8AAAAAAAAAAAAAABYAcABsAHUAZwBpAG4AcwAtAGIAYQByAAAAAAD/////AAAAAAAAAAA="
+    "__value__": "AAAA/wAAAAD9AAAABAAAAAAAAACrAAADu/wCAAAABfsAAAAkAGYAaQBsAGUAcwAtAGIAcgBvAHcAcwBlAHIALQBkAG8AYwBrAQAAAD0AAAO7AAAAWAD////7AAAAHgB0AG8AYwAtAHYAaQBlAHcAZQByAC0AZABvAGMAawAAAAAA/////wAAAFgA////+wAAACAAdABlAHgAdAAtAHMAZQBhAHIAYwBoAC0AZABvAGMAawAAAAAA/////wAAAHsA////+wAAACAAYwBoAGUAYwBrAHAAbwBpAG4AdABzAC0AZABvAGMAawAAAAAA/////wAAAIkA////+wAAACYAcwBhAHYAZQBkAC0AcwBlAGEAcgBjAGgAZQBzAC0AZABvAGMAawAAAAAA/////wAAAgQA////AAAAAQAAAXMAAAO7/AIAAAAC+wAAABgAcAByAGUAdgBpAGUAdwAtAGQAbwBjAGsBAAAAPQAAA7sAAABQAP////sAAAAaAGwAaQB2AGUALQBjAHMAcwAtAGQAbwBjAGsAAAAAAP////8AAABYAP///wAAAAIAAAAAAAAAAPwBAAAAAfsAAAAeAGMAaABlAGMAawAtAGIAbwBvAGsALQBkAG8AYwBrAAAAAAD/////AAAAkAD///8AAAADAAAAAAAAAAD8AQAAAAH7AAAAHABpAG4AcwBwAGUAYwB0AG8AcgAtAGQAbwBjAGsAAAAAAP////8AAAAzAP///wAAAZIAAAO7AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAMAAAAUAGcAbABvAGIAYQBsAC0AYgBhAHIBAAAAAP////8AAAAAAAAAAAAAABIAdABvAG8AbABzAC0AYgBhAHIBAAABJv////8AAAAAAAAAAAAAABYAcABsAHUAZwBpAG4AcwAtAGIAYQByAAAAAAD/////AAAAAAAAAAA="
   },
   "recent-books": [
+    "/home/ssserpent/Downloads/The Tao of tmux and Terminal Tricks by Ton - Unknown.epub",
+    "/home/ssserpent/Downloads/tmux 2 Productive Mouse-Free Development (Brian P. Hogan) (Z-Library).epub",
     "/home/ssserpent/Documents/Calibre Library/JJ TAM/LEARN GOLANG AND PYTHON QUICKLY_ Coding For Beginners - 2 BOOKS IN 1 - GOLANG AND PYTHON Crash (157)/LEARN GOLANG AND PYTHON QUICKLY_ Coding Fo - JJ TAM.azw3"
   ],
   "reports-ui-state": {},

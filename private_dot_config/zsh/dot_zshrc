@@ -105,7 +105,8 @@ fi
 # | clear |
 # +------+
 # {{{
-bindkey -s '^r' 'clear\n'
+bindkey -r '^g'
+bindkey -s '^g' 'clear\n'
 # }}}
 # +--------+
 # | ranger |
