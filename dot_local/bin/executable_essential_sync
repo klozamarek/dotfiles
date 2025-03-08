@@ -3,7 +3,7 @@
 # Configuration
 LOCAL_FILES=("/home/ssserpent/.local/share/buku/bookmarks.db" "/home/ssserpent/Documents/mydirtynotes.txt")
 REMOTE_USER="ssserpent"
-REMOTE_HOST="imac"
+REMOTE_HOST="soyoarch"
 REMOTE_FILES=("/home/ssserpent/.local/share/buku/bookmarks.db" "/home/ssserpent/Documents/mydirtynotes.txt")
 BACKUP_DIR="/home/ssserpent/Documents/Backups"
 MAX_BACKUPS=5

@@ -577,28 +577,28 @@
   },
   "geometry-of-calibre_main_window_geometry": {
     "frame_geometry": {
-      "height": 1061,
+      "height": 1060,
       "width": 1920,
       "x": 0,
       "y": 0
     },
     "full_screened": false,
     "geometry": {
-      "height": 1043,
+      "height": 1040,
       "width": 1920,
       "x": 0,
-      "y": 18
+      "y": 20
     },
     "maximized": true,
     "normal_geometry": {
-      "height": 1043,
+      "height": 1040,
       "width": 1920,
       "x": 0,
-      "y": 18
+      "y": 20
     },
     "qt": {
       "__class__": "bytearray",
-      "__value__": "AdnQywADAAAAAAAAAAAAAAAAB38AAAQkAAAAAAAAABIAAAd/AAAEJAAAAAECAAAAB4AAAAAAAAAAEgAAB38AAAQk"
+      "__value__": "AdnQywADAAAAAAAAAAAAAAAAB38AAAQjAAAAAAAAABQAAAd/AAAEIwAAAAECAAAAB4AAAAAAAAAAFAAAB38AAAQj"
     },
     "screen": {
       "depth": 24,
@@ -1299,7 +1299,7 @@
   "library_usage_stats": {
     "/home/ssserpent/Calibre Library": 154,
     "/home/ssserpent/Documents/Calibre Library": 24,
-    "/media/gen_dta/Calibre Library": 187
+    "/media/gen_dta/Calibre Library": 195
   },
   "main_window_central_widget_state": {
     "layout": "wide",
