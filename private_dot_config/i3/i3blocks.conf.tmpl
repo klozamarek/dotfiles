@@ -151,6 +151,11 @@ markup=pango
 {{- end}}
 
 {{ if eq .chezmoi.hostname "samsarch" }}
+[evpn]
+command=$XDG_CONFIG_HOME/i3/scripts/evpn
+label=VPN: 
+interval=5
+
 [battery2]
 command=$XDG_CONFIG_HOME/i3/scripts/battery2
 markup=pango
