@@ -47,6 +47,7 @@
   "jobs_search_history": [],
   "lrf_viewer_search_history": [],
   "main_search_history": [
+    "linux 2025",
     "wager",
     "voya",
     "david grann",
@@ -70,8 +71,7 @@
     "search:\"=Linux Magazine\" 2016",
     "search:\"=Linux Magazine\" 2025",
     "search:\"=Linux Magazine\"",
-    "(tags:\"Linux Magazine\")",
-    "Linux Magazine"
+    "(tags:\"Linux Magazine\")"
   ],
   "main_window_geometry": null,
   "match_tags_type": "any",

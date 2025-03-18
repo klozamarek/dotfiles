@@ -1,46 +1,46 @@
 {
   "geometry-of-main_window_geometry": {
     "frame_geometry": {
-      "height": 1060,
-      "width": 960,
-      "x": 960,
-      "y": 0
+      "height": 880,
+      "width": 720,
+      "x": 2640,
+      "y": 180
     },
     "full_screened": false,
     "geometry": {
-      "height": 1038,
-      "width": 956,
-      "x": 962,
-      "y": 20
+      "height": 858,
+      "width": 716,
+      "x": 2642,
+      "y": 200
     },
     "maximized": false,
     "normal_geometry": {
-      "height": 1038,
-      "width": 956,
-      "x": 962,
-      "y": 20
+      "height": 858,
+      "width": 716,
+      "x": 2642,
+      "y": 200
     },
     "qt": {
       "__class__": "bytearray",
-      "__value__": "AdnQywADAAAAAAPAAAAAAAAAB38AAAQjAAADwgAAABQAAAd9AAAEIQAAAAEAAAAAB4AAAAPCAAAAFAAAB30AAAQh"
+      "__value__": "AdnQywADAAAAAApQAAAAtAAADR8AAAQjAAAKUgAAAMgAAA0dAAAEIQAAAAAAAAAABaAAAApSAAAAyAAADR0AAAQh"
     },
     "screen": {
       "depth": 24,
       "device_pixel_ratio": 1.0,
       "geometry_in_logical_pixels": {
-        "height": 1080,
-        "width": 1920,
-        "x": 0,
-        "y": 0
+        "height": 900,
+        "width": 1440,
+        "x": 1920,
+        "y": 180
       },
-      "index_in_screens_list": 1,
+      "index_in_screens_list": 0,
       "manufacturer": "",
       "model": "",
-      "name": "DisplayPort-0",
+      "name": "DisplayPort-1",
       "serial": "",
       "size_in_logical_pixels": {
-        "height": 1080,
-        "width": 1920
+        "height": 900,
+        "width": 1440
       },
       "virtual_geometry": {
         "height": 1080,
@@ -52,11 +52,12 @@
   },
   "main_window_state": {
     "__class__": "bytearray",
-    "__value__": "AAAA/wAAAAH9AAAAAgAAAAAAAAEvAAAEDvwCAAAAAvsAAAAQAHQAbwBjAC0AZABvAGMAawEAAAAAAAAEDgAAAIcA////+wAAABYAcwBlAGEAcgBjAGgALQBkAG8AYwBrAAAAAAD/////AAAAlgD///8AAAABAAAAAAAAAAD8AgAAAAT7AAAAFgBsAG8AbwBrAHUAcAAtAGQAbwBjAGsAAAAAAP////8AAAB+AP////sAAAAcAGIAbwBvAGsAbQBhAHIAawBzAC0AZABvAGMAawAAAAAA/////wAAAOsA////+wAAABwAaQBuAHMAcABlAGMAdABvAHIALQBkAG8AYwBrAAAAAAD/////AAAAEgD////7AAAAHgBoAGkAZwBoAGwAaQBnAGgAdABzAC0AZABvAGMAawAAAAAA/////wAAANIA////AAAChwAABA4AAAAEAAAABAAAAAgAAAAI/AAAAAEAAAAAAAAAAQAAAB4AYQBjAHQAaQBvAG4AcwBfAHQAbwBvAGwAYgBhAHICAAAAAP////8AAAAAAAAAAA=="
+    "__value__": "AAAA/wAAAAH9AAAAAgAAAAAAAAEvAAADWvwCAAAAAvsAAAAQAHQAbwBjAC0AZABvAGMAawEAAAAAAAADWgAAAIcA////+wAAABYAcwBlAGEAcgBjAGgALQBkAG8AYwBrAAAAAAD/////AAAAlgD///8AAAABAAAAAAAAAAD8AgAAAAT7AAAAFgBsAG8AbwBrAHUAcAAtAGQAbwBjAGsAAAAAAP////8AAAB+AP////sAAAAcAGIAbwBvAGsAbQBhAHIAawBzAC0AZABvAGMAawAAAAAA/////wAAAOsA////+wAAABwAaQBuAHMAcABlAGMAdABvAHIALQBkAG8AYwBrAAAAAAD/////AAAAEgD////7AAAAHgBoAGkAZwBoAGwAaQBnAGgAdABzAC0AZABvAGMAawAAAAAA/////wAAANIA////AAABlwAAA1oAAAAEAAAABAAAAAgAAAAI/AAAAAEAAAAAAAAAAQAAAB4AYQBjAHQAaQBvAG4AcwBfAHQAbwBvAGwAYgBhAHICAAAAAP////8AAAAAAAAAAA=="
   },
   "old_prefs_migrated": true,
   "session_data": {
     "base_font_size": 20,
+    "book_scrollbar": false,
     "controls_help_shown_count": 2,
     "current_color_scheme": "sepia-dark",
     "paged_wheel_scrolls_by_screen": false,
@@ -75,6 +76,21 @@
       "singleinstance": false
     },
     "standalone_recently_opened": [
+      {
+        "key": "/home/ssserpent/Downloads/The Tao of tmux and Terminal Tricks by Ton - Unknown.epub",
+        "pathtoebook": "/home/ssserpent/Downloads/The Tao of tmux and Terminal Tricks by Ton - Unknown.epub",
+        "timestamp": "2025-03-10T04:57:47.689Z",
+        "title": "The Tao of tmux and Terminal Tricks by Tony Narlock"
+      },
+      {
+        "authors": [
+          "calibre"
+        ],
+        "key": "/media/gen_dta/Calibre Library/calibre/Foreign Affairs (2454)/Foreign Affairs - calibre.epub",
+        "pathtoebook": "/media/gen_dta/Calibre Library/calibre/Foreign Affairs (2454)/Foreign Affairs - calibre.epub",
+        "timestamp": "2025-03-08T19:56:36.284Z",
+        "title": "Foreign Affairs"
+      },
       {
         "authors": [
           "Brian P. Hogan"
@@ -275,24 +291,6 @@
         "pathtoebook": "/home/ssserpent/.config/cache/mutt-wizard/files/neomutt.html",
         "timestamp": "2024-01-05T04:52:34.652Z",
         "title": "neomutt"
-      },
-      {
-        "authors": [
-          "calibre"
-        ],
-        "key": "/home/ssserpent/Calibre Library/calibre/The Nation (177)/The Nation - calibre.mobi",
-        "pathtoebook": "/home/ssserpent/Calibre Library/calibre/The Nation (177)/The Nation - calibre.mobi",
-        "timestamp": "2023-12-16T07:53:01.428Z",
-        "title": "The Nation"
-      },
-      {
-        "authors": [
-          "calibre"
-        ],
-        "key": "/home/ssserpent/Calibre Library/calibre/New York Times Book Review (175)/New York Times Book Review - calibre.mobi",
-        "pathtoebook": "/home/ssserpent/Calibre Library/calibre/New York Times Book Review (175)/New York Times Book Review - calibre.mobi",
-        "timestamp": "2023-12-16T07:49:49.643Z",
-        "title": "New York Times Book Review"
       }
     ]
   }
