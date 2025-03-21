@@ -35,6 +35,7 @@ Image Sort Order=0
 Image Sorting=0
 Item Left Click Action=0
 Preview Convert To Eight Bit=false
+Preview Image Smooth Scaled=true
 Preview Load Full Image Size=false
 Preview Scale Fit To Window=false
 Preview Show Icons=true
@@ -84,10 +85,10 @@ TreeView Font=Sans Serif,9,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 Update Type=0
 
 [AlbumFolderView Sidebar]
-CurrentIndex=795
-Expansion=0,1,637,641,642,643,793,644,794,795,796,802,803
+CurrentIndex=644
+Expansion=0,1,641,643,793,644,795,796,802,803
 RestoreChecked=false
-Selection=795
+Selection=644
 SortColumn=0
 SortOrder=0
 
@@ -103,14 +104,39 @@ AlbumTreeViewSortColumn=0
 AlbumTreeViewSortOrder=0
 CaseSensitive=0
 
+[Autotags Settings]
+AlbumComboBox-Checked=
+AlbumComboBox-CurrentIndex=1
+AlbumComboBox-Expansion=1
+AlbumComboBox-RestoreChecked=true
+AlbumComboBox-Selection=1
+AlbumComboBox-SortColumn=0
+AlbumComboBox-SortOrder=0
+AlbumTypeEntry=0
+Autotags Languages=
+Autotags Object Detection Accuracy=7
+Autotags Object Detection Model=yolov11-nano
+Autotags Scan Mode=0
+Autotags Tag Mode=0
+Autotags Use Full CPU=false
+TagComboBox-Checked=
+TagComboBox-CurrentIndex=242
+TagComboBox-Expansion=
+TagComboBox-RestoreChecked=true
+TagComboBox-Selection=242,199
+TagComboBox-SortColumn=0
+TagComboBox-SortOrder=0
+UseWholeAlbumsEntry=true
+UseWholeTagsEntry=false
+
 [Baloo Settings]
 Sync Baloo to Digikam=false
 Sync Digikam to Baloo=false
 
 [Batch Queue Manager Settings]
-BqmBottomSplitter=AAAA/wAAAAEAAAAC//////////8B/////wEAAAABAA==
-BqmTopSplitter=AAAA/wAAAAEAAAAD////////////////Af////8BAAAAAQA=
-BqmVerticalSplitter=AAAA/wAAAAEAAAAC//////////8B/////wEAAAACAA==
+BqmBottomSplitter=AAAA/wAAAAEAAAACAAAAhQAAAIUB/////wEAAAABAA==
+BqmTopSplitter=AAAA/wAAAAEAAAADAAAAhQAAAHAAAACUAf////8BAAAAAQA=
+BqmVerticalSplitter=AAAA/wAAAAEAAAACAAAAjAAAAIEB/////wEAAAACAA==
 
 [Camera Settings]
 AlbumBox Expanded=false
@@ -197,12 +223,12 @@ Recently Used Tags=
 
 [Database Settings]
 Database Connectoptions=
-Database Encrypted Password=AwIPDw8=
+Database Encrypted Password=AwIzMzM=
 Database Hostname=
-Database Name=/run/media/ssserpent/intenso/Obrazy/
-Database Name Face=/run/media/ssserpent/intenso/Obrazy/
-Database Name Similarity=/run/media/ssserpent/intenso/Obrazy/
-Database Name Thumbnails=/run/media/ssserpent/intenso/Obrazy/
+Database Name=/media/gen_dta/Obrazy/
+Database Name Face=/media/gen_dta/Obrazy/
+Database Name Similarity=/media/gen_dta/Obrazy/
+Database Name Thumbnails=/media/gen_dta/Obrazy/
 Database Port=-1
 Database Type=QSQLITE
 Database Username=
@@ -269,7 +295,7 @@ Web GPS Locator=0
 
 [Digikam Right Sidebar][GPS Properties Tab][Map Widget]
 Backend=marble
-Center=geo:52,6
+Center=geo:0,0
 GoogleMaps Map Type=ROADMAP
 GoogleMaps Show Map Type Control=true
 GoogleMaps Show Navigation Control=true
@@ -325,12 +351,20 @@ AlbumComboBox-SortColumn=0
 AlbumComboBox-SortOrder=0
 AlbumTypeEntry=0
 Already Scanned Handling=0
+Face Already Scanned Handling=0
+Face Detection Accuracy=7
+Face Detection Model=0
+Face Detection Size=3
+Face Recognition Accuracy=7
+Face Recognition Model=0
 Face Scan Main Task=Detect
+Face Scan Task=0
+Face Use Full CPU=true
 TagComboBox-Checked=
 TagComboBox-CurrentIndex=4
 TagComboBox-Expansion=
 TagComboBox-RestoreChecked=true
-TagComboBox-Selection=4
+TagComboBox-Selection=199,4
 TagComboBox-SortColumn=0
 TagComboBox-SortOrder=0
 Use Full CPU=false
@@ -353,10 +387,10 @@ Last search album tag relation=0
 Last search results restriction=0
 Lower bound for minimum similarity=40
 TagComboBox-Checked=
-TagComboBox-CurrentIndex=4
+TagComboBox-CurrentIndex=199
 TagComboBox-Expansion=
 TagComboBox-RestoreChecked=true
-TagComboBox-Selection=4
+TagComboBox-Selection=199
 TagComboBox-SortColumn=0
 TagComboBox-SortOrder=0
 UseWholeAlbumsEntry=false
@@ -399,11 +433,11 @@ Selection=
 Sort Order=0
 SortColumn=0
 SortOrder=0
-SplitterState=AAAA/wAAAAEAAAAC//////////8B/////wEAAAACAA==
+SplitterState=AAAA/wAAAAEAAAACAAABfQAAAGUB/////wEAAAACAA==
 
 [GPS Search Sidebar][GPSSearch Map Widget]
 Backend=marble
-Center=geo:52,6
+Center=geo:0,0
 GoogleMaps Map Type=ROADMAP
 GoogleMaps Show Map Type Control=true
 GoogleMaps Show Navigation Control=true
@@ -438,12 +472,12 @@ Expand New Current Item On Click=true
 Icon Theme=breeze-dark
 Scan At Start=true
 Scroll Current Item To Center=false
+Select First Album Item=true
 Show Only Face Tags For Assigning Name=true
 Show Permanent Delete Dialog=true
 Show Splash=true
 Show Trash Delete Dialog=true
 String Comparison Type=0
-ToolBarsMovable=Disabled
 Use Native File Dialog=false
 Use Trash=true
 Version=8.3.0
@@ -457,12 +491,49 @@ Do slideshow operations on all=2
 Operate tools on all=2
 Rename all=2
 
+[Image Quality Settings]
+AlbumComboBox-Checked=
+AlbumComboBox-CurrentIndex=1
+AlbumComboBox-Expansion=1
+AlbumComboBox-RestoreChecked=true
+AlbumComboBox-Selection=1
+AlbumComboBox-SortColumn=0
+AlbumComboBox-SortOrder=0
+AlbumTypeEntry=0
+Image Quality Accepted Threshold=60
+Image Quality Blur Weight=100
+Image Quality Compression Weight=100
+Image Quality Detect Aesthetic=true
+Image Quality Detect Blur=true
+Image Quality Detect Compression=true
+Image Quality Detect Exposure=true
+Image Quality Detect Noise=true
+Image Quality Exposure Weight=100
+Image Quality HighQ Accepted=true
+Image Quality LowQ Rejected=true
+Image Quality MediumQ Pending=true
+Image Quality Noise Weight=100
+Image Quality Pending Threshold=40
+Image Quality Rejected Threshold=10
+Image Quality Scan Mode=0
+Image Quality Use Full CPU=false
+TagComboBox-Checked=
+TagComboBox-CurrentIndex=242
+TagComboBox-Expansion=
+TagComboBox-RestoreChecked=true
+TagComboBox-Selection=242,199
+TagComboBox-SortColumn=0
+TagComboBox-SortOrder=0
+UseWholeAlbumsEntry=true
+UseWholeTagsEntry=false
+
 [ImageViewer Settings]
 AutoZoom=true
 OverExposureIndicator=false
 PreviewMode=128
 Show Thumbbar=false
-SplitterState=AAAA/wAAAAEAAAAC//////////8B/////wAAAAABAQ==
+SplitterState=AAAA/wAAAAEAAAACAAAAwAAAAS4B/////wAAAAABAQ==
+ThumbbarState=AAAA/wAAAAD9AAAAAQAAAAAAAAAAAAAAAPwCAAAAAfsAAAAeAGUAZABpAHQAbwByAF8AdABoAHUAbQBiAGIAYQByAQAAAAD/////AAAAVwD///8AAAAAAAAAAAAAAAQAAAAEAAAACAAAAAj8AAAAAA==
 UnderExposureIndicator=false
 UseRawImportTool=false
 
@@ -509,7 +580,7 @@ Web GPS Locator=0
 
 [ImageViewer Settings][Right Sidebar][GPS Properties Tab][Map Widget]
 Backend=marble
-Center=geo:52,6
+Center=geo:0,0
 GoogleMaps Map Type=ROADMAP
 GoogleMaps Show Map Type Control=true
 GoogleMaps Show Navigation Control=true
@@ -631,14 +702,16 @@ CaseSensitive=0
 [Labels Sidebar]
 ColorSelection=
 Expansion=
+ImageQualityScanWidgetExpanded=true
 PickSelection=
 RatingSelection=
 
 [LightTable Settings]
 Clear On Close=false
-Horizontal Splitter State=AAAA/wAAAAEAAAAD////////////////Af////8AAAAAAQE=
+Horizontal Splitter State=AAAA/wAAAAEAAAADAAABLgAAAFcAAAEuAf////8AAAAAAQE=
 Navigate By Pair=false
 Show Thumbbar=true
+ThumbbarState=AAAA/wAAAAD9AAAAAQAAAAIAAAAAAAAAAPwBAAAAAfsAAAAmAGwAaQBnAGgAdAB0AGEAYgBsAGUAXwB0AGgAdQBtAGIAYgBhAHIBAAAAAP////8AAABXAP///wAAAAAAAAAAAAAABAAAAAQAAAAIAAAACPwAAAAA
 
 [LightTable Settings][Left Sidebar]
 ActiveTab=0
@@ -648,7 +721,7 @@ ItemProperties Expanded=true
 LocationProperties Expanded=true
 Minimized=true
 PhotographProperties Expanded=true
-RestoreSize=-1
+RestoreSize=31
 RightsProperties Expanded=true
 TagsProperties Expanded=true
 VideoProperties Expanded=true
@@ -683,7 +756,7 @@ Web GPS Locator=0
 
 [LightTable Settings][Left Sidebar][GPS Properties Tab][Map Widget]
 Backend=marble
-Center=geo:52,6
+Center=geo:0,0
 GoogleMaps Map Type=ROADMAP
 GoogleMaps Show Map Type Control=true
 GoogleMaps Show Navigation Control=true
@@ -730,7 +803,7 @@ ItemProperties Expanded=true
 LocationProperties Expanded=true
 Minimized=true
 PhotographProperties Expanded=true
-RestoreSize=-1
+RestoreSize=30
 RightsProperties Expanded=true
 TagsProperties Expanded=true
 VideoProperties Expanded=true
@@ -765,7 +838,7 @@ Web GPS Locator=0
 
 [LightTable Settings][Right Sidebar][GPS Properties Tab][Map Widget]
 Backend=marble
-Center=geo:52,6
+Center=geo:0,0
 GoogleMaps Map Type=ROADMAP
 GoogleMaps Show Map Type Control=true
 GoogleMaps Show Navigation Control=true
@@ -805,9 +878,9 @@ Version Properties Tab=versions
 Version Properties View Mode=2
 
 [MainWindow]
-InitialAlbumID=795
+InitialAlbumID=644
 SplitterState=AAAA/wAAAAEAAAADAAABkwAADhoAAAE9Af////8AAAAAAQE=
-ThumbbarState=AAAA/wAAAAD9AAAAAQAAAAIAAAR0AAAAtfwBAAAAAfsAAAAmAG0AYQBpAG4AdwBpAG4AZABvAHcAXwB0AGgAdQBtAGIAYgBhAHIAAAAAAAAABHQAAABXAP///wAABHQAAAL7AAAABAAAAAQAAAAIAAAACPwAAAAA
+ThumbbarState=AAAA/wAAAAD9AAAAAQAAAAIAAAR0AAAAtfwBAAAAAfsAAAAmAG0AYQBpAG4AdwBpAG4AZABvAHcAXwB0AGgAdQBtAGIAYgBhAHIAAAAAAAAABHQAAABXAP///wAABHAAAAO0AAAABAAAAAQAAAAIAAAACPwAAAAA
 
 [Metadata Settings]
 Album Date Source=1
@@ -842,6 +915,7 @@ Write Metadata To RAW Files=false
 [People Sidebar]
 CurrentIndex=
 Expansion=
+FaceScanWidgetExpanded=true
 RestoreChecked=false
 Selection=
 SortColumn=0
@@ -849,7 +923,7 @@ SortOrder=0
 
 [Search Sidebar]
 CurrentIndex=
-Expansion=
+Expansion=1
 RestoreChecked=false
 Selection=
 SortColumn=0
@@ -891,6 +965,7 @@ TypeGeolocationFilter Expanded=true
 TypeMimeFilter Expanded=true
 
 [TagView Sidebar]
+AutotagScanWidgetExpanded=true
 CurrentIndex=
 Expansion=0
 RestoreChecked=false
@@ -954,7 +1029,7 @@ Sort Order=0
 
 [mainwindow_mapwidgetview][Central Map Widget]
 Backend=marble
-Center=geo:52,6
+Center=geo:0,0
 GoogleMaps Map Type=ROADMAP
 GoogleMaps Show Map Type Control=true
 GoogleMaps Show Navigation Control=true
