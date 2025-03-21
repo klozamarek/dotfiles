@@ -1,46 +1,46 @@
 {
   "geometry-of-main_window_geometry": {
     "frame_geometry": {
-      "height": 880,
-      "width": 720,
-      "x": 2640,
-      "y": 180
+      "height": 1060,
+      "width": 960,
+      "x": 960,
+      "y": 0
     },
     "full_screened": false,
     "geometry": {
-      "height": 858,
-      "width": 716,
-      "x": 2642,
-      "y": 200
+      "height": 1038,
+      "width": 956,
+      "x": 962,
+      "y": 20
     },
     "maximized": false,
     "normal_geometry": {
-      "height": 858,
-      "width": 716,
-      "x": 2642,
-      "y": 200
+      "height": 1038,
+      "width": 956,
+      "x": 962,
+      "y": 20
     },
     "qt": {
       "__class__": "bytearray",
-      "__value__": "AdnQywADAAAAAApQAAAAtAAADR8AAAQjAAAKUgAAAMgAAA0dAAAEIQAAAAAAAAAABaAAAApSAAAAyAAADR0AAAQh"
+      "__value__": "AdnQywADAAAAAAPAAAAAAAAAB38AAAQjAAADwgAAABQAAAd9AAAEIQAAAAEAAAAAB4AAAAPCAAAAFAAAB30AAAQh"
     },
     "screen": {
       "depth": 24,
       "device_pixel_ratio": 1.0,
       "geometry_in_logical_pixels": {
-        "height": 900,
-        "width": 1440,
-        "x": 1920,
-        "y": 180
+        "height": 1080,
+        "width": 1920,
+        "x": 0,
+        "y": 0
       },
-      "index_in_screens_list": 0,
+      "index_in_screens_list": 1,
       "manufacturer": "",
       "model": "",
-      "name": "DisplayPort-1",
+      "name": "DisplayPort-0",
       "serial": "",
       "size_in_logical_pixels": {
-        "height": 900,
-        "width": 1440
+        "height": 1080,
+        "width": 1920
       },
       "virtual_geometry": {
         "height": 1080,
@@ -52,7 +52,7 @@
   },
   "main_window_state": {
     "__class__": "bytearray",
-    "__value__": "AAAA/wAAAAH9AAAAAgAAAAAAAAEvAAADWvwCAAAAAvsAAAAQAHQAbwBjAC0AZABvAGMAawEAAAAAAAADWgAAAIcA////+wAAABYAcwBlAGEAcgBjAGgALQBkAG8AYwBrAAAAAAD/////AAAAlgD///8AAAABAAAAAAAAAAD8AgAAAAT7AAAAFgBsAG8AbwBrAHUAcAAtAGQAbwBjAGsAAAAAAP////8AAAB+AP////sAAAAcAGIAbwBvAGsAbQBhAHIAawBzAC0AZABvAGMAawAAAAAA/////wAAAOsA////+wAAABwAaQBuAHMAcABlAGMAdABvAHIALQBkAG8AYwBrAAAAAAD/////AAAAEgD////7AAAAHgBoAGkAZwBoAGwAaQBnAGgAdABzAC0AZABvAGMAawAAAAAA/////wAAANIA////AAABlwAAA1oAAAAEAAAABAAAAAgAAAAI/AAAAAEAAAAAAAAAAQAAAB4AYQBjAHQAaQBvAG4AcwBfAHQAbwBvAGwAYgBhAHICAAAAAP////8AAAAAAAAAAA=="
+    "__value__": "AAAA/wAAAAH9AAAAAgAAAAAAAAEvAAAEDvwCAAAAAvsAAAAQAHQAbwBjAC0AZABvAGMAawEAAAAAAAAEDgAAAIcA////+wAAABYAcwBlAGEAcgBjAGgALQBkAG8AYwBrAAAAAAD/////AAAAlgD///8AAAABAAAAAAAAAAD8AgAAAAT7AAAAFgBsAG8AbwBrAHUAcAAtAGQAbwBjAGsAAAAAAP////8AAAB+AP////sAAAAcAGIAbwBvAGsAbQBhAHIAawBzAC0AZABvAGMAawAAAAAA/////wAAAOsA////+wAAABwAaQBuAHMAcABlAGMAdABvAHIALQBkAG8AYwBrAAAAAAD/////AAAAEgD////7AAAAHgBoAGkAZwBoAGwAaQBnAGgAdABzAC0AZABvAGMAawAAAAAA/////wAAANIA////AAAChwAABA4AAAAEAAAABAAAAAgAAAAI/AAAAAEAAAAAAAAAAQAAAB4AYQBjAHQAaQBvAG4AcwBfAHQAbwBvAGwAYgBhAHICAAAAAP////8AAAAAAAAAAA=="
   },
   "old_prefs_migrated": true,
   "session_data": {
@@ -76,6 +76,24 @@
       "singleinstance": false
     },
     "standalone_recently_opened": [
+      {
+        "authors": [
+          "calibre"
+        ],
+        "key": "/media/gen_dta/Calibre Library/calibre/The Nation (2463)/The Nation - calibre.epub",
+        "pathtoebook": "/media/gen_dta/Calibre Library/calibre/The Nation (2463)/The Nation - calibre.epub",
+        "timestamp": "2025-03-21T06:46:14.022Z",
+        "title": "The Nation"
+      },
+      {
+        "authors": [
+          "calibre"
+        ],
+        "key": "/media/gen_dta/Calibre Library/calibre/Foreign Affairs (2462)/Foreign Affairs - calibre.epub",
+        "pathtoebook": "/media/gen_dta/Calibre Library/calibre/Foreign Affairs (2462)/Foreign Affairs - calibre.epub",
+        "timestamp": "2025-03-21T06:43:57.800Z",
+        "title": "Foreign Affairs"
+      },
       {
         "key": "/home/ssserpent/Downloads/The Tao of tmux and Terminal Tricks by Ton - Unknown.epub",
         "pathtoebook": "/home/ssserpent/Downloads/The Tao of tmux and Terminal Tricks by Ton - Unknown.epub",
@@ -276,21 +294,6 @@
         "pathtoebook": "/home/ssserpent/Calibre Library/calibre/Linux Magazine (181)/Linux Magazine - calibre.mobi",
         "timestamp": "2024-05-11T10:12:41.527Z",
         "title": "Linux Magazine"
-      },
-      {
-        "authors": [
-          "Ken Liu"
-        ],
-        "key": "/home/ssserpent/Calibre Library/Ken Liu/Invisible Planets (186)/Invisible Planets - Ken Liu.epub",
-        "pathtoebook": "/home/ssserpent/Calibre Library/Ken Liu/Invisible Planets (186)/Invisible Planets - Ken Liu.epub",
-        "timestamp": "2024-05-11T07:59:30.150Z",
-        "title": "Invisible Planets"
-      },
-      {
-        "key": "/home/ssserpent/.config/cache/mutt-wizard/files/neomutt.html",
-        "pathtoebook": "/home/ssserpent/.config/cache/mutt-wizard/files/neomutt.html",
-        "timestamp": "2024-01-05T04:52:34.652Z",
-        "title": "neomutt"
       }
     ]
   }

@@ -327,10 +327,6 @@
 
 	<recipe_customization keep_issues="0" id="builtin:lightspeed_magazine" add_title_tag="yes" custom_tags=""/>
 
-	<scheduled_recipe id="builtin:linux_magazine" title="Linux Magazine" last_downloaded="2025-03-20T06:01:10.565397+00:00"><schedule type="interval">31.000000</schedule></scheduled_recipe>
-
-	<recipe_customization keep_issues="0" id="builtin:linux_magazine" add_title_tag="yes" custom_tags=""/>
-
 	<recipe_customization keep_issues="0" id="builtin:livescience" add_title_tag="yes" custom_tags=""/>
 
 	<recipe_customization keep_issues="0" id="builtin:living_stones" add_title_tag="yes" custom_tags=""/>
@@ -420,10 +416,6 @@
 	<recipe_customization keep_issues="0" id="builtin:new_york_review_of_books" add_title_tag="yes" custom_tags=""/>
 
 	<recipe_customization keep_issues="0" id="builtin:new_york_review_of_books_no_sub" add_title_tag="yes" custom_tags=""/>
-
-	<scheduled_recipe id="builtin:nytimesbook" title="New York Times Book Review" last_downloaded="2025-03-10T05:01:02.779732+00:00"><schedule type="days_of_week">0:6:0</schedule></scheduled_recipe>
-
-	<recipe_customization keep_issues="0" id="builtin:nytimesbook" add_title_tag="yes" custom_tags=""/>
 
 	<recipe_customization keep_issues="0" id="builtin:nytimes_sports" add_title_tag="yes" custom_tags=""/>
 
@@ -643,10 +635,6 @@
 
 	<recipe_customization keep_issues="0" id="builtin:ajc" add_title_tag="yes" custom_tags=""/>
 
-	<scheduled_recipe id="builtin:amspec" title="The American Spectator" last_downloaded="2025-02-13T06:10:43.738228+00:00"><schedule type="interval">62.000000</schedule></scheduled_recipe>
-
-	<recipe_customization keep_issues="0" id="builtin:amspec" add_title_tag="yes" custom_tags=""/>
-
 	<recipe_customization keep_issues="0" id="builtin:the_athletic" add_title_tag="yes" custom_tags=""/>
 
 	<recipe_customization keep_issues="0" id="builtin:the_baffler" add_title_tag="yes" custom_tags=""/>
@@ -825,26 +813,38 @@
 
 	<recipe_customization keep_issues="0" id="builtin:linuxportal_pl" add_title_tag="yes" custom_tags=""/>
 
-	<scheduled_recipe id="builtin:atlantic" title="The Atlantic" last_downloaded="2025-03-20T06:01:34.589856+00:00"><schedule type="interval">31.000000</schedule></scheduled_recipe>
-
-	<recipe_customization keep_issues="0" id="builtin:atlantic" add_title_tag="yes" custom_tags=""/>
-
 	<scheduled_recipe id="builtin:economist" title="The Economist" last_downloaded="2025-03-21T05:07:48.377863+00:00"><schedule type="days_of_week">4:6:0</schedule></scheduled_recipe>
 
 	<recipe_customization keep_issues="0" id="builtin:economist" add_title_tag="yes" custom_tags=""/>
 
 	<recipe_customization keep_issues="0" id="builtin:lwn_free" add_title_tag="yes" custom_tags="" recipe_specific_options="{}"/>
 
-	<scheduled_recipe id="builtin:spectator_magazine" title="Spectator Magazine" last_downloaded="2025-03-08T05:00:50.797986+00:00"><schedule type="days_of_week">5:6:0</schedule></scheduled_recipe>
+	<scheduled_recipe id="builtin:foreignaffairs" title="Foreign Affairs" last_downloaded="2025-03-21T06:43:21.782499+00:00"><schedule type="interval">31.000000</schedule></scheduled_recipe>
 
-	<recipe_customization keep_issues="0" id="builtin:spectator_magazine" add_title_tag="yes" custom_tags="" recipe_specific_options="{}"/>
+	<recipe_customization keep_issues="0" id="builtin:foreignaffairs" add_title_tag="yes" custom_tags="" recipe_specific_options="{}"/>
 
-	<scheduled_recipe id="builtin:the_nation" title="The Nation" last_downloaded="2025-03-08T05:01:08.764635+00:00"><schedule type="days_of_week">5:6:0</schedule></scheduled_recipe>
+	<scheduled_recipe id="builtin:the_nation" title="The Nation" last_downloaded="2025-03-21T06:46:07.774702+00:00"><schedule type="days_of_week">5:6:0</schedule></scheduled_recipe>
 
 	<recipe_customization keep_issues="0" id="builtin:the_nation" add_title_tag="yes" custom_tags="" recipe_specific_options="{}"/>
 
-	<scheduled_recipe id="builtin:foreignaffairs" title="Foreign Affairs" last_downloaded="2025-03-08T20:03:38.791730+00:00"><schedule type="interval">31.000000</schedule></scheduled_recipe>
+	<scheduled_recipe id="builtin:atlantic" title="The Atlantic" last_downloaded="2025-03-20T06:01:34.589856+00:00"><schedule type="interval">31.000000</schedule></scheduled_recipe>
 
-	<recipe_customization keep_issues="0" id="builtin:foreignaffairs" add_title_tag="yes" custom_tags="" recipe_specific_options="{}"/>
+	<recipe_customization keep_issues="0" id="builtin:atlantic" add_title_tag="yes" custom_tags="" recipe_specific_options="{}"/>
+
+	<scheduled_recipe id="builtin:spectator_magazine" title="Spectator Magazine" last_downloaded="2025-03-21T06:43:12.797411+00:00"><schedule type="days_of_week">5:6:0</schedule></scheduled_recipe>
+
+	<recipe_customization keep_issues="0" id="builtin:spectator_magazine" add_title_tag="yes" custom_tags="" recipe_specific_options="{}"/>
+
+	<scheduled_recipe id="builtin:amspec" title="The American Spectator" last_downloaded="2025-02-13T06:10:43.738228+00:00"><schedule type="interval">62.000000</schedule></scheduled_recipe>
+
+	<recipe_customization keep_issues="0" id="builtin:amspec" add_title_tag="yes" custom_tags="" recipe_specific_options="{}"/>
+
+	<scheduled_recipe id="builtin:nytimesbook" title="New York Times Book Review" last_downloaded="2025-03-10T05:01:02.779732+00:00"><schedule type="days_of_week">0:6:0</schedule></scheduled_recipe>
+
+	<recipe_customization keep_issues="0" id="builtin:nytimesbook" add_title_tag="yes" custom_tags="" recipe_specific_options="{}"/>
+
+	<scheduled_recipe id="builtin:linux_magazine" title="Linux Magazine" last_downloaded="2025-03-20T06:01:10.565397+00:00"><schedule type="interval">31.000000</schedule></scheduled_recipe>
+
+	<recipe_customization keep_issues="0" id="builtin:linux_magazine" add_title_tag="yes" custom_tags="" recipe_specific_options="{}"/>
 
 </recipe_collection>

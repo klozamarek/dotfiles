@@ -1023,28 +1023,28 @@
   },
   "geometry-of-metasingle_window_geometry3": {
     "frame_geometry": {
-      "height": 788,
+      "height": 790,
       "width": 1102,
-      "x": 810,
-      "y": 303
+      "x": 764,
+      "y": 247
     },
     "full_screened": false,
     "geometry": {
       "height": 768,
       "width": 1098,
-      "x": 812,
-      "y": 321
+      "x": 766,
+      "y": 267
     },
     "maximized": false,
     "normal_geometry": {
       "height": 768,
       "width": 1098,
-      "x": 812,
-      "y": 321
+      "x": 766,
+      "y": 267
     },
     "qt": {
       "__class__": "bytearray",
-      "__value__": "AdnQywADAAAAAAMqAAABLwAAB3cAAARCAAADLAAAAUEAAAd1AAAEQAAAAAEAAAAAB4AAAAMsAAABQQAAB3UAAARA"
+      "__value__": "AdnQywADAAAAAAL8AAAA9wAAB0kAAAQMAAAC/gAAAQsAAAdHAAAECgAAAAEAAAAAB4AAAAL+AAABCwAAB0cAAAQK"
     },
     "screen": {
       "depth": 24,
@@ -1177,27 +1177,27 @@
   "geometry-of-scheduler_dialog_geometry": {
     "frame_geometry": {
       "height": 622,
-      "width": 900,
-      "x": 526,
-      "y": 304
+      "width": 914,
+      "x": 528,
+      "y": 324
     },
     "full_screened": false,
     "geometry": {
       "height": 600,
-      "width": 896,
-      "x": 528,
-      "y": 324
+      "width": 910,
+      "x": 530,
+      "y": 344
     },
     "maximized": false,
     "normal_geometry": {
       "height": 600,
-      "width": 896,
-      "x": 528,
-      "y": 324
+      "width": 910,
+      "x": 530,
+      "y": 344
     },
     "qt": {
       "__class__": "bytearray",
-      "__value__": "AdnQywADAAAAAAIOAAABMAAABZEAAAOdAAACEAAAAUQAAAWPAAADmwAAAAEAAAAAB4AAAAIQAAABRAAABY8AAAOb"
+      "__value__": "AdnQywADAAAAAAIQAAABRAAABaEAAAOxAAACEgAAAVgAAAWfAAADrwAAAAEAAAAAB4AAAAISAAABWAAABZ8AAAOv"
     },
     "screen": {
       "depth": 24,
@@ -1235,7 +1235,7 @@
   "library_usage_stats": {
     "/home/ssserpent/Calibre Library": 154,
     "/home/ssserpent/Documents/Calibre Library": 24,
-    "/media/gen_dta/Calibre Library": 215
+    "/media/gen_dta/Calibre Library": 217
   },
   "main_window_central_widget_state": {
     "layout": "wide",
@@ -1328,7 +1328,9 @@
     289
   ],
   "qv_open_at_shutdown": false,
-  "recently_used_languages": [],
+  "recently_used_languages": [
+    "English"
+  ],
   "replace_scene_breaks_history": [
     "",
     "<hr />",
