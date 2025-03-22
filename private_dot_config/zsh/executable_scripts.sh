@@ -515,3 +515,24 @@ tsm-show() { transmission-show "$1" ;}                          # show .torrent 
 # DESC: ncurses frontend to transmission-daemon
 tsm-ncurse() { tremc ;}
 #}}}
+# -- shutdown -- Sprawdzenie czy jest połączenie SSH lub host ma nazwę soyoarch -- {{{
+shutdown() {
+    local hostname=$(hostname)
+
+    # Sprawdzenie czy jest połączenie SSH lub host ma nazwę soyoarch
+    if [[ -n "$SSH_CONNECTION" || "$hostname" == "soyoarch" ]]; then
+        echo "Jesteś zalogowany przez SSH lub pracujesz na serwerze 'soyoarch'."
+        echo -n "Czy na pewno chcesz wykonać shutdown? [T/n]: "
+        read -q confirm
+        echo
+
+        if [[ ! "$confirm" =~ ^[TtYy]$ ]]; then
+            echo "Anulowano shutdown."
+            return 1
+        fi
+    fi
+
+    # Wykonanie oryginalnego polecenia shutdown
+    sudo shutdown now
+}
+# }}}

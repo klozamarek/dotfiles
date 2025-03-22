@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 # -- System--{{{
-alias shutdown='sudo shutdown now'
 alias restart='sudo reboot'
 # }}}
 # -- zsh --{{{
