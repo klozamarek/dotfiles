@@ -80,6 +80,24 @@
         "authors": [
           "calibre"
         ],
+        "key": "/media/gen_dta/Calibre Library/calibre/The Spectator Growing pains (2464)/The Spectator Growing pains - calibre.epub",
+        "pathtoebook": "/media/gen_dta/Calibre Library/calibre/The Spectator Growing pains (2464)/The Spectator Growing pains - calibre.epub",
+        "timestamp": "2025-03-24T11:12:06.319Z",
+        "title": "The Spectator Growing pains"
+      },
+      {
+        "authors": [
+          "calibre"
+        ],
+        "key": "/media/gen_dta/Calibre Library/calibre/New York Times Book Review (2466)/New York Times Book Review - calibre.epub",
+        "pathtoebook": "/media/gen_dta/Calibre Library/calibre/New York Times Book Review (2466)/New York Times Book Review - calibre.epub",
+        "timestamp": "2025-03-24T11:05:37.520Z",
+        "title": "New York Times Book Review"
+      },
+      {
+        "authors": [
+          "calibre"
+        ],
         "key": "/media/gen_dta/Calibre Library/calibre/The Nation (2463)/The Nation - calibre.epub",
         "pathtoebook": "/media/gen_dta/Calibre Library/calibre/The Nation (2463)/The Nation - calibre.epub",
         "timestamp": "2025-03-21T06:46:14.022Z",
@@ -276,24 +294,6 @@
         "pathtoebook": "/home/ssserpent/Calibre Library/calibre/Foreign Affairs (May_June 2024) (182)/Foreign Affairs (May_June 2024) - calibre.mobi",
         "timestamp": "2024-05-11T13:04:51.827Z",
         "title": "Foreign Affairs (May/June 2024)"
-      },
-      {
-        "authors": [
-          "calibre"
-        ],
-        "key": "/home/ssserpent/Calibre Library/calibre/The Nation (183)/The Nation - calibre.mobi",
-        "pathtoebook": "/home/ssserpent/Calibre Library/calibre/The Nation (183)/The Nation - calibre.mobi",
-        "timestamp": "2024-05-11T10:34:07.008Z",
-        "title": "The Nation"
-      },
-      {
-        "authors": [
-          "calibre"
-        ],
-        "key": "/home/ssserpent/Calibre Library/calibre/Linux Magazine (181)/Linux Magazine - calibre.mobi",
-        "pathtoebook": "/home/ssserpent/Calibre Library/calibre/Linux Magazine (181)/Linux Magazine - calibre.mobi",
-        "timestamp": "2024-05-11T10:12:41.527Z",
-        "title": "Linux Magazine"
       }
     ]
   }

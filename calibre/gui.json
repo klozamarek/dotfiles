@@ -1021,30 +1021,81 @@
       }
     }
   },
+  "geometry-of-metadata_single_gui_geom": {
+    "frame_geometry": {
+      "height": 622,
+      "width": 854,
+      "x": 896,
+      "y": 411
+    },
+    "full_screened": false,
+    "geometry": {
+      "height": 600,
+      "width": 850,
+      "x": 898,
+      "y": 431
+    },
+    "maximized": false,
+    "normal_geometry": {
+      "height": 600,
+      "width": 850,
+      "x": 898,
+      "y": 431
+    },
+    "qt": {
+      "__class__": "bytearray",
+      "__value__": "AdnQywADAAAAAAOAAAABmwAABtUAAAQIAAADggAAAa8AAAbTAAAEBgAAAAEAAAAAB4AAAAOCAAABrwAABtMAAAQG"
+    },
+    "screen": {
+      "depth": 24,
+      "device_pixel_ratio": 1.0,
+      "geometry_in_logical_pixels": {
+        "height": 1080,
+        "width": 1920,
+        "x": 0,
+        "y": 0
+      },
+      "index_in_screens_list": 1,
+      "manufacturer": "",
+      "model": "",
+      "name": "DisplayPort-0",
+      "serial": "",
+      "size_in_logical_pixels": {
+        "height": 1080,
+        "width": 1920
+      },
+      "virtual_geometry": {
+        "height": 1080,
+        "width": 3360,
+        "x": 0,
+        "y": 0
+      }
+    }
+  },
   "geometry-of-metasingle_window_geometry3": {
     "frame_geometry": {
       "height": 790,
       "width": 1102,
-      "x": 764,
-      "y": 247
+      "x": 636,
+      "y": 107
     },
     "full_screened": false,
     "geometry": {
       "height": 768,
       "width": 1098,
-      "x": 766,
-      "y": 267
+      "x": 638,
+      "y": 127
     },
     "maximized": false,
     "normal_geometry": {
       "height": 768,
       "width": 1098,
-      "x": 766,
-      "y": 267
+      "x": 638,
+      "y": 127
     },
     "qt": {
       "__class__": "bytearray",
-      "__value__": "AdnQywADAAAAAAL8AAAA9wAAB0kAAAQMAAAC/gAAAQsAAAdHAAAECgAAAAEAAAAAB4AAAAL+AAABCwAAB0cAAAQK"
+      "__value__": "AdnQywADAAAAAAJ8AAAAawAABskAAAOAAAACfgAAAH8AAAbHAAADfgAAAAEAAAAAB4AAAAJ+AAAAfwAABscAAAN+"
     },
     "screen": {
       "depth": 24,
@@ -1235,7 +1286,7 @@
   "library_usage_stats": {
     "/home/ssserpent/Calibre Library": 154,
     "/home/ssserpent/Documents/Calibre Library": 24,
-    "/media/gen_dta/Calibre Library": 219
+    "/media/gen_dta/Calibre Library": 233
   },
   "main_window_central_widget_state": {
     "layout": "wide",
@@ -1317,6 +1368,10 @@
       ]
     ]
   },
+  "metadata-download-identify-widget-splitter-state": {
+    "__class__": "bytearray",
+    "__value__": "AAAA/wAAAAEAAAACAAACAAAAAQAA/////wEAAAABAA=="
+  },
   "previous_sort_order_BooksView": {
     "title": true
   },
@@ -1329,7 +1384,8 @@
   ],
   "qv_open_at_shutdown": false,
   "recently_used_languages": [
-    "English"
+    "English",
+    "Polish"
   ],
   "replace_scene_breaks_history": [
     "",
